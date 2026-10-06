@@ -1,0 +1,22 @@
+{
+  "model": "Linear Regression",
+  "target": "annual_generation_kwh",
+  "features": [
+    "solar_radiation",
+    "system_size_kw",
+    "shading_factor"
+  ],
+  "train_samples": 960,
+  "test_samples": 240,
+  "mae": 293.81,
+  "rmse": 440.77,
+  "r2": 0.9863,
+  "coefficients": {
+    "solar_radiation": 1163.9921,
+    "system_size_kw": 1421.2225,
+    "shading_factor": 6299.1636
+  },
+  "intercept": -12085.8917,
+  "dataset_type": "demonstration_benchmark",
+  "documentation": "Calibrated physics-grounded benchmark solar generation dataset for rooftop PV across 24 Indian climatic regions (NASA SSE & MNRE irradiance standards)."
+}

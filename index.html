@@ -1,0 +1,1725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SolarWise AI — Intelligent Solar Planning & Clean-Energy OS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+
+  <!-- Premium SolarWise Initial Application Loader -->
+  <div class="solar-app-loader" id="appLoader" aria-hidden="true">
+    <div class="loader-content">
+      <div class="loader-brand-title">
+        <span>SOLARWISE</span> <span class="highlight-yellow">AI</span>
+        <span class="loader-pip"></span>
+      </div>
+      <div class="loader-beam-track">
+        <div class="loader-beam" id="loaderBeam"></div>
+      </div>
+      <div class="loader-subtitle">INTELLIGENT SOLAR PLANNING</div>
+      <div class="loader-tag" id="loaderTag">CALIBRATING CLEAN ENERGY MODELS...</div>
+    </div>
+  </div>
+
+  <!-- Editorial Background Textures & Clean Energy Lighting -->
+  <div class="editorial-bg">
+    <div class="bg-noise"></div>
+    <div class="bg-grid-lines"></div>
+    <div class="bg-solar-glow glow-top"></div>
+    <div class="bg-solar-glow glow-accent"></div>
+  </div>
+
+  <!-- Top Minimal Header Bar -->
+  <header class="editorial-topbar">
+    <div class="topbar-inner">
+      <div class="topbar-brand" onclick="switchScreen('screen-landing')">
+        <span class="brand-dot"></span>
+        <span class="brand-text">SOLARWISE <b class="text-yellow">AI</b></span>
+      </div>
+
+      <!-- Smart Search Trigger -->
+      <div class="search-command-trigger" id="navSearchTrigger" onclick="openCommandPalette()" onkeydown="if(event.key==='Enter'||event.key===' ')openCommandPalette()" role="button" tabindex="0" title="Search SolarWise (Ctrl + K)">
+        <span class="search-icon">🔍</span>
+        <span class="search-placeholder" id="navSearchPlaceholder">Search SolarWise or choose an action...</span>
+        <kbd class="search-kbd" id="searchKbdShortcut"><span class="kbd-mod">Ctrl</span> K</kbd>
+      </div>
+
+      <!-- Top Right Controls -->
+      <div class="topbar-actions">
+        <!-- Location Pill -->
+        <div class="location-status-pill" title="Active Regional Benchmark">
+          <span class="loc-pin">📍</span>
+          <span class="loc-city" id="topLocationBadge">Surat, Gujarat</span>
+          <span class="loc-rad" id="topIrradianceBadge">5.5 kWh/m²/day</span>
+        </div>
+
+        <!-- Faculty Demo Mode -->
+        <button type="button" class="btn-topbar-ghost" id="btnExploreDemoNav" onclick="loadFacultyDemoAndLaunch()" title="Load Faculty Benchmark Data">
+          <span>⚡ Demo</span>
+        </button>
+
+        <!-- Profile & Settings -->
+        <button type="button" class="btn-topbar-ghost" onclick="openProfileSettingsModal()" title="Platform Settings">
+          <span>⚙</span>
+        </button>
+
+        <!-- Theme Toggle -->
+        <div class="theme-toggle-box" id="themeToggle" title="Toggle Theme">
+          <button type="button" class="theme-icon-btn active" id="themeSunBtn" aria-label="Dark Mode">☾</button>
+          <button type="button" class="theme-icon-btn" id="themeMoonBtn" aria-label="Light Mode">☀</button>
+        </div>
+
+        <!-- Primary CTA -->
+        <button type="button" class="btn-yellow-sm" onclick="switchScreen('screen-input')">
+          <span>Analyze Solar</span>
+          <span class="arrow">→</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Application Layout with Left Editorial Navigation Rail -->
+  <div class="editorial-shell">
+
+    <!-- Left Navigation Rail (01 to 12) -->
+    <aside class="editorial-rail" id="navRail" aria-label="Navigation">
+      <div class="rail-header">
+        <div class="rail-brand-group" onclick="switchScreen('screen-landing')">
+          <div class="rail-logo-row">
+            <span class="rail-brand-title">SOLARWISE <b>AI</b></span>
+            <span class="rail-solar-pip"></span>
+          </div>
+          <span class="rail-brand-eyebrow">INTELLIGENT SOLAR PLANNING</span>
+        </div>
+      </div>
+
+      <nav class="rail-menu" id="railMenu">
+        <div class="rail-gliding-indicator" id="railIndicatorBar"></div>
+        <button type="button" class="rail-item active" data-screen-target="screen-landing">
+          <span class="rail-num">01</span>
+          <span class="rail-label">Home</span>
+        </button>
+        <button type="button" class="rail-item" data-screen-target="screen-overview">
+          <span class="rail-num">02</span>
+          <span class="rail-label">Overview</span>
+        </button>
+        <button type="button" class="rail-item" data-screen-target="screen-input">
+          <span class="rail-num">03</span>
+          <span class="rail-label">Solar Analysis</span>
+        </button>
+        <button type="button" class="rail-item" data-screen-target="screen-savings">
+          <span class="rail-num">04</span>
+          <span class="rail-label">Savings</span>
+        </button>
+        <button type="button" class="rail-item" data-screen-target="screen-subsidies">
+          <span class="rail-num">05</span>
+          <span class="rail-label">Subsidies</span>
+        </button>
+        <button type="button" class="rail-item" data-screen-target="screen-compare">
+          <span class="rail-num">06</span>
+          <span class="rail-label">Compare</span>
+        </button>
+        <button type="button" class="rail-item" data-screen-target="screen-battery">
+          <span class="rail-num">07</span>
+          <span class="rail-label">Battery</span>
+        </button>
+        <button type="button" class="rail-item" data-screen-target="screen-financing">
+          <span class="rail-num">08</span>
+          <span class="rail-label">Financing</span>
+        </button>
+        <button type="button" class="rail-item" data-screen-target="screen-scenarios">
+          <span class="rail-num">09</span>
+          <span class="rail-label">What-If</span>
+        </button>
+        <button type="button" class="rail-item" data-screen-target="screen-advisor">
+          <span class="rail-num">10</span>
+          <span class="rail-label">AI Advisor</span>
+        </button>
+        <button type="button" class="rail-item" data-screen-target="screen-checklist">
+          <span class="rail-num">11</span>
+          <span class="rail-label">Checklist</span>
+        </button>
+        <button type="button" class="rail-item" data-screen-target="screen-report">
+          <span class="rail-num">12</span>
+          <span class="rail-label">Report</span>
+        </button>
+      </nav>
+
+      <div class="rail-footer">
+        <div class="rail-foot-tag">
+          <span class="tag-globe">✦</span>
+          <span>Power a cleaner future.</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Screens Viewport Container -->
+    <main class="editorial-stage" id="viewportStage">
+
+      <!-- ====================================================================
+           01 HOME: CINEMATIC EDITORIAL HERO
+           ==================================================================== -->
+      <section class="screen-view active" id="screen-landing">
+        <div class="hero-editorial-wrap" id="heroParallaxStage">
+          <!-- Editorial Eyebrow -->
+          <div class="hero-eyebrow-row" data-reveal="fade-down" data-parallax-depth="6">
+            <span class="hero-eyebrow-tag">CLEAN ENERGY</span>
+            <span class="hero-eyebrow-divider">/</span>
+            <span class="hero-eyebrow-sub">BRIGHTER TOMORROW</span>
+          </div>
+
+          <!-- Oversized Headline -->
+          <h1 class="hero-editorial-headline" data-reveal="fade-up" data-delay="80" data-parallax-depth="12">
+            Power Your Home<br>
+            With <span class="highlight-yellow">Intelligence.</span>
+          </h1>
+
+          <!-- Editorial Lead Text -->
+          <p class="hero-editorial-subtitle" data-reveal="fade-up" data-delay="160" data-parallax-depth="8">
+            Understand your solar potential, system size, savings, subsidies and long-term returns in one intelligent platform.
+          </p>
+
+          <!-- Buttons -->
+          <div class="hero-btn-row" data-reveal="fade-up" data-delay="240" data-parallax-depth="6">
+            <button type="button" class="btn-yellow" onclick="switchScreen('screen-input')">
+              <span>Analyze My Solar</span>
+              <span class="arrow">→</span>
+            </button>
+            <button type="button" class="btn-outline-glass" onclick="loadFacultyDemoAndLaunch()">
+              <span>Explore SolarWise</span>
+            </button>
+          </div>
+
+          <!-- Cinematic Hero Photography Visual with 3D Depth -->
+          <div class="hero-cinematic-frame has-light-reflection" data-reveal="scale" data-delay="180" data-tilt="true" data-parallax-depth="18">
+            <div class="frame-ambient-glow" data-parallax-depth="24"></div>
+            <img src="assets/solar_sunset_villa_hd.jpg" alt="Modern Rooftop Solar Villa at Dusk" class="hero-cinematic-image" data-scroll-parallax="0.06">
+            <div class="hero-image-vignette"></div>
+            <div class="light-reflection-streak"></div>
+            <div class="hero-hd-spec-pill">
+              <span class="pulse-flow-dot"></span>
+              <span>4K CINEMATIC VISUALIZATION · MONOCRYSTALLINE PV ARCHITECTURE</span>
+            </div>
+          </div>
+
+          <!-- Bottom Metric Strip -->
+          <div class="hero-stats-strip" data-reveal="fade-up" data-delay="300">
+            <div class="hero-stat-col" data-tilt="true">
+              <span class="stat-number">10K+</span>
+              <span class="stat-caption">Homes Analyzed</span>
+            </div>
+            <div class="hero-stat-col" data-tilt="true">
+              <span class="stat-number">₹5Cr+</span>
+              <span class="stat-caption">Potential Savings</span>
+            </div>
+            <div class="hero-stat-col" data-tilt="true">
+              <span class="stat-number">25K+ Ton</span>
+              <span class="stat-caption">CO₂ Offset (Est.)</span>
+            </div>
+            <div class="hero-stat-col" data-tilt="true">
+              <span class="stat-number">90%+</span>
+              <span class="stat-caption">Customer Satisfaction</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           02 OVERVIEW: YOUR SOLAR PROFILE
+           ==================================================================== -->
+      <section class="screen-view" id="screen-overview">
+        <div class="editorial-screen-wrap">
+          <!-- Section Heading -->
+          <div class="section-editorial-header" data-reveal="fade-up">
+            <div class="sec-num-badge">
+              <span class="sec-num">02</span>
+              <span class="sec-category">OVERVIEW</span>
+            </div>
+            <div class="sec-title-cluster">
+              <h2 class="sec-heading">Your Solar Profile.</h2>
+              <p class="sec-sub">A complete overview of your solar potential and estimated benefits.</p>
+            </div>
+          </div>
+
+          <!-- Overview Main Asymmetric Card -->
+          <div class="overview-spotlight-card" data-reveal="fade-up" data-delay="80" data-tilt="true">
+            <div class="overview-spotlight-info">
+              <div class="spotlight-top-badge">
+                <span class="badge-dot"></span>
+                <span id="resultLocation">Personalized recommendation for Surat, Gujarat</span>
+              </div>
+
+              <div class="spotlight-primary-metric">
+                <span class="spotlight-label">Recommended System</span>
+                <div class="spotlight-val-row">
+                  <span class="spotlight-val-large highlight-yellow" id="heroSystemSize">3.0 kW</span>
+                  <span class="spotlight-val-sub" id="heroPanelCount">(9 Panels)</span>
+                  <button type="button" class="btn-edit-pencil" onclick="switchScreen('screen-input')" title="Adjust sizing">✎</button>
+                </div>
+              </div>
+
+              <div class="spotlight-secondary-metric">
+                <span class="spotlight-label">Estimated Annual Generation</span>
+                <div class="spotlight-gen-box">
+                  <span class="gen-bolt">⚡</span>
+                  <span class="gen-val" id="heroAnnualGen">4,850 kWh/year</span>
+                </div>
+              </div>
+
+              <!-- Quick CapEx Row with Subsidy Badge -->
+              <div class="overview-cost-row">
+                <div class="cost-item">
+                  <span class="lbl">Gross Turnkey</span>
+                  <strong class="val" id="costTile">₹1,86,000</strong>
+                </div>
+                <div class="cost-item subsidy-pill" onclick="switchScreen('screen-subsidies')" title="View Subsidies">
+                  <span class="lbl">Govt Subsidy ↗</span>
+                  <strong class="val text-green" id="subsidyCfaBadge">₹78,000</strong>
+                </div>
+                <div class="cost-item">
+                  <span class="lbl">Net Investment</span>
+                  <strong class="val text-yellow" id="netCostSub">₹1,08,000</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Angled Solar Panel Detail Photo with 3D Depth -->
+            <div class="overview-spotlight-photo has-light-reflection" data-tilt="true">
+              <img src="assets/solar_panel_detail_hd.jpg" alt="Monocrystalline Solar Panel Detail" class="spotlight-img" data-scroll-parallax="0.05">
+              <div class="light-reflection-streak"></div>
+              <div class="photo-overlay-tag">
+                <span class="dot-online"></span>
+                <span>Tier-1 Mono PERC · 550W Half-Cut Cells</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom 4 Asymmetric Metric Cards with Staggered 3D Tilt -->
+          <div class="overview-metrics-grid">
+            <div class="ov-metric-card" data-reveal="fade-up" data-delay="140" data-tilt="true">
+              <span class="ov-card-label">Solar Potential</span>
+              <div class="ov-card-number">
+                <span class="num-bold" id="metricSuitability">87</span>
+                <span class="num-denom">/ 100</span>
+              </div>
+              <div class="ov-yellow-bar">
+                <div class="bar-fill" style="width: 87%;"></div>
+              </div>
+              <span class="ov-card-caption" id="planSuitabilityTag">High Sunlight Exposure</span>
+            </div>
+
+            <div class="ov-metric-card" data-reveal="fade-up" data-delay="200" data-tilt="true">
+              <span class="ov-card-label">Est. Annual Savings</span>
+              <div class="ov-card-number text-green" id="metricAnnualSavings">₹42,500</div>
+              <span class="ov-card-caption" id="monthlySavingsTile">~₹3,540 / month reduction</span>
+            </div>
+
+            <div class="ov-metric-card" data-reveal="fade-up" data-delay="260" data-tilt="true">
+              <span class="ov-card-label">Payback Period</span>
+              <div class="ov-card-number">
+                <span class="num-bold text-yellow" id="metricPayback">5.2</span>
+                <span class="num-unit">years</span>
+              </div>
+              <span class="ov-card-caption">Zero-bill horizon achieved</span>
+            </div>
+
+            <div class="ov-metric-card" data-reveal="fade-up" data-delay="320" data-tilt="true">
+              <span class="ov-card-label">CO₂ Offset</span>
+              <div class="ov-card-number">
+                <span class="num-bold text-cyan" id="metricCo2">2.1</span>
+                <span class="num-unit">tons/year</span>
+              </div>
+              <span class="ov-card-caption" id="treesSub">~94 mature trees planted</span>
+            </div>
+          </div>
+
+          <!-- High-Tech Solar Energy Flow Engineering Visualization (Pillar 4) -->
+          <div class="energy-flow-architecture-card" data-reveal="fade-up" data-delay="360" data-tilt="true">
+            <div class="flow-card-header">
+              <div class="flow-title-row">
+                <span class="flow-badge-icon">⚡</span>
+                <span class="flow-card-title">DYNAMIC SOLAR ENERGY FLOW &amp; DISPATCH</span>
+              </div>
+              <div class="flow-status-tag">
+                <span class="pulse-flow-dot"></span>
+                <span id="flowStatusLabel">LIVE SYSTEM DISPATCH MODEL</span>
+              </div>
+            </div>
+
+            <div class="flow-nodes-track">
+              <!-- Node 1: Sun -->
+              <div class="flow-node node-sun">
+                <div class="flow-icon-circle">☀</div>
+                <div class="flow-node-meta">
+                  <span class="flow-node-role">SOLAR SOURCE</span>
+                  <strong class="flow-node-val" id="flowRadiationVal">5.5 kWh/m²</strong>
+                </div>
+              </div>
+
+              <!-- Connector 1 -->
+              <div class="flow-connector">
+                <div class="flow-line">
+                  <div class="flow-particle p-fast"></div>
+                  <div class="flow-particle p-slow"></div>
+                </div>
+                <span class="connector-label">IRRADIANCE</span>
+              </div>
+
+              <!-- Node 2: PV Array -->
+              <div class="flow-node node-pv">
+                <div class="flow-icon-circle">☷</div>
+                <div class="flow-node-meta">
+                  <span class="flow-node-role">ROOFTOP ARRAY</span>
+                  <strong class="flow-node-val highlight-yellow" id="flowPanelsVal">3.0 kW (9 Modules)</strong>
+                </div>
+              </div>
+
+              <!-- Connector 2 -->
+              <div class="flow-connector">
+                <div class="flow-line">
+                  <div class="flow-particle p-fast"></div>
+                </div>
+                <span class="connector-label">DC POWER</span>
+              </div>
+
+              <!-- Node 3: Hybrid Inverter -->
+              <div class="flow-node node-inverter">
+                <div class="flow-icon-circle">⟲</div>
+                <div class="flow-node-meta">
+                  <span class="flow-node-role">HYBRID INVERTER</span>
+                  <strong class="flow-node-val highlight-cyan" id="flowInverterVal">98.2% Eff.</strong>
+                </div>
+              </div>
+
+              <!-- Connector 3 -->
+              <div class="flow-connector">
+                <div class="flow-line">
+                  <div class="flow-particle p-fast"></div>
+                </div>
+                <span class="connector-label">AC 230V</span>
+              </div>
+
+              <!-- Node 4: Home -->
+              <div class="flow-node node-home">
+                <div class="flow-icon-circle">⌂</div>
+                <div class="flow-node-meta">
+                  <span class="flow-node-role">CONSUMPTION</span>
+                  <strong class="flow-node-val highlight-green" id="flowLiveHomeVal">350 kWh/mo</strong>
+                </div>
+              </div>
+
+              <!-- Connector 4 -->
+              <div class="flow-connector">
+                <div class="flow-line">
+                  <div class="flow-particle p-fast"></div>
+                </div>
+                <span class="connector-label">NET BALANCE</span>
+              </div>
+
+              <!-- Node 5: Grid / Battery -->
+              <div class="flow-node node-grid">
+                <div class="flow-icon-circle">⇋</div>
+                <div class="flow-node-meta">
+                  <span class="flow-node-role">GRID / STORAGE</span>
+                  <strong class="flow-node-val" id="flowGridVal">Net Metering Active</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hidden legacy spans for JS backwards compatibility -->
+          <div style="display:none;">
+            <span id="systemSize"></span><span id="panelCount"></span><span id="generation"></span>
+            <span id="savings"></span><span id="payback"></span><span id="co2"></span>
+            <span id="planSuitabilityScore"></span><span id="subsidySplitTile"></span>
+            <span id="subKwVal"></span><span id="subCfaVal"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           03 SOLAR ANALYSIS: READ YOUR ROOF (Engineering vs Python ML)
+           ==================================================================== -->
+      <section class="screen-view" id="screen-input">
+        <div class="editorial-screen-wrap">
+          <!-- Section Heading -->
+          <div class="section-editorial-header" data-reveal="fade-up">
+            <div class="sec-num-badge">
+              <span class="sec-num">03</span>
+              <span class="sec-category">SOLAR ANALYSIS</span>
+            </div>
+            <div class="sec-title-cluster">
+              <h2 class="sec-heading">Read Your Roof.</h2>
+              <p class="sec-sub">Enter your details to get accurate solar sizing and AI-powered insights.</p>
+            </div>
+            <div class="sec-header-right">
+              <span class="rad-tag">Solar Radiation: <strong id="roofRadDisplay">5.5 kWh/m²/day</strong></span>
+            </div>
+          </div>
+
+          <!-- 2-Column Technical Layout -->
+          <div class="analysis-grid-layout">
+            <!-- Left: Your Inputs Form -->
+            <div class="analysis-inputs-card" data-reveal="fade-up" data-delay="60" data-tilt="true">
+              <div class="card-eyebrow">YOUR INPUTS</div>
+              <form id="solarForm" class="analysis-form">
+                
+                <!-- Location -->
+                <div class="form-group-item">
+                  <label for="locationSelect">Location</label>
+                  <select id="locationSelect" class="editorial-select">
+                    <option value="Surat, Gujarat" selected>Surat, Gujarat (5.6 kWh/m²)</option>
+                    <option value="Ahmedabad, Gujarat">Ahmedabad, Gujarat (5.5 kWh/m²)</option>
+                    <option value="Jaipur, Rajasthan">Jaipur, Rajasthan (5.7 kWh/m²)</option>
+                    <option value="Jodhpur, Rajasthan">Jodhpur, Rajasthan (5.9 kWh/m²)</option>
+                    <option value="Bengaluru, Karnataka">Bengaluru, Karnataka (5.2 kWh/m²)</option>
+                    <option value="Chennai, Tamil Nadu">Chennai, Tamil Nadu (5.4 kWh/m²)</option>
+                    <option value="Delhi, NCR">Delhi, NCR (5.1 kWh/m²)</option>
+                    <option value="Mumbai, Maharashtra">Mumbai, Maharashtra (5.0 kWh/m²)</option>
+                    <option value="Pune, Maharashtra">Pune, Maharashtra (5.3 kWh/m²)</option>
+                    <option value="Hyderabad, Telangana">Hyderabad, Telangana (5.4 kWh/m²)</option>
+                    <option value="Lucknow, Uttar Pradesh">Lucknow, Uttar Pradesh (4.9 kWh/m²)</option>
+                    <option value="Kolkata, West Bengal">Kolkata, West Bengal (4.6 kWh/m²)</option>
+                    <option value="Bhopal, Madhya Pradesh">Bhopal, Madhya Pradesh (5.5 kWh/m²)</option>
+                    <option value="Patna, Bihar">Patna, Bihar (4.8 kWh/m²)</option>
+                    <option value="Bhubaneswar, Odisha">Bhubaneswar, Odisha (4.9 kWh/m²)</option>
+                    <option value="Chandigarh, Punjab/Haryana">Chandigarh, Punjab/Haryana (5.0 kWh/m²)</option>
+                    <option value="Leh, Ladakh">Leh, Ladakh (5.8 kWh/m²)</option>
+                  </select>
+                </div>
+
+                <!-- Roof Area -->
+                <div class="form-group-item">
+                  <div class="label-row">
+                    <label for="roof">Roof Area (sq. ft.)</label>
+                    <span class="range-live" id="roofValDisplay">1,200</span>
+                  </div>
+                  <input type="number" id="roof" class="editorial-input" value="1200" min="100" max="10000" step="50">
+                  <input type="range" id="roofRange" class="editorial-slider" value="1200" min="100" max="5000" step="50">
+                </div>
+
+                <!-- Monthly Electricity Usage -->
+                <div class="form-group-item">
+                  <div class="label-row">
+                    <label for="usage">Monthly Electricity Usage (kWh)</label>
+                    <span class="range-live" id="usageValDisplay">350</span>
+                  </div>
+                  <input type="number" id="usage" class="editorial-input" value="350" min="50" max="3000" step="25">
+                  <input type="range" id="usageRange" class="editorial-slider" value="350" min="50" max="1500" step="25">
+                </div>
+
+                <!-- Shading -->
+                <div class="form-group-item">
+                  <label for="shade">Roof Shading Exposure</label>
+                  <select id="shade" class="editorial-select">
+                    <option value="low" selected>Low Shading (&gt;85% Direct Sunlight)</option>
+                    <option value="medium">Medium Shading (Partial Trees / Chimneys)</option>
+                    <option value="high">High Shading (Surrounding Tall Buildings)</option>
+                  </select>
+                </div>
+
+                <!-- Goal & Budget (Preserved) -->
+                <div class="form-row-2col">
+                  <div class="form-group-item">
+                    <label for="goal">Optimization Goal</label>
+                    <select id="goal" class="editorial-select">
+                      <option value="both" selected>Balanced ROI & Sizing</option>
+                      <option value="savings">Max Bill Reduction</option>
+                      <option value="budget">Strict Budget Match</option>
+                      <option value="eco">Max Carbon Offset</option>
+                    </select>
+                  </div>
+                  <div class="form-group-item">
+                    <label for="budget">Approx. Budget (₹)</label>
+                    <input type="number" id="budget" class="editorial-input" value="250000" placeholder="Optional">
+                  </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn-yellow-block" id="analyzeRoofBtn">
+                  <span>Analyze</span>
+                  <span class="arrow">→</span>
+                </button>
+              </form>
+            </div>
+
+            <!-- Right: 3D Roof Visual + DUAL PREDICTION PANEL -->
+            <div class="analysis-visual-column">
+              <!-- 3D Roof Technical Viewport -->
+              <div class="roof-3d-technical-card" id="roof3dStage" data-reveal="fade-up" data-delay="120" data-tilt="true">
+                <div class="tech-canvas-header">
+                  <span id="roofAzimuthSpec">ROOFTOP AZIMUTH: 180° SOUTH · TILT: 22° OPTIMAL</span>
+                  <span id="roofElevationSpec">SUN ELEVATION: 58°</span>
+                </div>
+                <!-- Interactive SVG/CSS 3D Roof Model (Pillar 6 & 7) -->
+                <div class="roof-isometric-viewport">
+                  <svg class="roof-svg-blueprint" id="roofIsometricSvg" viewBox="0 0 460 230" fill="none">
+                    <!-- Base Roof Structure -->
+                    <polygon points="230,20 420,90 230,170 40,90" fill="#0b1322" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" />
+                    <!-- South Pitch Slope Surface -->
+                    <polygon points="230,30 400,92 230,160 60,92" fill="#082038" stroke="#0284c7" stroke-width="1.2" />
+                    
+                    <!-- Dynamic Photovoltaic Modules Array Container -->
+                    <g id="roofPanelsGrid">
+                      <!-- Rendered dynamically by updateDynamicRooftopPanels() based on user kW / panels -->
+                      <polygon points="120,80 155,67 195,102 160,115" class="roof-panel-module" />
+                      <polygon points="165,63 200,50 240,85 205,98" class="roof-panel-module" />
+                      <polygon points="210,46 245,33 285,68 250,81" class="roof-panel-module" />
+                      <polygon points="150,110 185,97 225,132 190,145" class="roof-panel-module" />
+                      <polygon points="195,93 230,80 270,115 235,128" class="roof-panel-module" />
+                      <polygon points="240,76 275,63 315,98 280,111" class="roof-panel-module" />
+                    </g>
+
+                    <!-- Shading Exposure Mask Overlay -->
+                    <path id="roofShadeMask" class="roof-shading-mask low" d="M 60,92 L 100,78 L 130,95 L 90,110 Z" fill="rgba(5, 5, 10, 0.75)" stroke="#ef4444" stroke-width="1" stroke-dasharray="3 3" />
+
+                    <!-- Solar Elevation Vector / Sun Rays -->
+                    <g class="sun-vector-group">
+                      <line x1="390" y1="20" x2="310" y2="70" stroke="#e5ff3f" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.6" />
+                      <line x1="360" y1="10" x2="280" y2="60" stroke="#e5ff3f" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.4" />
+                      <circle cx="400" cy="15" r="8" fill="#e5ff3f" opacity="0.8" />
+                      <circle cx="400" cy="15" r="14" fill="none" stroke="#e5ff3f" stroke-width="0.8" stroke-dasharray="2 2" opacity="0.5" />
+                    </g>
+                  </svg>
+                  
+                  <div class="blueprint-overlay-readout">
+                    <span class="readout-tag" id="roofArrayTag">PV ARRAY 3.0 kW</span>
+                    <span class="readout-spec" id="roofArraySpec">550W Mono PERC × 9 Modules</span>
+                  </div>
+                </div>
+
+                <!-- Roof Suitability Heat Map Legend (Pillar 6 & 7) -->
+                <div class="roof-suitability-legend">
+                  <div class="legend-item">
+                    <span class="legend-swatch optimal"></span>
+                    <span>High Irradiance (Optimal)</span>
+                  </div>
+                  <div class="legend-item">
+                    <span class="legend-swatch partial"></span>
+                    <span>Partial Shading</span>
+                  </div>
+                  <div class="legend-item">
+                    <span class="legend-swatch shaded"></span>
+                    <span>High Obstruction</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- DUAL PREDICTION COMPARISON CARD (Required by Faculty) -->
+              <div class="dual-prediction-card" data-reveal="fade-up" data-delay="180" data-tilt="true">
+                <div class="dual-prediction-header">
+                  <span class="dual-label">ANNUAL GENERATION PREDICTION COMPARISON</span>
+                  <div class="dual-status-tag" id="mlStatusIndicator">
+                    <span class="status-dot-pulse"></span>
+                    <span id="mlStatusText">ML Service Connected (Port 5001)</span>
+                  </div>
+                </div>
+
+                <div class="dual-prediction-columns">
+                  <!-- Engineering Estimate -->
+                  <div class="dual-pred-box engineering">
+                    <span class="box-title">ENGINEERING ESTIMATE</span>
+                    <div class="box-value">
+                      <span class="val-num" id="engEstimateVal">4,820</span>
+                      <span class="val-unit">kWh/year</span>
+                    </div>
+                    <span class="box-sub">(Based on standard solar physical model)</span>
+                  </div>
+
+                  <!-- Python ML Prediction -->
+                  <div class="dual-pred-box python-ml">
+                    <div class="box-title-row">
+                      <span class="box-title highlight-cyan">PYTHON ML PREDICTION</span>
+                      <span class="dual-badge badge-pos" id="mlDeltaBadge">+0.6%</span>
+                    </div>
+                    <div class="box-value">
+                      <span class="val-num highlight-yellow" id="mlEstimateVal">4,850</span>
+                      <span class="val-unit">kWh/year</span>
+                    </div>
+                    <span class="box-sub">(Scikit-learn Linear Regression Model)</span>
+                  </div>
+                </div>
+
+                <div class="dual-prediction-footer">
+                  <span>Difference: <strong id="estimateDiffVal">30 kWh/year (0.6%)</strong></span>
+                  <span class="text-faint">Trained on 1,200 Indian regional benchmark samples (R² = 0.9863)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           04 SAVINGS: SEE THE DIFFERENCE
+           ==================================================================== -->
+      <section class="screen-view" id="screen-savings">
+        <div class="editorial-screen-wrap">
+          <!-- Section Heading -->
+          <div class="section-editorial-header" data-reveal="fade-up">
+            <div class="sec-num-badge">
+              <span class="sec-num">04</span>
+              <span class="sec-category">SAVINGS</span>
+            </div>
+            <div class="sec-title-cluster">
+              <h2 class="sec-heading">See the Difference.</h2>
+              <p class="sec-sub">Reduce your electricity bills and increase long-term savings.</p>
+            </div>
+          </div>
+
+          <div class="savings-editorial-grid">
+            <!-- Left: Before vs After Monthly Bills -->
+            <div class="savings-compare-panel" data-reveal="fade-up" data-delay="60" data-tilt="true">
+              <div class="card-eyebrow">MONTHLY ELECTRICITY BILL COMPARISON</div>
+              
+              <div class="before-after-stack">
+                <!-- Before -->
+                <div class="bill-state-card before">
+                  <span class="state-label">Before Solar</span>
+                  <div class="state-value-row">
+                    <span class="state-amount" id="savBillBefore">₹5,200</span>
+                    <span class="state-unit">/month</span>
+                  </div>
+                  <span class="state-desc">Average electricity bill from utility</span>
+                  <div class="bill-bar-track">
+                    <div class="bill-bar-fill before-bar" style="width: 100%;"></div>
+                  </div>
+                </div>
+
+                <!-- After -->
+                <div class="bill-state-card after">
+                  <div class="state-header-row">
+                    <span class="state-label">After Solar</span>
+                    <span class="reduction-badge" id="savReductionPct">-68%</span>
+                  </div>
+                  <div class="state-value-row">
+                    <span class="state-amount highlight-yellow" id="savBillAfter">₹1,650</span>
+                    <span class="state-unit">/month</span>
+                  </div>
+                  <span class="state-desc">Residual fixed connection & nighttime grid draw</span>
+                  <div class="bill-bar-track">
+                    <div class="bill-bar-fill after-bar" style="width: 32%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Cost Ledger Breakdown -->
+              <div class="savings-ledger-box" id="savingsCostBreakdownCard">
+                <div class="ledger-header">CAPITAL INVESTMENT &amp; SUBSIDY LEDGER</div>
+                <div class="ledger-line">
+                  <span>Gross Turnkey Cost (3.0 kW)</span>
+                  <strong id="ledgerGrossCost">₹1,86,000</strong>
+                </div>
+                <div class="ledger-line text-cyan">
+                  <span>Central PM Surya Ghar CFA</span>
+                  <strong id="ledgerCentralCfa">−₹78,000</strong>
+                </div>
+                <div class="ledger-line text-green">
+                  <span>State Renewable Top-Up</span>
+                  <strong id="ledgerStateIncentive">−₹0</strong>
+                </div>
+                <div class="ledger-divider"></div>
+                <div class="ledger-line total">
+                  <span>Net Out-of-Pocket Expense</span>
+                  <strong class="highlight-yellow" id="ledgerNetCost">₹1,08,000</strong>
+                </div>
+                <div class="ledger-badges-row">
+                  <span class="ledger-pill badge-after" id="savingsPaybackAfterBadge">Payback After Subsidy: 5.2 yrs</span>
+                  <span class="ledger-pill badge-before" id="savingsPaybackBeforeBadge">Payback Before Subsidy: 7.8 yrs</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Hero Numbers & 20-Year Projections -->
+            <div class="savings-projection-panel" data-reveal="fade-up" data-delay="120">
+              <div class="savings-hero-numbers">
+                <div class="hero-num-block" data-reveal="fade-up" data-delay="160" data-tilt="true">
+                  <div class="hero-huge-num highlight-yellow" id="savAnnualHero">₹42,500</div>
+                  <span class="hero-num-lbl">ESTIMATED ANNUAL SAVINGS</span>
+                </div>
+                <div class="hero-num-block" data-reveal="fade-up" data-delay="200" data-tilt="true">
+                  <div class="hero-huge-num text-white" id="sav20YrHero">₹8,50,000</div>
+                  <span class="hero-num-lbl">20-YEAR SAVINGS (EST.)</span>
+                </div>
+              </div>
+
+              <!-- 20-Year Canvas Chart -->
+              <div class="chart-container-card" data-reveal="fade-up" data-delay="240" data-tilt="true">
+                <div class="chart-header-row">
+                  <span class="chart-title">20-YEAR CUMULATIVE WEALTH ACCUMULATION</span>
+                  <div class="chart-legend">
+                    <span class="legend-color-dot"></span>
+                    <span>Cumulative Savings (3% Tariff Inflation)</span>
+                  </div>
+                </div>
+                <div class="canvas-wrap">
+                  <canvas id="chartCanvas" width="600" height="260"></canvas>
+                </div>
+              </div>
+
+              <!-- Interactive Simulator Accordion (Preserved) -->
+              <div class="simulator-toggle-box">
+                <details class="editorial-accordion">
+                  <summary class="accordion-summary">
+                    <span>✦ Expand Live Solar Savings Simulator (Real-Time 0ms)</span>
+                    <span class="chevron">▾</span>
+                  </summary>
+                  <div class="simulator-sliders-grid">
+                    <div class="sim-slider-col">
+                      <div class="label-row">
+                        <label for="simInflationSlider">Utility Tariff Inflation Rate</label>
+                        <span id="simInflationVal">3.0%</span>
+                      </div>
+                      <input type="range" id="simInflationSlider" min="0" max="8" step="0.5" value="3.0">
+                    </div>
+                    <div class="sim-slider-col">
+                      <div class="label-row">
+                        <label for="simUsageSlider">Annual Usage Growth</label>
+                        <span id="simUsageVal">0%</span>
+                      </div>
+                      <input type="range" id="simUsageSlider" min="0" max="6" step="1" value="0">
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visual Storytelling: Without Solar vs With Solar (Pillar 10) -->
+          <div class="savings-story-card" data-reveal="fade-up" data-delay="140" data-tilt="true">
+            <div class="card-eyebrow">ENERGY INDEPENDENCE VISUAL BALANCE</div>
+            <div class="story-comparison-grid">
+              <!-- State 1: Without Solar -->
+              <div class="story-scenario without-solar">
+                <div class="scenario-badge">WITHOUT SOLAR</div>
+                <div class="scenario-visual">
+                  <div class="meter-drain-animation">
+                    <div class="spinning-disk"></div>
+                    <span class="meter-icon">⚡</span>
+                  </div>
+                </div>
+                <div class="scenario-meta">
+                  <strong class="scenario-title">100% Utility Grid Dependent</strong>
+                  <p class="scenario-desc">Escalating peak DISCOM tariffs with continuous compound bill inflation. Lifetime utility drain with zero asset equity.</p>
+                  <div class="scenario-stat text-red">
+                    <span class="stat-glyph">↑</span>
+                    <span id="storyCost20Yr">₹18,50,000+ paid out to utility over 20 years</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Divider Tag -->
+              <div class="story-arrow-divider">
+                <span>VS</span>
+              </div>
+
+              <!-- State 2: With Solar -->
+              <div class="story-scenario with-solar">
+                <div class="scenario-badge highlight-yellow">WITH SOLARWISE</div>
+                <div class="scenario-visual">
+                  <div class="solar-clean-ring">
+                    <div class="solar-pulse-core"></div>
+                    <span class="solar-icon">☀</span>
+                  </div>
+                </div>
+                <div class="scenario-meta">
+                  <strong class="scenario-title">85–95% Solar Self-Sufficiency</strong>
+                  <p class="scenario-desc">Rooftop generates free clean electricity during daylight. Surplus exports to grid via bidirectional net-metering.</p>
+                  <div class="scenario-stat text-green">
+                    <span class="stat-glyph">✓</span>
+                    <span id="storySavings20Yr">₹12,40,000+ retained savings over 20 years</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hidden legacy spans for JS backwards compatibility -->
+          <div style="display:none;">
+            <span id="billCurrentVal"></span><span id="billAfterVal"></span><span id="billReductionBadge"></span>
+            <span id="billSavingsVal"></span><span id="bill1YearVal"></span><span id="bill10YearVal"></span>
+            <span id="bill20YearVal"></span><span id="assumpTariffVal"></span>
+            <select id="simMonthSelect"><option value="0">Jan</option></select>
+            <span id="simGenVal"></span><span id="simBillVal"></span><span id="simSavingsVal"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           05 SUBSIDIES: GOVERNMENT SUPPORT
+           ==================================================================== -->
+      <section class="screen-view" id="screen-subsidies">
+        <div class="editorial-screen-wrap">
+          <!-- Section Heading -->
+          <div class="section-editorial-header" data-reveal="fade-up">
+            <div class="sec-num-badge">
+              <span class="sec-num">05</span>
+              <span class="sec-category">SUBSIDIES</span>
+            </div>
+            <div class="sec-title-cluster">
+              <h2 class="sec-heading">Government Support.</h2>
+              <p class="sec-sub">Take advantage of central and state subsidies for solar installation.</p>
+            </div>
+            <div class="sec-header-right">
+              <span class="disclaimer-mini">Values are estimates. Please verify with official sources.</span>
+            </div>
+          </div>
+
+          <!-- Controls: State Dropdown & System Size Pills -->
+          <div class="subsidy-interactive-toolbar" data-reveal="fade-up" data-delay="60">
+            <div class="toolbar-state-select">
+              <label for="subsidyStateSelect">Select State / Union Territory</label>
+              <select id="subsidyStateSelect" class="editorial-select state-picker">
+                <!-- Dynamically populated from solarSubsidyData.js -->
+              </select>
+            </div>
+            <div class="toolbar-size-pills">
+              <label>System Capacity (kW)</label>
+              <div class="pills-row" id="subsidySizePills">
+                <button type="button" class="size-pill-btn" data-kw="1.0">1 kW</button>
+                <button type="button" class="size-pill-btn" data-kw="2.0">2 kW</button>
+                <button type="button" class="size-pill-btn active" data-kw="3.0">3 kW</button>
+                <button type="button" class="size-pill-btn" data-kw="4.0">4 kW</button>
+                <button type="button" class="size-pill-btn" data-kw="5.0">5 kW</button>
+                <button type="button" class="size-pill-btn" data-kw="6.0">6 kW</button>
+                <button type="button" class="size-pill-btn" data-kw="8.0">8 kW</button>
+                <button type="button" class="size-pill-btn" data-kw="10.0">10 kW</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 Column Subsidy Ledger (Matching Visual Reference) -->
+          <div class="subsidies-three-column-grid">
+            <!-- Central Subsidy -->
+            <div class="sub-col-card" data-reveal="fade-up" data-delay="120" data-tilt="true">
+              <span class="sub-col-label">Central Subsidy</span>
+              <div class="sub-col-val text-cyan" id="subHeroCentralVal">₹78,000</div>
+              <span class="sub-col-note" id="subCentralDesc">PM Surya Ghar CFA (Capped at 3kW)</span>
+            </div>
+
+            <!-- State Subsidy -->
+            <div class="sub-col-card" data-reveal="fade-up" data-delay="180" data-tilt="true">
+              <span class="sub-col-label">State Subsidy</span>
+              <div class="sub-col-val text-green" id="subHeroStateVal">₹30,000</div>
+              <span class="sub-col-note" id="subStateDesc">State nodal agency top-up</span>
+            </div>
+
+            <!-- Total Support (Highlighted Yellow Box) -->
+            <div class="sub-col-card featured-yellow" data-reveal="fade-up" data-delay="240" data-tilt="true">
+              <span class="sub-col-label">Total Potential Support</span>
+              <div class="sub-col-val highlight-yellow" id="subHeroTotalVal">₹1,08,000</div>
+              <span class="sub-col-note">Direct Benefit Transfer (DBT)</span>
+            </div>
+          </div>
+
+          <!-- Metadata & Status Banner -->
+          <div class="subsidy-meta-bar" data-reveal="fade-up" data-delay="280">
+            <div class="meta-item">
+              <span class="lbl">Category:</span>
+              <strong id="subHeroCategoryBadge">General Region</strong>
+            </div>
+            <div class="meta-item">
+              <span class="lbl">Verification Status:</span>
+              <span class="status-verified-pill" id="subHeroStatusBadge">✓ Official/currently verified</span>
+            </div>
+            <div class="meta-item">
+              <span class="lbl">Official Source:</span>
+              <span id="subMetaSource">PM Surya Ghar National Portal</span>
+            </div>
+          </div>
+
+          <!-- Multi-State Comparison Table -->
+          <div class="subsidies-comparison-table-wrap" data-reveal="fade-up" data-delay="320" data-tilt="true">
+            <div class="table-header-caption">
+              <span>ALL-INDIA STATE SUBSIDY COMPARISON (<span id="compKwHeading">3 kW</span> SYSTEM)</span>
+              <span>Updated: September 2026</span>
+            </div>
+            <div class="table-responsive">
+              <table class="editorial-table" id="subsidyComparisonTable">
+                <thead>
+                  <tr>
+                    <th>Jurisdiction</th>
+                    <th>Category</th>
+                    <th>Central CFA</th>
+                    <th>State Top-Up</th>
+                    <th>Total Incentive</th>
+                    <th>Verification Status</th>
+                  </tr>
+                </thead>
+                <tbody id="subsidyComparisonTbody">
+                  <!-- Populated dynamically by script.js -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Statutory Legal Disclaimer Box -->
+          <div class="editorial-disclaimer-box">
+            <p>
+              <strong>Statutory Notice:</strong> Solar subsidy amounts (Central CFA and State/UT incentives) are indicative estimates subject to eligibility, DISCOM technical feasibility approval, and official policy orders in effect as of 2026. Central CFA is disbursed directly via DBT through the PM Surya Ghar National Portal (pmsuryaghar.gov.in).
+            </p>
+          </div>
+
+          <!-- Hidden legacy spans for JS compatibility -->
+          <div style="display:none;">
+            <span id="subHeroGrossCost"></span><span id="subHeroNetCost"></span><span id="subHeroPayback"></span>
+            <div id="subHeroNoticeBanner"><span id="subHeroNoticeText"></span></div>
+            <span id="subBreakdownKwTag"></span><span id="subBreakdownCentralVal"></span><span id="subBreakdownStateVal"></span>
+            <span id="subBreakdownTotalVal"></span><span id="subMetaStatus"></span><span id="subMetaNotes"></span><span id="subMetaDate"></span>
+            <span id="subCentralVal"></span><span id="subStateVal"></span><span id="subTotalVal"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           06 COMPARE: FIND YOUR BEST FIT
+           ==================================================================== -->
+      <section class="screen-view" id="screen-compare">
+        <div class="editorial-screen-wrap">
+          <!-- Section Heading -->
+          <div class="section-editorial-header" data-reveal="fade-up">
+            <div class="sec-num-badge">
+              <span class="sec-num">06</span>
+              <span class="sec-category">COMPARE</span>
+            </div>
+            <div class="sec-title-cluster">
+              <h2 class="sec-heading">Find Your Best Fit.</h2>
+              <p class="sec-sub">Compare different system sizes and choose what works for you.</p>
+            </div>
+          </div>
+
+          <!-- Editorial Comparison Table (Selected 3kW Highlighted in Yellow) -->
+          <div class="comparison-editorial-card" data-reveal="fade-up" data-delay="80" data-tilt="true">
+            <div class="table-responsive">
+              <table class="editorial-compare-table">
+                <thead>
+                  <tr>
+                    <th class="th-metric">Metric</th>
+                    <th class="th-sys">2 kW</th>
+                    <th class="th-sys selected-yellow">3 kW <span class="badge-rec">RECOMMENDED</span></th>
+                    <th class="th-sys">4 kW</th>
+                    <th class="th-sys">5 kW</th>
+                    <th class="th-sys">6 kW</th>
+                  </tr>
+                </thead>
+                <tbody id="comparisonTableBody">
+                  <tr>
+                    <td class="lbl">Annual Generation (kWh)</td>
+                    <td>3,200</td>
+                    <td class="col-yellow">4,850</td>
+                    <td>6,400</td>
+                    <td>8,100</td>
+                    <td>9,700</td>
+                  </tr>
+                  <tr>
+                    <td class="lbl">Panel Count (550W)</td>
+                    <td>4</td>
+                    <td class="col-yellow">6</td>
+                    <td>8</td>
+                    <td>10</td>
+                    <td>12</td>
+                  </tr>
+                  <tr>
+                    <td class="lbl">Gross Cost (₹)</td>
+                    <td>₹1,40,000</td>
+                    <td class="col-yellow">₹2,10,000</td>
+                    <td>₹2,80,000</td>
+                    <td>₹3,50,000</td>
+                    <td>₹4,20,000</td>
+                  </tr>
+                  <tr>
+                    <td class="lbl">Govt Subsidy (₹)</td>
+                    <td>₹66,000</td>
+                    <td class="col-yellow">₹78,000</td>
+                    <td>₹78,000</td>
+                    <td>₹78,000</td>
+                    <td>₹78,000</td>
+                  </tr>
+                  <tr>
+                    <td class="lbl">Net Cost (₹)</td>
+                    <td>₹74,000</td>
+                    <td class="col-yellow">₹1,32,000</td>
+                    <td>₹2,02,000</td>
+                    <td>₹2,72,000</td>
+                    <td>₹3,42,000</td>
+                  </tr>
+                  <tr>
+                    <td class="lbl">Annual Savings (₹)</td>
+                    <td>₹28,000</td>
+                    <td class="col-yellow">₹42,500</td>
+                    <td>₹56,000</td>
+                    <td>₹70,500</td>
+                    <td>₹84,000</td>
+                  </tr>
+                  <tr>
+                    <td class="lbl">Payback Period</td>
+                    <td>2.6 yrs</td>
+                    <td class="col-yellow font-bold">3.1 yrs</td>
+                    <td>3.6 yrs</td>
+                    <td>3.9 yrs</td>
+                    <td>4.1 yrs</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Legacy container hook -->
+            <div id="systemComparisonGrid" style="display:none;"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           07 BATTERY: ENERGY WHEN YOU NEED IT
+           ==================================================================== -->
+      <section class="screen-view" id="screen-battery">
+        <div class="editorial-screen-wrap">
+          <!-- Section Heading -->
+          <div class="section-editorial-header" data-reveal="fade-up">
+            <div class="sec-num-badge">
+              <span class="sec-num">07</span>
+              <span class="sec-category">BATTERY</span>
+            </div>
+            <div class="sec-title-cluster">
+              <h2 class="sec-heading">Energy When You Need It.</h2>
+              <p class="sec-sub">Add battery storage for backup and complete energy independence.</p>
+            </div>
+          </div>
+
+          <!-- Cinematic Hardware Display Card -->
+          <div class="battery-hero-card" data-reveal="fade-up" data-delay="80" data-tilt="true">
+            <div class="battery-visual-box has-light-reflection">
+              <img src="assets/home_battery_storage_hd.jpg" alt="Home Battery Storage Hardware" class="battery-img battery-floating" data-scroll-parallax="0.04">
+              <div class="battery-tech-glow"></div>
+              <div class="light-reflection-streak"></div>
+              <!-- Vertical Energy Level Indicator (Pillar 8) -->
+              <div class="battery-energy-gauge">
+                <div class="gauge-track">
+                  <div class="gauge-fill" style="height: 85%;"></div>
+                </div>
+                <span class="gauge-tag">85% SOC · LFP CELLS</span>
+              </div>
+              <div class="battery-model-tag">
+                <span class="pulse-flow-dot"></span>
+                <span>PowerVault LiFePO₄ 48V Storage</span>
+              </div>
+            </div>
+
+            <!-- 4 Metric Pills -->
+            <div class="battery-pills-grid">
+              <div class="bat-pill">
+                <span class="bat-lbl">Battery Capacity</span>
+                <strong class="bat-val" id="batCapacityVal">5 kWh</strong>
+              </div>
+              <div class="bat-pill">
+                <span class="bat-lbl">Estimated Backup</span>
+                <strong class="bat-val text-cyan" id="batBackupVal">6–8 hours</strong>
+              </div>
+              <div class="bat-pill">
+                <span class="bat-lbl">Daily Consumption</span>
+                <strong class="bat-val" id="batConsumptionVal">12 kWh</strong>
+              </div>
+              <div class="bat-pill">
+                <span class="bat-lbl">Suggested Storage</span>
+                <strong class="bat-val highlight-yellow" id="batSuggestedVal">5–10 kWh</strong>
+              </div>
+            </div>
+
+            <div class="battery-cta-row">
+              <button type="button" class="btn-yellow" onclick="switchScreen('screen-advisor')">
+                <span>Explore Battery Options</span>
+                <span class="arrow">→</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Side-by-side: Grid-Tied vs Battery Backup -->
+          <div class="battery-comparison-cards">
+            <div class="decision-card active" id="batGridTiedCard" data-reveal="fade-up" data-delay="160" data-tilt="true">
+              <div class="dec-badge">RECOMMENDED FOR MOST HOMES</div>
+              <h3 class="dec-title">Grid-Tied (Net Metering)</h3>
+              <p class="dec-desc">Lowest initial investment, shortest payback period (4–5 years), zero battery maintenance. Surplus energy flows into the DISCOM grid.</p>
+              <div class="dec-stats">
+                <span>Cost: Lowest</span>
+                <span>ROI: 24% p.a.</span>
+                <span>Outage Power: No</span>
+              </div>
+            </div>
+
+            <div class="decision-card" id="batHybridCard" data-reveal="fade-up" data-delay="220" data-tilt="true">
+              <div class="dec-badge">FOR UNRELIABLE GRIDS</div>
+              <h3 class="dec-title">Solar + LiFePO4 Battery</h3>
+              <p class="dec-desc">Seamless automatic switchover during grid blackouts. Stores daytime solar surplus for overnight self-consumption.</p>
+              <div class="dec-stats">
+                <span>Cost: +₹1.2L–₹1.8L</span>
+                <span>Lifespan: 12+ Yrs</span>
+                <span>Outage Power: 100% Yes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           08 FINANCING: FINANCE YOUR SYSTEM
+           ==================================================================== -->
+      <section class="screen-view" id="screen-financing">
+        <div class="editorial-screen-wrap">
+          <!-- Section Heading -->
+          <div class="section-editorial-header" data-reveal="fade-up">
+            <div class="sec-num-badge">
+              <span class="sec-num">08</span>
+              <span class="sec-category">FINANCING</span>
+            </div>
+            <div class="sec-title-cluster">
+              <h2 class="sec-heading">Finance Your System.</h2>
+              <p class="sec-sub">Flexible solar loans, zero down-payment options, and day-one positive cash flow.</p>
+            </div>
+          </div>
+
+          <div class="financing-calculator-grid">
+            <!-- Left: Loan Parameters Form -->
+            <div class="financing-inputs-panel" data-reveal="fade-up" data-delay="80" data-tilt="true">
+              <div class="card-eyebrow">LOAN STRUCTURE &amp; EMI CALCULATOR</div>
+              
+              <div class="form-group-item">
+                <div class="label-row">
+                  <label for="finDownPayPercent">Down Payment (%)</label>
+                  <span id="finDownPayPercentVal">20%</span>
+                </div>
+                <input type="range" id="finDownPayPercent" min="0" max="50" step="5" value="20" class="editorial-slider">
+              </div>
+
+              <div class="form-group-item">
+                <div class="label-row">
+                  <label for="finInterestRate">Annual Interest Rate (%)</label>
+                  <span id="finInterestVal">8.5%</span>
+                </div>
+                <input type="range" id="finInterestRate" min="7.0" max="13.0" step="0.25" value="8.5" class="editorial-slider">
+              </div>
+
+              <div class="form-group-item">
+                <div class="label-row">
+                  <label for="finTenureYears">Loan Tenure (Years)</label>
+                  <span id="finTenureVal">5 Years</span>
+                </div>
+                <input type="range" id="finTenureYears" min="1" max="10" step="1" value="5" class="editorial-slider">
+              </div>
+
+              <!-- Capital Summary -->
+              <div class="financing-summary-lines">
+                <div class="fin-line">
+                  <span>Net System Cost:</span>
+                  <strong id="finSystemCost">₹1,08,000</strong>
+                </div>
+                <div class="fin-line">
+                  <span>Down Payment:</span>
+                  <strong id="finDownPayAmt">₹21,600</strong>
+                </div>
+                <div class="fin-line total">
+                  <span>Loan Principal:</span>
+                  <strong class="text-cyan" id="finLoanPrincipal">₹86,400</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: EMI vs Solar Savings Result -->
+            <div class="financing-results-panel" data-reveal="fade-up" data-delay="140" data-tilt="true">
+              <div class="card-eyebrow">CASH FLOW BALANCE</div>
+              
+              <div class="emi-vs-savings-box">
+                <div class="fin-res-col">
+                  <span class="lbl">Monthly Loan EMI</span>
+                  <div class="amount-huge" id="finMonthlyEmi">₹1,773</div>
+                  <span class="sub">Fixed installment</span>
+                </div>
+
+                <div class="fin-vs-divider">VS</div>
+
+                <div class="fin-res-col">
+                  <span class="lbl">Monthly Solar Savings</span>
+                  <div class="amount-huge highlight-yellow" id="finMonthlySavings">₹3,540</div>
+                  <span class="sub">Avoided utility bill</span>
+                </div>
+              </div>
+
+              <!-- Net Cashflow Indicator -->
+              <div class="cashflow-pill-banner">
+                <span class="pill-dot">✓</span>
+                <span>Net Monthly Benefit: <strong class="text-green" id="finNetCashflow">+₹1,767 / month</strong></span>
+                <span class="badge-cashflow" id="finCashflowBadge">Day-1 Positive Cash Flow</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           09 WHAT-IF: SIMULATE YOUR FUTURE
+           ==================================================================== -->
+      <section class="screen-view" id="screen-scenarios">
+        <div class="editorial-screen-wrap">
+          <!-- Section Heading -->
+          <div class="section-editorial-header" data-reveal="fade-up">
+            <div class="sec-num-badge">
+              <span class="sec-num">09</span>
+              <span class="sec-category">WHAT-IF</span>
+            </div>
+            <div class="sec-title-cluster">
+              <h2 class="sec-heading">Simulate Your Future.</h2>
+              <p class="sec-sub">Interactive scenario modeling powered by real-time physics and AI reasoning.</p>
+            </div>
+          </div>
+
+          <!-- Sliders Grid -->
+          <div class="whatif-sliders-grid" data-reveal="fade-up" data-delay="80">
+            <div class="whatif-slider-item">
+              <div class="label-row">
+                <label for="whatIfUsageSlider">Electricity Usage (kWh/mo)</label>
+                <span id="whatIfUsageVal">350 kWh</span>
+              </div>
+              <input type="range" id="whatIfUsageSlider" min="100" max="1500" step="25" value="350" class="editorial-slider">
+            </div>
+
+            <div class="whatif-slider-item">
+              <div class="label-row">
+                <label for="whatIfRoofSlider">Available Roof Area (sq. ft.)</label>
+                <span id="whatIfRoofVal">1,200 sq.ft</span>
+              </div>
+              <input type="range" id="whatIfRoofSlider" min="200" max="4000" step="50" value="1200" class="editorial-slider">
+            </div>
+
+            <div class="whatif-slider-item">
+              <div class="label-row">
+                <label for="whatIfSizeSlider">Target System Size (kW)</label>
+                <span id="whatIfSizeVal">3.0 kW</span>
+              </div>
+              <input type="range" id="whatIfSizeSlider" min="1.0" max="10.0" step="0.5" value="3.0" class="editorial-slider">
+            </div>
+
+            <div class="whatif-slider-item">
+              <label for="whatIfShadeSelect">Roof Shading Condition</label>
+              <select id="whatIfShadeSelect" class="editorial-select">
+                <option value="low" selected>Low Shading (100% Output)</option>
+                <option value="medium">Medium Shading (90% Output)</option>
+                <option value="high">High Shading (78% Output)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Real-Time Delta Impact Output -->
+          <div class="whatif-impact-cards" data-reveal="fade-up" data-delay="140">
+            <div class="whatif-card" data-tilt="true">
+              <span class="lbl">Predicted Generation</span>
+              <div class="val text-cyan" id="whatIfGenDelta">4,850 kWh</div>
+              <span class="sub">Annual clean power</span>
+            </div>
+
+            <div class="whatif-card" data-tilt="true">
+              <span class="lbl">Yearly Savings</span>
+              <div class="val highlight-yellow" id="whatIfSavingsDelta">₹42,500</div>
+              <span class="sub">Utility bill avoided</span>
+            </div>
+
+            <div class="whatif-card" data-tilt="true">
+              <span class="lbl">Payback Period</span>
+              <div class="val text-white" id="whatIfPaybackDelta">5.2 years</div>
+              <span class="sub">Break-even horizon</span>
+            </div>
+
+            <div class="whatif-card" data-tilt="true">
+              <span class="lbl">Net Cost (After Subsidy)</span>
+              <div class="val text-green" id="whatIfNetCostDelta">₹1,08,000</div>
+              <span class="sub">Zero hidden charges</span>
+            </div>
+          </div>
+
+          <!-- Explain with AI CTA -->
+          <div class="whatif-ai-cta" data-reveal="fade-up" data-delay="200">
+            <button type="button" class="btn-yellow" onclick="askAiAboutCurrentScenario()">
+              <span>Explain Scenario with SolarWise AI</span>
+              <span class="arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           10 AI ADVISOR: ASK SOLARWISE (Grok-Powered Intelligence)
+           ==================================================================== -->
+      <section class="screen-view" id="screen-advisor">
+        <div class="editorial-screen-wrap">
+          <!-- Section Heading -->
+          <div class="section-editorial-header" data-reveal="fade-up">
+            <div class="sec-num-badge">
+              <span class="sec-num">10</span>
+              <span class="sec-category">AI ADVISOR</span>
+            </div>
+            <div class="sec-title-cluster">
+              <h2 class="sec-heading">Ask SolarWise.</h2>
+              <p class="sec-sub">Your intelligent solar energy advisor.</p>
+            </div>
+            <div class="sec-header-right">
+              <div class="grok-pill-badge">
+                <span class="status-dot-pulse"></span>
+                <span>xAI Grok Intelligence Active</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Editorial Chat Container -->
+          <div class="editorial-chat-shell" data-reveal="fade-up" data-delay="80" data-tilt="true">
+            <!-- Solar Intelligence Energy Core Orb (Pillar 9) -->
+            <div class="ai-core-visual-stage">
+              <div class="ai-energy-orb-container" id="aiEnergyOrb">
+                <div class="orb-outer-ring ring-1"></div>
+                <div class="orb-outer-ring ring-2"></div>
+                <div class="orb-outer-ring ring-3"></div>
+                <div class="orb-core-sphere">
+                  <div class="orb-internal-lattice"></div>
+                  <span class="orb-center-glyph">✦</span>
+                </div>
+              </div>
+              <div class="ai-orb-meta">
+                <span class="ai-orb-title">SOLAR INTELLIGENCE CORE</span>
+                <span class="ai-orb-subtitle" id="aiStatusIndicator">Grok AI &amp; Gemini 2.5 Multi-Engine Ready</span>
+              </div>
+            </div>
+
+            <!-- Suggested Prompt Chips -->
+            <div class="chat-prompt-chips">
+              <button type="button" class="prompt-chip" onclick="handlePredefinedChat('Should I install 3 kW or 5 kW system?')">
+                Should I install 3 kW or 5 kW system?
+              </button>
+              <button type="button" class="prompt-chip" onclick="handlePredefinedChat('What solar subsidy can I get in Gujarat?')">
+                What solar subsidy can I get in Gujarat?
+              </button>
+              <button type="button" class="prompt-chip" onclick="handlePredefinedChat('How does net metering work in India?')">
+                How does net metering work in India?
+              </button>
+              <button type="button" class="prompt-chip" onclick="handlePredefinedChat('Is battery backup worth the investment?')">
+                Is battery backup worth the investment?
+              </button>
+            </div>
+
+            <!-- Messages Stream -->
+            <div class="chat-messages-stream" id="chatMessages">
+              <!-- Initial Welcome Message from SolarWise -->
+              <div class="chat-msg ai-msg">
+                <div class="msg-avatar">☀</div>
+                <div class="msg-bubble">
+                  <div class="ai-advisor-badge-row">
+                    <span class="ai-advisor-tag current">✦ SOLAR INTELLIGENCE</span>
+                  </div>
+                  <h3 class="chat-structured-headline">Welcome to SolarWise Advisor.</h3>
+                  <div class="chat-direct-insight">
+                    <span class="insight-tag-mini">✦ KEY INSIGHT</span>
+                    <p>Based on your property inputs in Surat, Gujarat, a <strong>3.0 kW rooftop array</strong> covers ~85–90% of your energy needs with a <strong>₹42,500 annual savings</strong> and <strong>₹78,000 Central PM Surya Ghar subsidy</strong>.</p>
+                  </div>
+                  <div class="chat-points-box">
+                    <div class="chat-points-label"><span>•</span><span>KEY BENCHMARKS</span></div>
+                    <div class="chat-points-list">
+                      <div class="chat-point-item"><span class="bullet-dot">•</span><span>Recommended System: 3.0 kW (9 Tier-1 Mono PERC panels)</span></div>
+                      <div class="chat-point-item"><span class="bullet-dot">•</span><span>Payback Period: ~5.2 years after central DBT subsidy</span></div>
+                      <div class="chat-point-item"><span class="bullet-dot">•</span><span>Annual Generation: 4,850 kWh clean electricity</span></div>
+                    </div>
+                  </div>
+                  <div class="chat-next-step-box">
+                    <strong>Next Step:</strong> <span>Ask any question below about equipment sizing, net metering, DISCOM rules, or financing.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Typing Indicator -->
+            <div class="chat-typing-indicator hidden" id="chatTypingIndicator">
+              <span class="pulse-dot"></span>
+              <span class="pulse-dot"></span>
+              <span class="pulse-dot"></span>
+              <span class="typing-text">Grok AI is analyzing...</span>
+            </div>
+
+            <!-- Chat Input Form -->
+            <form id="chatForm" class="editorial-chat-form">
+              <input type="text" id="chatInput" class="editorial-chat-input" placeholder="Ask a solar question..." autocomplete="off">
+              <button type="submit" class="btn-chat-send" aria-label="Send Message">
+                <span class="send-arrow">→</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           11 CHECKLIST: INSTALLATION ROADMAP
+           ==================================================================== -->
+      <section class="screen-view" id="screen-checklist">
+        <div class="editorial-screen-wrap">
+          <!-- Section Heading -->
+          <div class="section-editorial-header" data-reveal="fade-up">
+            <div class="sec-num-badge">
+              <span class="sec-num">11</span>
+              <span class="sec-category">CHECKLIST</span>
+            </div>
+            <div class="sec-title-cluster">
+              <h2 class="sec-heading">Installation Roadmap.</h2>
+              <p class="sec-sub">7-step journey from rooftop survey to grid synchronization.</p>
+            </div>
+            <div class="sec-header-right">
+              <span class="progress-pill-badge" id="checklistCounter">0 / 7 Completed</span>
+            </div>
+          </div>
+
+          <!-- Progress Bar -->
+          <div class="checklist-progress-track" data-reveal="fade-up" data-delay="60">
+            <div class="checklist-progress-bar" id="checklistProgressBar" style="width: 0%;"></div>
+          </div>
+
+          <!-- 7 Steps (Matching Reference Image) -->
+          <div class="editorial-steps-list">
+            <div class="editorial-step-card" data-reveal="fade-up" data-delay="80" data-tilt="true">
+              <label class="step-check-label">
+                <input type="checkbox" class="step-cb" data-step-id="1">
+                <span class="custom-cb"></span>
+                <span class="step-num-code">01</span>
+                <div class="step-meta">
+                  <strong class="step-title">Site Assessment</strong>
+                  <span class="step-desc">Physical structural verification of roof load-bearing capacity, azimuth orientation, and shading obstructions.</span>
+                </div>
+              </label>
+            </div>
+
+            <div class="editorial-step-card" data-reveal="fade-up" data-delay="120" data-tilt="true">
+              <label class="step-check-label">
+                <input type="checkbox" class="step-cb" data-step-id="2">
+                <span class="custom-cb"></span>
+                <span class="step-num-code">02</span>
+                <div class="step-meta">
+                  <strong class="step-title">Choose Installer</strong>
+                  <span class="step-desc">Select an authorized, MNRE-empanelled EPC vendor providing Tier-1 modules with a 25-year performance warranty.</span>
+                </div>
+              </label>
+            </div>
+
+            <div class="editorial-step-card" data-reveal="fade-up" data-delay="160" data-tilt="true">
+              <label class="step-check-label">
+                <input type="checkbox" class="step-cb" data-step-id="3">
+                <span class="custom-cb"></span>
+                <span class="step-num-code">03</span>
+                <div class="step-meta">
+                  <strong class="step-title">Apply for Subsidy</strong>
+                  <span class="step-desc">Register on the PM Surya Ghar National Portal (pmsuryaghar.gov.in) with your DISCOM consumer electricity number.</span>
+                </div>
+              </label>
+            </div>
+
+            <div class="editorial-step-card" data-reveal="fade-up" data-delay="200" data-tilt="true">
+              <label class="step-check-label">
+                <input type="checkbox" class="step-cb" data-step-id="4">
+                <span class="custom-cb"></span>
+                <span class="step-num-code">04</span>
+                <div class="step-meta">
+                  <strong class="step-title">Installation</strong>
+                  <span class="step-desc">Mechanical mounting of elevated anodized aluminum structure, PV panel wiring, string inverter, and earthing pit connection.</span>
+                </div>
+              </label>
+            </div>
+
+            <div class="editorial-step-card" data-reveal="fade-up" data-delay="240" data-tilt="true">
+              <label class="step-check-label">
+                <input type="checkbox" class="step-cb" data-step-id="5">
+                <span class="custom-cb"></span>
+                <span class="step-num-code">05</span>
+                <div class="step-meta">
+                  <strong class="step-title">Inspection</strong>
+                  <span class="step-desc">DISCOM electrical engineering inspector validates safety parameters, AC/DC distribution boxes, and surge protections.</span>
+                </div>
+              </label>
+            </div>
+
+            <div class="editorial-step-card" data-reveal="fade-up" data-delay="280" data-tilt="true">
+              <label class="step-check-label">
+                <input type="checkbox" class="step-cb" data-step-id="6">
+                <span class="custom-cb"></span>
+                <span class="step-num-code">06</span>
+                <div class="step-meta">
+                  <strong class="step-title">Net Metering</strong>
+                  <span class="step-desc">Installation of bi-directional net-meter recording exported daytime solar units against nighttime grid consumption.</span>
+                </div>
+              </label>
+            </div>
+
+            <div class="editorial-step-card" data-reveal="fade-up" data-delay="320" data-tilt="true">
+              <label class="step-check-label">
+                <input type="checkbox" class="step-cb" data-step-id="7">
+                <span class="custom-cb"></span>
+                <span class="step-num-code">07</span>
+                <div class="step-meta">
+                  <strong class="step-title">System Activation</strong>
+                  <span class="step-desc">Commissioning certificate uploaded to the portal to trigger direct subsidy disbursement into your bank account.</span>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           12 REPORT: YOUR SOLAR REPORT
+           ==================================================================== -->
+      <section class="screen-view" id="screen-report">
+        <div class="editorial-screen-wrap">
+          <!-- Section Heading -->
+          <div class="section-editorial-header" data-reveal="fade-up">
+            <div class="sec-num-badge">
+              <span class="sec-num">12</span>
+              <span class="sec-category">REPORT</span>
+            </div>
+            <div class="sec-title-cluster">
+              <h2 class="sec-heading">Your Solar Report.</h2>
+              <p class="sec-sub">A complete summary of your solar analysis and recommendations.</p>
+            </div>
+          </div>
+
+          <!-- Report Showcase Card (Matching Reference Image) -->
+          <div class="report-showcase-card" data-reveal="fade-up" data-delay="80" data-tilt="true">
+            <!-- Left: Dossier Overview -->
+            <div class="report-dossier-info">
+              <div class="dossier-badge">OFFICIAL FEASIBILITY ASSESSMENT</div>
+              <h3 class="dossier-title">Comprehensive Rooftop Solar Dossier</h3>
+              <p class="dossier-desc">
+                Includes localized NASA meteorological irradiance benchmarks, 12-month generation seasonality curve, PM Surya Ghar DBT subsidy allocation, equipment specification bill of materials, and a 20-year cash flow forecast.
+              </p>
+
+              <div class="dossier-metrics-list">
+                <div class="dossier-item">
+                  <span class="d-lbl">System Size:</span>
+                  <strong class="d-val highlight-yellow" id="dossierSystemSize">3.0 kW Rooftop Array</strong>
+                </div>
+                <div class="dossier-item">
+                  <span class="d-lbl">Annual Generation:</span>
+                  <strong class="d-val" id="dossierAnnualGen">4,850 kWh / year</strong>
+                </div>
+                <div class="dossier-item">
+                  <span class="d-lbl">Estimated Annual Savings:</span>
+                  <strong class="d-val text-green" id="dossierAnnualSavings">₹42,500 / year</strong>
+                </div>
+                <div class="dossier-item">
+                  <span class="d-lbl">Govt Subsidy:</span>
+                  <strong class="d-val text-cyan" id="dossierSubsidy">₹78,000 (Central CFA)</strong>
+                </div>
+              </div>
+
+              <div class="dossier-action-row">
+                <button type="button" class="btn-yellow" onclick="openSolarReportModal()">
+                  <span>Download Report (PDF)</span>
+                  <span class="arrow">→</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Right: Document Cover Mockup Photo (Pillar 11) -->
+            <div class="report-cover-photo-box has-light-reflection" data-tilt="true">
+              <img src="assets/solar_report_cover_hd.jpg" alt="SolarWise AI Official Solar Feasibility Dossier" class="report-cover-img" onclick="openSolarReportModal()" data-scroll-parallax="0.04">
+              <div class="light-reflection-streak"></div>
+              <div class="cover-quick-preview-tag" onclick="openSolarReportModal()">
+                <span>📄 Click to Preview &amp; Print Dossier</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Command Palette Modal (Ctrl + K) -->
+  <div class="command-palette-modal hidden" id="commandPaletteModal" role="dialog" aria-modal="true" aria-label="Command Palette">
+    <div class="cmd-palette-backdrop" onclick="closeCommandPalette()"></div>
+    <div class="cmd-palette-box">
+      <div class="cmd-input-bar">
+        <span class="cmd-search-glyph">🔍</span>
+        <input type="text" id="cmdPaletteInput" class="cmd-search-input" placeholder="Search SolarWise or choose an action..." autocomplete="off" spellcheck="false">
+        <kbd class="cmd-esc-tag" onclick="closeCommandPalette()" title="Press Escape to close">ESC</kbd>
+      </div>
+      <div class="cmd-results-list" id="cmdPaletteBody">
+        <!-- Rendered dynamically by renderCommandPalette() -->
+      </div>
+      <div class="cmd-palette-footer">
+        <div class="cmd-footer-keys">
+          <span class="cmd-key-hint"><kbd>↑</kbd> <kbd>↓</kbd> Navigate</span>
+          <span class="cmd-key-hint"><kbd>↵</kbd> Open</span>
+          <span class="cmd-key-hint"><kbd>ESC</kbd> Close</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Profile & Platform Settings Modal -->
+  <div class="profile-settings-modal hidden" id="profileSettingsModal" role="dialog" aria-modal="true">
+    <div class="settings-backdrop" onclick="closeProfileSettingsModal()"></div>
+    <div class="settings-box">
+      <div class="settings-header">
+        <div class="settings-title-row">
+          <span class="settings-icon">⚙</span>
+          <h3>Profile &amp; Platform Settings</h3>
+        </div>
+        <button type="button" class="btn-close-modal" onclick="closeProfileSettingsModal()">✕</button>
+      </div>
+      <div class="settings-body">
+        <div class="settings-field">
+          <label for="setQuickCity">Default City Benchmark</label>
+          <select id="setQuickCity" class="editorial-select" onchange="handleSettingsCityChange(this.value)">
+            <option value="Surat, Gujarat" selected>Surat, Gujarat</option>
+            <option value="Ahmedabad, Gujarat">Ahmedabad, Gujarat</option>
+            <option value="Jaipur, Rajasthan">Jaipur, Rajasthan</option>
+            <option value="Bengaluru, Karnataka">Bengaluru, Karnataka</option>
+            <option value="Chennai, Tamil Nadu">Chennai, Tamil Nadu</option>
+            <option value="Delhi, NCR">Delhi, NCR</option>
+            <option value="Mumbai, Maharashtra">Mumbai, Maharashtra</option>
+          </select>
+        </div>
+        <div class="settings-actions-group">
+          <button type="button" class="btn-settings-action" onclick="toggleThemeFromSettings()">
+            <span>Toggle Theme (Dark / Light)</span>
+          </button>
+          <button type="button" class="btn-settings-action" onclick="loadDemoFromSettings()">
+            <span>Reload Faculty Benchmark Data</span>
+          </button>
+          <button type="button" class="btn-settings-action reset" onclick="resetFromSettings()">
+            <span>Reset All Values to Defaults</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Printable Solar Feasibility Report Modal (Preserved 17-Section PDF) -->
+  <div class="solar-report-modal hidden" id="solarReportModal" role="dialog" aria-modal="true">
+    <div class="report-modal-backdrop" onclick="closeSolarReportModal()"></div>
+    <div class="report-modal-container">
+      <div class="report-modal-toolbar">
+        <div class="report-doc-title">SOLARWISE AI — COMPREHENSIVE FEASIBILITY REPORT</div>
+        <div class="report-btn-group">
+          <button type="button" class="btn-print-report" onclick="window.print()">
+            <span>🖨 Print / Save as PDF</span>
+          </button>
+          <button type="button" class="btn-close-report" onclick="closeSolarReportModal()">✕</button>
+        </div>
+      </div>
+      <div class="report-printable-area" id="reportPrintArea">
+        <!-- Generated by openSolarReportModal() in script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="data/solarSubsidyData.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

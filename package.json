@@ -1,0 +1,30 @@
+{
+  "name": "solarwise-ai",
+  "version": "2.0.0",
+  "description": "SolarWise AI — Intelligent Solar Energy Planning Advisor with Google Gemini Generative AI",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "ml:start": "python python_service/app.py",
+    "ml:train": "python python_service/train_model.py"
+  },
+  "keywords": [
+    "solar",
+    "energy",
+    "generative-ai",
+    "gemini",
+    "clean-tech",
+    "calculator"
+  ],
+  "author": "SolarWise AI Team",
+  "license": "MIT",
+  "dependencies": {
+    "@google/genai": "^2.25.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "serverless-http": "^4.0.0"
+  }
+}

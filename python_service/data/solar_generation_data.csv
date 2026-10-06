@@ -1,0 +1,1201 @@
+location,solar_radiation,system_size_kw,shading_factor,shading_level,roof_area_sqft,annual_generation_kwh
+"Chennai, Tamil Nadu",5.49,7.0,0.9,medium,870,9811
+"Pune, Maharashtra",5.29,3.0,0.9,medium,601,4052
+"Jaipur, Rajasthan",5.56,1.5,0.9,medium,713,2118
+"Chandigarh, Punjab/Haryana",5.04,6.0,1.0,low,985,8540
+"Varanasi, Uttar Pradesh",5.01,6.0,1.0,low,937,8465
+"Indore, Madhya Pradesh",5.64,8.0,1.0,low,1269,12423
+"Jaipur, Rajasthan",5.81,4.0,1.0,low,716,6410
+"Chandigarh, Punjab/Haryana",4.92,8.0,1.0,low,1377,11399
+"Coimbatore, Tamil Nadu",5.16,1.0,1.0,low,609,1459
+"Leh, Ladakh",5.81,3.5,1.0,low,901,5925
+"Nagpur, Maharashtra",5.63,2.5,1.0,low,703,4053
+"Coimbatore, Tamil Nadu",5.4,10.0,1.0,low,1202,14939
+"Shimla, Himachal Pradesh",4.66,8.0,0.9,medium,990,9428
+"Chennai, Tamil Nadu",5.38,1.0,1.0,low,312,1520
+"Pune, Maharashtra",5.21,4.5,0.9,medium,888,6072
+"Delhi, NCR",5.22,5.0,0.9,medium,1067,6705
+"Surat, Gujarat",5.47,4.0,0.9,medium,842,5676
+"Jaipur, Rajasthan",5.69,3.0,0.78,high,580,3870
+"Surat, Gujarat",5.67,4.0,0.9,medium,908,5798
+"Kolkata, West Bengal",4.46,4.0,1.0,low,645,5004
+"Jodhpur, Rajasthan",6.02,4.0,0.9,medium,692,6095
+"Chennai, Tamil Nadu",5.34,3.5,0.78,high,669,4198
+"Hyderabad, Telangana",5.34,3.0,0.9,medium,477,4079
+"Pune, Maharashtra",5.25,4.0,0.78,high,780,4563
+"Surat, Gujarat",5.53,7.0,1.0,low,965,10792
+"Mysuru, Karnataka",5.3,5.0,1.0,low,874,7426
+"Kolkata, West Bengal",4.53,4.5,0.78,high,973,4548
+"Bhubaneswar, Odisha",4.86,1.0,1.0,low,517,1353
+"Chennai, Tamil Nadu",5.4,1.0,1.0,low,689,1540
+"Ahmedabad, Gujarat",5.47,4.0,1.0,low,774,6188
+"Surat, Gujarat",5.52,1.5,1.0,low,517,2399
+"Varanasi, Uttar Pradesh",5.07,4.5,1.0,low,697,6571
+"Mysuru, Karnataka",5.27,1.0,1.0,low,436,1540
+"Kolkata, West Bengal",4.66,2.0,1.0,low,548,2689
+"Bhubaneswar, Odisha",5.03,4.5,1.0,low,937,6492
+"Patna, Bihar",4.93,6.0,1.0,low,1001,8541
+"Lucknow, Uttar Pradesh",5.0,5.0,1.0,low,1018,7082
+"Nagpur, Maharashtra",5.52,7.0,1.0,low,1082,10966
+"Jaipur, Rajasthan",5.76,2.0,0.9,medium,403,2980
+"Pune, Maharashtra",5.43,2.5,0.78,high,739,3071
+"Jaipur, Rajasthan",5.66,5.0,0.9,medium,998,7141
+"Ahmedabad, Gujarat",5.56,10.0,1.0,low,1310,15563
+"Jodhpur, Rajasthan",5.82,3.0,1.0,low,833,5037
+"Surat, Gujarat",5.61,7.0,1.0,low,1224,11345
+"Leh, Ladakh",5.72,3.5,0.78,high,550,4465
+"Ahmedabad, Gujarat",5.46,1.0,1.0,low,697,1574
+"Surat, Gujarat",5.51,10.0,1.0,low,1153,15697
+"Varanasi, Uttar Pradesh",5.15,10.0,1.0,low,1155,14631
+"Jaipur, Rajasthan",5.77,3.0,0.78,high,751,3817
+"Chandigarh, Punjab/Haryana",4.91,1.0,1.0,low,377,1415
+"Patna, Bihar",4.82,3.5,0.9,medium,859,4246
+"Mumbai, Maharashtra",5.11,1.0,0.9,medium,642,1337
+"Pune, Maharashtra",5.36,4.0,1.0,low,796,5958
+"Shimla, Himachal Pradesh",4.82,6.0,1.0,low,785,8169
+"Hyderabad, Telangana",5.31,4.5,0.9,medium,999,6129
+"Dehradun, Uttarakhand",4.85,2.0,1.0,low,412,2744
+"Leh, Ladakh",5.83,3.5,1.0,low,669,5767
+"Bengaluru, Karnataka",5.21,3.0,1.0,low,557,4524
+"Bengaluru, Karnataka",5.19,3.5,1.0,low,871,5304
+"Coimbatore, Tamil Nadu",5.37,10.0,0.78,high,1255,11789
+"Kolkata, West Bengal",4.69,2.0,1.0,low,788,2640
+"Dehradun, Uttarakhand",4.78,8.0,1.0,low,1007,10790
+"Surat, Gujarat",5.58,3.5,0.9,medium,736,5033
+"Leh, Ladakh",5.87,2.0,1.0,low,493,3427
+"Kolkata, West Bengal",4.68,5.0,1.0,low,869,6707
+"Nagpur, Maharashtra",5.36,6.0,1.0,low,788,9265
+"Jodhpur, Rajasthan",5.8,3.0,1.0,low,459,4954
+"Shimla, Himachal Pradesh",4.75,2.5,0.9,medium,735,3078
+"Dehradun, Uttarakhand",4.93,8.0,1.0,low,1289,10901
+"Surat, Gujarat",5.59,2.0,0.9,medium,617,2921
+"Jaipur, Rajasthan",5.8,4.5,0.78,high,643,5717
+"Bhopal, Madhya Pradesh",5.36,2.0,0.9,medium,564,2717
+"Varanasi, Uttar Pradesh",5.05,10.0,0.9,medium,1239,12693
+"Chennai, Tamil Nadu",5.29,3.0,1.0,low,524,4461
+"Shimla, Himachal Pradesh",4.77,3.0,0.78,high,613,3205
+"Jaipur, Rajasthan",5.85,2.5,1.0,low,495,4118
+"Shimla, Himachal Pradesh",4.81,3.0,1.0,low,632,4160
+"Delhi, NCR",5.06,1.0,1.0,low,617,1459
+"Leh, Ladakh",5.74,2.0,1.0,low,745,3288
+"Bhubaneswar, Odisha",4.92,3.0,1.0,low,845,4194
+"Bhubaneswar, Odisha",4.95,2.5,0.78,high,543,2719
+"Bengaluru, Karnataka",5.27,10.0,1.0,low,1295,15002
+"Indore, Madhya Pradesh",5.49,6.0,0.9,medium,1150,8384
+"Patna, Bihar",4.92,1.5,1.0,low,464,2108
+"Mysuru, Karnataka",5.45,10.0,1.0,low,1294,15358
+"Kolkata, West Bengal",4.68,3.5,0.9,medium,701,4285
+"Kolkata, West Bengal",4.48,2.0,1.0,low,591,2524
+"Coimbatore, Tamil Nadu",5.19,5.0,0.9,medium,1036,6644
+"Hyderabad, Telangana",5.32,5.0,1.0,low,1018,7580
+"Chandigarh, Punjab/Haryana",5.14,8.0,0.78,high,1122,9013
+"Indore, Madhya Pradesh",5.72,3.5,0.78,high,751,4452
+"Bhubaneswar, Odisha",4.77,5.0,1.0,low,792,6709
+"Surat, Gujarat",5.64,3.5,1.0,low,940,5608
+"Shimla, Himachal Pradesh",4.74,4.5,1.0,low,763,6017
+"Coimbatore, Tamil Nadu",5.26,1.5,1.0,low,656,2258
+"Surat, Gujarat",5.57,10.0,0.9,medium,1562,14684
+"Hyderabad, Telangana",5.52,10.0,0.78,high,1520,12398
+"Ahmedabad, Gujarat",5.37,1.5,1.0,low,304,2345
+"Dehradun, Uttarakhand",4.77,3.5,0.9,medium,723,4237
+"Varanasi, Uttar Pradesh",5.1,1.5,1.0,low,684,2226
+"Chandigarh, Punjab/Haryana",4.87,3.5,0.9,medium,696,4469
+"Bengaluru, Karnataka",5.28,2.0,1.0,low,427,3021
+"Delhi, NCR",4.99,2.0,1.0,low,609,2872
+"Ahmedabad, Gujarat",5.46,4.5,1.0,low,849,6874
+"Ahmedabad, Gujarat",5.49,2.0,1.0,low,617,3099
+"Dehradun, Uttarakhand",4.88,3.0,0.9,medium,524,3898
+"Kolkata, West Bengal",4.72,8.0,0.78,high,1255,8162
+"Kolkata, West Bengal",4.72,2.5,1.0,low,734,3434
+"Dehradun, Uttarakhand",4.81,1.0,0.78,high,637,1088
+"Varanasi, Uttar Pradesh",4.93,4.5,1.0,low,861,6302
+"Chandigarh, Punjab/Haryana",4.95,7.0,1.0,low,1220,9535
+"Lucknow, Uttar Pradesh",4.8,3.5,0.9,medium,887,4439
+"Coimbatore, Tamil Nadu",5.36,5.0,0.78,high,844,5994
+"Kolkata, West Bengal",4.46,3.0,1.0,low,619,3810
+"Leh, Ladakh",5.68,1.0,1.0,low,261,1603
+"Bhopal, Madhya Pradesh",5.45,7.0,1.0,low,1098,10661
+"Indore, Madhya Pradesh",5.64,4.5,0.9,medium,918,6521
+"Indore, Madhya Pradesh",5.56,3.5,1.0,low,527,5543
+"Dehradun, Uttarakhand",4.81,1.5,0.9,medium,313,1873
+"Pune, Maharashtra",5.31,10.0,0.9,medium,1443,13704
+"Jaipur, Rajasthan",5.67,5.0,0.9,medium,677,7192
+"Nagpur, Maharashtra",5.42,10.0,1.0,low,1217,15174
+"Mumbai, Maharashtra",5.09,10.0,1.0,low,1377,15021
+"Coimbatore, Tamil Nadu",5.33,8.0,1.0,low,1374,12329
+"Bengaluru, Karnataka",5.16,6.0,0.9,medium,1192,7762
+"Leh, Ladakh",5.72,3.5,1.0,low,503,5749
+"Pune, Maharashtra",5.18,4.5,0.78,high,846,5190
+"Pune, Maharashtra",5.41,3.5,0.78,high,593,4264
+"Shimla, Himachal Pradesh",4.77,5.0,0.9,medium,852,5954
+"Nagpur, Maharashtra",5.41,6.0,1.0,low,1024,9319
+"Bhubaneswar, Odisha",4.9,1.0,1.0,low,250,1362
+"Bengaluru, Karnataka",5.2,2.5,1.0,low,658,3747
+"Surat, Gujarat",5.56,4.5,1.0,low,1006,6970
+"Coimbatore, Tamil Nadu",5.39,1.0,1.0,low,578,1540
+"Varanasi, Uttar Pradesh",4.89,4.5,0.9,medium,1018,5688
+"Nagpur, Maharashtra",5.47,3.0,0.9,medium,586,4192
+"Ahmedabad, Gujarat",5.4,2.0,0.78,high,669,2441
+"Coimbatore, Tamil Nadu",5.4,3.0,1.0,low,735,4630
+"Jaipur, Rajasthan",5.6,3.0,1.0,low,527,4620
+"Hyderabad, Telangana",5.43,1.5,0.9,medium,594,2099
+"Coimbatore, Tamil Nadu",5.26,2.0,0.9,medium,702,2696
+"Varanasi, Uttar Pradesh",5.12,4.0,1.0,low,858,5981
+"Coimbatore, Tamil Nadu",5.22,4.0,1.0,low,683,6056
+"Mumbai, Maharashtra",4.89,10.0,1.0,low,1380,13733
+"Jodhpur, Rajasthan",6.05,5.0,1.0,low,1060,8812
+"Mumbai, Maharashtra",4.95,3.5,1.0,low,802,4963
+"Jodhpur, Rajasthan",5.89,2.5,1.0,low,556,4127
+"Jodhpur, Rajasthan",5.97,1.5,1.0,low,414,2666
+"Kolkata, West Bengal",4.62,6.0,1.0,low,818,7749
+"Dehradun, Uttarakhand",4.79,7.0,1.0,low,990,9446
+"Coimbatore, Tamil Nadu",5.3,5.0,1.0,low,753,7751
+"Shimla, Himachal Pradesh",4.56,6.0,0.9,medium,1036,7074
+"Delhi, NCR",5.08,10.0,1.0,low,1446,14443
+"Bhopal, Madhya Pradesh",5.42,6.0,0.9,medium,931,8433
+"Dehradun, Uttarakhand",4.93,3.5,1.0,low,923,4793
+"Chandigarh, Punjab/Haryana",4.95,2.5,0.9,medium,553,3240
+"Delhi, NCR",4.98,2.5,1.0,low,474,3541
+"Ahmedabad, Gujarat",5.63,7.0,1.0,low,1100,11359
+"Kolkata, West Bengal",4.52,5.0,1.0,low,847,6363
+"Patna, Bihar",4.85,4.0,0.78,high,910,4368
+"Varanasi, Uttar Pradesh",5.02,3.5,1.0,low,688,4958
+"Hyderabad, Telangana",5.37,2.0,1.0,low,560,3015
+"Varanasi, Uttar Pradesh",4.86,4.5,1.0,low,856,6202
+"Ahmedabad, Gujarat",5.51,1.0,1.0,low,415,1605
+"Kolkata, West Bengal",4.5,1.0,1.0,low,304,1278
+"Mumbai, Maharashtra",5.12,1.5,1.0,low,386,2204
+"Dehradun, Uttarakhand",4.7,1.5,0.9,medium,307,1826
+"Coimbatore, Tamil Nadu",5.18,3.0,1.0,low,546,4347
+"Indore, Madhya Pradesh",5.67,2.0,1.0,low,427,3291
+"Lucknow, Uttar Pradesh",4.87,3.0,1.0,low,847,4186
+"Dehradun, Uttarakhand",4.92,4.0,0.9,medium,710,5068
+"Patna, Bihar",4.92,3.0,1.0,low,683,4121
+"Ahmedabad, Gujarat",5.46,4.0,1.0,low,810,6331
+"Delhi, NCR",5.08,8.0,1.0,low,1291,11451
+"Nagpur, Maharashtra",5.39,6.0,1.0,low,808,9223
+"Varanasi, Uttar Pradesh",5.0,1.0,1.0,low,289,1427
+"Ahmedabad, Gujarat",5.54,4.0,1.0,low,827,6184
+"Dehradun, Uttarakhand",4.85,3.5,0.78,high,840,3775
+"Mumbai, Maharashtra",5.02,3.5,1.0,low,664,5081
+"Dehradun, Uttarakhand",4.68,3.5,1.0,low,812,4697
+"Mysuru, Karnataka",5.37,1.5,0.9,medium,608,2005
+"Bhopal, Madhya Pradesh",5.36,8.0,0.78,high,1142,9335
+"Kolkata, West Bengal",4.48,2.0,1.0,low,498,2542
+"Jodhpur, Rajasthan",5.97,4.0,0.9,medium,859,6232
+"Ahmedabad, Gujarat",5.47,4.5,0.78,high,668,5319
+"Indore, Madhya Pradesh",5.53,2.0,0.9,medium,686,2829
+"Hyderabad, Telangana",5.3,5.0,0.9,medium,722,6809
+"Pune, Maharashtra",5.33,5.0,1.0,low,780,7548
+"Patna, Bihar",4.89,8.0,0.78,high,1051,8452
+"Nagpur, Maharashtra",5.59,1.0,1.0,low,579,1619
+"Dehradun, Uttarakhand",4.81,8.0,1.0,low,1165,11072
+"Varanasi, Uttar Pradesh",5.05,3.5,0.9,medium,699,4618
+"Patna, Bihar",4.8,7.0,0.78,high,1214,7426
+"Lucknow, Uttar Pradesh",5.03,4.0,1.0,low,635,5738
+"Chennai, Tamil Nadu",5.26,3.0,0.9,medium,820,4041
+"Bhubaneswar, Odisha",5.0,1.5,1.0,low,402,2158
+"Varanasi, Uttar Pradesh",5.05,4.5,1.0,low,787,6571
+"Pune, Maharashtra",5.25,4.0,1.0,low,588,5974
+"Indore, Madhya Pradesh",5.69,2.5,0.9,medium,808,3653
+"Hyderabad, Telangana",5.43,1.5,1.0,low,469,2380
+"Ahmedabad, Gujarat",5.36,4.0,1.0,low,823,6055
+"Chandigarh, Punjab/Haryana",4.99,4.5,1.0,low,976,6532
+"Mumbai, Maharashtra",4.88,4.0,1.0,low,614,5521
+"Bhopal, Madhya Pradesh",5.44,1.5,1.0,low,745,2313
+"Bengaluru, Karnataka",5.06,1.0,0.78,high,322,1119
+"Jodhpur, Rajasthan",5.82,6.0,0.9,medium,1176,8826
+"Mysuru, Karnataka",5.44,4.5,1.0,low,932,6953
+"Leh, Ladakh",5.83,10.0,1.0,low,1256,16430
+"Ahmedabad, Gujarat",5.47,5.0,1.0,low,908,7843
+"Leh, Ladakh",5.94,1.0,1.0,low,269,1704
+"Varanasi, Uttar Pradesh",4.9,6.0,1.0,low,1087,8263
+"Jaipur, Rajasthan",5.62,4.5,0.9,medium,688,6527
+"Delhi, NCR",5.22,3.0,1.0,low,554,4356
+"Delhi, NCR",4.96,1.5,0.9,medium,308,1885
+"Indore, Madhya Pradesh",5.65,3.0,0.9,medium,675,4226
+"Coimbatore, Tamil Nadu",5.36,6.0,1.0,low,786,8979
+"Lucknow, Uttar Pradesh",4.95,3.0,0.78,high,563,3121
+"Kolkata, West Bengal",4.7,4.5,0.9,medium,639,5347
+"Hyderabad, Telangana",5.33,3.5,1.0,low,835,5387
+"Lucknow, Uttar Pradesh",4.96,7.0,1.0,low,1030,9949
+"Mumbai, Maharashtra",4.88,7.0,0.9,medium,856,8893
+"Mumbai, Maharashtra",4.89,7.0,1.0,low,888,9731
+"Patna, Bihar",4.9,10.0,1.0,low,1444,14090
+"Coimbatore, Tamil Nadu",5.23,8.0,1.0,low,1314,11565
+"Jaipur, Rajasthan",5.59,2.0,0.9,medium,423,2917
+"Indore, Madhya Pradesh",5.73,10.0,0.9,medium,1553,14629
+"Jodhpur, Rajasthan",5.77,7.0,1.0,low,861,11523
+"Surat, Gujarat",5.47,4.5,1.0,low,905,6932
+"Bhopal, Madhya Pradesh",5.64,10.0,1.0,low,1400,16148
+"Chennai, Tamil Nadu",5.27,1.0,1.0,low,328,1488
+"Kolkata, West Bengal",4.53,4.0,1.0,low,979,5213
+"Jaipur, Rajasthan",5.69,4.0,1.0,low,834,6475
+"Pune, Maharashtra",5.22,1.5,0.9,medium,383,1967
+"Varanasi, Uttar Pradesh",5.14,4.5,1.0,low,620,6673
+"Indore, Madhya Pradesh",5.58,7.0,0.78,high,996,8794
+"Indore, Madhya Pradesh",5.67,2.0,1.0,low,630,3218
+"Shimla, Himachal Pradesh",4.66,8.0,1.0,low,1021,10545
+"Chandigarh, Punjab/Haryana",4.9,7.0,0.9,medium,1048,8724
+"Jaipur, Rajasthan",5.79,8.0,1.0,low,1265,13520
+"Bhubaneswar, Odisha",4.88,3.5,1.0,low,943,4975
+"Leh, Ladakh",5.82,3.0,1.0,low,521,4937
+"Coimbatore, Tamil Nadu",5.29,1.5,1.0,low,394,2193
+"Mysuru, Karnataka",5.24,10.0,0.9,medium,1251,13480
+"Kolkata, West Bengal",4.48,1.0,1.0,low,295,1285
+"Indore, Madhya Pradesh",5.6,3.5,1.0,low,660,5561
+"Surat, Gujarat",5.61,1.0,0.78,high,663,1246
+"Surat, Gujarat",5.7,6.0,1.0,low,943,9874
+"Mumbai, Maharashtra",4.9,1.0,0.78,high,566,1097
+"Jaipur, Rajasthan",5.82,5.0,0.78,high,1008,6310
+"Nagpur, Maharashtra",5.61,1.5,0.9,medium,383,2185
+"Indore, Madhya Pradesh",5.69,4.0,0.9,medium,757,5950
+"Jaipur, Rajasthan",5.56,8.0,0.9,medium,961,11432
+"Dehradun, Uttarakhand",4.85,5.0,0.9,medium,771,6180
+"Hyderabad, Telangana",5.3,4.0,1.0,low,837,5847
+"Kolkata, West Bengal",4.5,3.5,0.9,medium,649,4067
+"Jaipur, Rajasthan",5.57,2.0,0.9,medium,442,2767
+"Leh, Ladakh",5.66,1.0,0.9,medium,554,1459
+"Shimla, Himachal Pradesh",4.68,2.5,0.9,medium,781,3028
+"Bhubaneswar, Odisha",4.9,1.5,0.9,medium,395,1871
+"Ahmedabad, Gujarat",5.5,1.5,1.0,low,719,2352
+"Mysuru, Karnataka",5.35,2.0,1.0,low,595,2986
+"Patna, Bihar",4.84,1.0,1.0,low,257,1345
+"Jodhpur, Rajasthan",6.02,4.0,0.9,medium,563,6168
+"Leh, Ladakh",5.91,4.5,1.0,low,683,7708
+"Ahmedabad, Gujarat",5.38,1.0,1.0,low,277,1551
+"Surat, Gujarat",5.68,4.5,1.0,low,1006,7137
+"Indore, Madhya Pradesh",5.52,6.0,1.0,low,1019,9343
+"Nagpur, Maharashtra",5.6,1.0,1.0,low,513,1546
+"Pune, Maharashtra",5.43,5.0,1.0,low,933,7691
+"Varanasi, Uttar Pradesh",5.06,4.5,1.0,low,806,6690
+"Mysuru, Karnataka",5.21,10.0,1.0,low,1483,14844
+"Bhubaneswar, Odisha",4.77,1.0,1.0,low,447,1344
+"Bengaluru, Karnataka",5.33,3.0,1.0,low,628,4617
+"Shimla, Himachal Pradesh",4.7,1.5,1.0,low,593,2018
+"Bhubaneswar, Odisha",4.79,10.0,1.0,low,1583,13766
+"Patna, Bihar",4.71,4.0,0.9,medium,901,4749
+"Mysuru, Karnataka",5.41,3.5,1.0,low,692,5388
+"Varanasi, Uttar Pradesh",5.1,4.5,0.9,medium,927,6062
+"Bhopal, Madhya Pradesh",5.63,1.0,1.0,low,391,1643
+"Ahmedabad, Gujarat",5.65,3.5,1.0,low,660,5531
+"Delhi, NCR",5.25,10.0,0.9,medium,1226,13327
+"Ahmedabad, Gujarat",5.47,2.5,0.9,medium,481,3486
+"Hyderabad, Telangana",5.49,2.0,0.9,medium,478,2819
+"Chandigarh, Punjab/Haryana",4.95,8.0,0.9,medium,1092,9986
+"Chandigarh, Punjab/Haryana",4.96,10.0,1.0,low,1454,13654
+"Mysuru, Karnataka",5.17,2.0,1.0,low,679,3024
+"Ahmedabad, Gujarat",5.49,2.0,1.0,low,677,3006
+"Chandigarh, Punjab/Haryana",5.09,5.0,1.0,low,953,7501
+"Bengaluru, Karnataka",5.12,2.5,0.9,medium,831,3362
+"Nagpur, Maharashtra",5.64,10.0,0.9,medium,1256,14524
+"Dehradun, Uttarakhand",4.92,3.0,0.78,high,730,3218
+"Jodhpur, Rajasthan",6.03,3.5,1.0,low,833,6150
+"Jodhpur, Rajasthan",5.83,2.5,0.9,medium,556,3745
+"Lucknow, Uttar Pradesh",4.78,1.5,1.0,low,376,2085
+"Jodhpur, Rajasthan",6.0,7.0,1.0,low,957,11977
+"Chennai, Tamil Nadu",5.34,1.0,1.0,low,547,1489
+"Shimla, Himachal Pradesh",4.84,2.5,1.0,low,709,3414
+"Mumbai, Maharashtra",4.88,10.0,0.9,medium,1267,12516
+"Chandigarh, Punjab/Haryana",5.12,5.0,0.9,medium,920,6418
+"Mumbai, Maharashtra",5.12,1.0,1.0,low,542,1497
+"Jodhpur, Rajasthan",5.83,2.0,0.9,medium,516,2957
+"Jodhpur, Rajasthan",5.79,4.0,1.0,low,724,6622
+"Varanasi, Uttar Pradesh",5.07,1.5,1.0,low,448,2206
+"Pune, Maharashtra",5.22,10.0,1.0,low,1403,15233
+"Ahmedabad, Gujarat",5.43,4.0,0.9,medium,872,5405
+"Delhi, NCR",5.16,4.0,1.0,low,851,5698
+"Kolkata, West Bengal",4.63,3.5,1.0,low,666,4560
+"Bengaluru, Karnataka",5.32,2.0,1.0,low,702,3070
+"Mysuru, Karnataka",5.26,2.5,1.0,low,715,3757
+"Mysuru, Karnataka",5.33,2.0,1.0,low,730,2962
+"Jaipur, Rajasthan",5.61,1.5,0.78,high,557,1813
+"Leh, Ladakh",5.82,2.5,0.78,high,686,3200
+"Indore, Madhya Pradesh",5.51,6.0,1.0,low,870,9074
+"Dehradun, Uttarakhand",4.77,4.5,1.0,low,959,6064
+"Shimla, Himachal Pradesh",4.71,5.0,0.9,medium,733,5965
+"Chennai, Tamil Nadu",5.51,3.0,0.9,medium,487,4250
+"Bhubaneswar, Odisha",4.96,2.5,1.0,low,513,3467
+"Ahmedabad, Gujarat",5.63,5.0,1.0,low,972,7825
+"Bhubaneswar, Odisha",4.83,6.0,0.9,medium,1060,7477
+"Indore, Madhya Pradesh",5.75,3.0,1.0,low,461,4871
+"Indore, Madhya Pradesh",5.57,3.5,0.9,medium,790,5024
+"Bhopal, Madhya Pradesh",5.59,4.0,1.0,low,622,6562
+"Indore, Madhya Pradesh",5.57,1.5,1.0,low,718,2380
+"Mumbai, Maharashtra",5.1,5.0,1.0,low,938,7259
+"Jodhpur, Rajasthan",5.93,1.0,0.9,medium,559,1507
+"Jaipur, Rajasthan",5.67,5.0,0.9,medium,1041,7368
+"Chandigarh, Punjab/Haryana",4.86,5.0,1.0,low,822,6972
+"Hyderabad, Telangana",5.53,2.5,1.0,low,715,3939
+"Mysuru, Karnataka",5.15,7.0,0.9,medium,909,9051
+"Bengaluru, Karnataka",5.28,6.0,1.0,low,1131,8802
+"Pune, Maharashtra",5.38,4.5,1.0,low,682,6817
+"Chennai, Tamil Nadu",5.46,8.0,0.9,medium,1209,11339
+"Chennai, Tamil Nadu",5.32,3.0,0.9,medium,757,4120
+"Mysuru, Karnataka",5.28,3.0,0.78,high,511,3462
+"Jaipur, Rajasthan",5.66,8.0,1.0,low,1178,12974
+"Dehradun, Uttarakhand",4.77,7.0,1.0,low,1079,9491
+"Indore, Madhya Pradesh",5.62,4.0,1.0,low,972,6249
+"Patna, Bihar",4.84,3.0,0.9,medium,622,3780
+"Jodhpur, Rajasthan",5.86,1.0,1.0,low,440,1624
+"Chandigarh, Punjab/Haryana",5.0,2.5,0.9,medium,511,3203
+"Patna, Bihar",4.79,5.0,0.9,medium,1062,6276
+"Hyderabad, Telangana",5.29,1.0,0.9,medium,674,1351
+"Surat, Gujarat",5.69,10.0,1.0,low,1391,16737
+"Ahmedabad, Gujarat",5.47,3.5,0.9,medium,578,4860
+"Varanasi, Uttar Pradesh",4.87,4.5,0.78,high,668,4873
+"Bengaluru, Karnataka",5.06,4.5,1.0,low,642,6654
+"Surat, Gujarat",5.47,4.5,1.0,low,616,6863
+"Pune, Maharashtra",5.44,2.0,0.9,medium,377,2746
+"Kolkata, West Bengal",4.5,3.0,1.0,low,801,3836
+"Indore, Madhya Pradesh",5.47,8.0,0.78,high,1085,9610
+"Coimbatore, Tamil Nadu",5.34,1.5,0.9,medium,348,2025
+"Delhi, NCR",5.14,6.0,1.0,low,1004,8661
+"Patna, Bihar",4.75,2.5,1.0,low,657,3457
+"Lucknow, Uttar Pradesh",4.99,8.0,1.0,low,959,11680
+"Indore, Madhya Pradesh",5.48,1.5,1.0,low,452,2371
+"Patna, Bihar",4.93,2.5,1.0,low,687,3394
+"Kolkata, West Bengal",4.72,4.5,0.78,high,721,4739
+"Varanasi, Uttar Pradesh",4.93,1.5,0.9,medium,448,1903
+"Coimbatore, Tamil Nadu",5.37,4.0,1.0,low,773,6132
+"Pune, Maharashtra",5.23,8.0,1.0,low,1207,11674
+"Chandigarh, Punjab/Haryana",5.07,7.0,0.78,high,1256,7941
+"Pune, Maharashtra",5.38,1.0,1.0,low,440,1549
+"Leh, Ladakh",5.82,10.0,1.0,low,1257,16898
+"Indore, Madhya Pradesh",5.5,6.0,1.0,low,878,9492
+"Nagpur, Maharashtra",5.57,1.0,1.0,low,473,1594
+"Mumbai, Maharashtra",5.07,4.0,0.9,medium,615,5262
+"Delhi, NCR",5.06,5.0,1.0,low,735,7229
+"Nagpur, Maharashtra",5.57,5.0,0.78,high,1026,6207
+"Bhubaneswar, Odisha",4.85,2.0,0.9,medium,419,2454
+"Bhubaneswar, Odisha",4.98,3.5,1.0,low,792,4802
+"Mysuru, Karnataka",5.27,4.5,1.0,low,801,6593
+"Hyderabad, Telangana",5.28,4.0,0.9,medium,770,5517
+"Bhopal, Madhya Pradesh",5.57,3.0,1.0,low,504,4739
+"Shimla, Himachal Pradesh",4.75,1.5,0.9,medium,487,1829
+"Kolkata, West Bengal",4.6,2.0,1.0,low,458,2642
+"Kolkata, West Bengal",4.58,2.5,1.0,low,512,3235
+"Dehradun, Uttarakhand",4.72,2.5,1.0,low,650,3399
+"Leh, Ladakh",5.84,1.0,0.9,medium,397,1517
+"Lucknow, Uttar Pradesh",4.8,3.5,0.78,high,623,3800
+"Lucknow, Uttar Pradesh",4.81,2.5,1.0,low,449,3321
+"Jaipur, Rajasthan",5.56,1.0,1.0,low,367,1586
+"Hyderabad, Telangana",5.48,2.0,1.0,low,651,3035
+"Kolkata, West Bengal",4.56,3.0,1.0,low,854,3825
+"Mysuru, Karnataka",5.34,4.0,0.78,high,968,4534
+"Surat, Gujarat",5.68,2.5,0.9,medium,581,3612
+"Bhubaneswar, Odisha",4.95,2.5,1.0,low,807,3504
+"Nagpur, Maharashtra",5.36,3.5,1.0,low,662,5414
+"Mumbai, Maharashtra",4.93,3.5,1.0,low,716,4860
+"Hyderabad, Telangana",5.33,5.0,1.0,low,833,7602
+"Pune, Maharashtra",5.19,2.5,1.0,low,406,3666
+"Mysuru, Karnataka",5.42,1.5,0.9,medium,502,2085
+"Chennai, Tamil Nadu",5.37,6.0,1.0,low,1133,9246
+"Bhopal, Madhya Pradesh",5.57,6.0,0.78,high,818,7295
+"Shimla, Himachal Pradesh",4.65,2.0,0.78,high,733,2083
+"Nagpur, Maharashtra",5.45,5.0,1.0,low,766,7670
+"Chennai, Tamil Nadu",5.46,1.0,1.0,low,310,1535
+"Ahmedabad, Gujarat",5.47,7.0,1.0,low,935,11266
+"Bhopal, Madhya Pradesh",5.49,1.0,1.0,low,254,1586
+"Ahmedabad, Gujarat",5.55,5.0,0.9,medium,747,7097
+"Chennai, Tamil Nadu",5.41,4.5,0.9,medium,893,6345
+"Mumbai, Maharashtra",5.14,2.0,0.9,medium,797,2668
+"Jodhpur, Rajasthan",5.98,3.5,1.0,low,731,5926
+"Chandigarh, Punjab/Haryana",5.05,2.5,0.9,medium,810,3239
+"Varanasi, Uttar Pradesh",4.86,5.0,1.0,low,1036,6986
+"Coimbatore, Tamil Nadu",5.23,6.0,1.0,low,1011,8823
+"Patna, Bihar",4.68,3.0,0.78,high,717,3016
+"Mumbai, Maharashtra",4.88,8.0,0.9,medium,1113,9858
+"Delhi, NCR",5.07,4.5,1.0,low,915,6383
+"Bhubaneswar, Odisha",4.92,1.5,1.0,low,686,2127
+"Pune, Maharashtra",5.45,1.0,1.0,low,257,1545
+"Bengaluru, Karnataka",5.27,7.0,1.0,low,1215,10506
+"Lucknow, Uttar Pradesh",5.05,10.0,0.78,high,1170,11458
+"Hyderabad, Telangana",5.35,8.0,0.78,high,1172,9378
+"Bengaluru, Karnataka",5.22,1.0,1.0,low,653,1494
+"Ahmedabad, Gujarat",5.41,3.0,0.78,high,714,3613
+"Kolkata, West Bengal",4.68,5.0,1.0,low,1080,6797
+"Nagpur, Maharashtra",5.49,3.0,1.0,low,580,4694
+"Lucknow, Uttar Pradesh",4.96,4.5,1.0,low,1016,6456
+"Chandigarh, Punjab/Haryana",4.98,1.5,1.0,low,730,2141
+"Dehradun, Uttarakhand",4.84,3.5,0.9,medium,607,4259
+"Pune, Maharashtra",5.4,7.0,0.9,medium,1061,9613
+"Jaipur, Rajasthan",5.76,8.0,0.9,medium,1150,11861
+"Bhubaneswar, Odisha",4.82,4.5,1.0,low,727,6306
+"Indore, Madhya Pradesh",5.54,3.0,1.0,low,566,4805
+"Chandigarh, Punjab/Haryana",5.05,2.5,0.9,medium,438,3249
+"Mysuru, Karnataka",5.35,4.0,1.0,low,903,6163
+"Shimla, Himachal Pradesh",4.66,2.5,1.0,low,589,3330
+"Bhopal, Madhya Pradesh",5.49,1.0,1.0,low,593,1561
+"Bhopal, Madhya Pradesh",5.63,4.0,1.0,low,632,6495
+"Hyderabad, Telangana",5.54,5.0,1.0,low,1024,7946
+"Kolkata, West Bengal",4.71,4.5,0.9,medium,916,5421
+"Delhi, NCR",4.95,4.5,1.0,low,741,6320
+"Pune, Maharashtra",5.17,5.0,1.0,low,871,7285
+"Coimbatore, Tamil Nadu",5.41,10.0,1.0,low,1574,15438
+"Shimla, Himachal Pradesh",4.61,4.0,1.0,low,611,5256
+"Bengaluru, Karnataka",5.13,3.0,1.0,low,866,4460
+"Chandigarh, Punjab/Haryana",4.88,10.0,1.0,low,1184,14033
+"Indore, Madhya Pradesh",5.47,3.5,1.0,low,546,5676
+"Indore, Madhya Pradesh",5.63,6.0,1.0,low,1155,9856
+"Bhubaneswar, Odisha",4.99,2.0,1.0,low,697,2899
+"Jodhpur, Rajasthan",5.87,10.0,0.78,high,1343,12994
+"Delhi, NCR",5.1,4.0,1.0,low,763,5652
+"Patna, Bihar",4.76,8.0,0.9,medium,1232,9693
+"Surat, Gujarat",5.59,10.0,1.0,low,1573,15745
+"Bhopal, Madhya Pradesh",5.53,10.0,1.0,low,1326,15694
+"Bhopal, Madhya Pradesh",5.36,4.5,1.0,low,979,6868
+"Surat, Gujarat",5.55,3.0,1.0,low,641,4604
+"Delhi, NCR",5.07,3.0,1.0,low,466,4338
+"Shimla, Himachal Pradesh",4.71,7.0,1.0,low,890,9377
+"Bhopal, Madhya Pradesh",5.4,4.5,1.0,low,931,6855
+"Coimbatore, Tamil Nadu",5.42,3.0,1.0,low,894,4695
+"Chennai, Tamil Nadu",5.54,3.0,1.0,low,796,4692
+"Bhopal, Madhya Pradesh",5.37,10.0,0.9,medium,1326,14101
+"Ahmedabad, Gujarat",5.55,1.0,1.0,low,331,1602
+"Bengaluru, Karnataka",5.09,8.0,1.0,low,1062,11684
+"Delhi, NCR",5.14,2.0,1.0,low,615,2919
+"Bhopal, Madhya Pradesh",5.54,3.5,1.0,low,538,5553
+"Chandigarh, Punjab/Haryana",5.12,3.5,0.9,medium,849,4637
+"Coimbatore, Tamil Nadu",5.4,5.0,1.0,low,1068,7588
+"Indore, Madhya Pradesh",5.46,3.0,0.9,medium,576,4190
+"Dehradun, Uttarakhand",4.9,3.5,0.9,medium,937,4374
+"Hyderabad, Telangana",5.33,3.0,0.9,medium,479,4165
+"Nagpur, Maharashtra",5.59,2.0,1.0,low,521,3176
+"Coimbatore, Tamil Nadu",5.42,6.0,1.0,low,867,9374
+"Jodhpur, Rajasthan",5.87,4.5,1.0,low,1039,7572
+"Bengaluru, Karnataka",5.32,1.0,0.78,high,524,1163
+"Mumbai, Maharashtra",5.04,8.0,1.0,low,1075,11326
+"Bengaluru, Karnataka",5.21,2.5,1.0,low,720,3720
+"Jodhpur, Rajasthan",5.8,1.5,1.0,low,675,2478
+"Hyderabad, Telangana",5.37,7.0,1.0,low,1212,10771
+"Mumbai, Maharashtra",4.97,3.5,0.9,medium,898,4382
+"Bengaluru, Karnataka",5.34,3.0,1.0,low,583,4558
+"Jodhpur, Rajasthan",6.05,5.0,0.78,high,726,6606
+"Varanasi, Uttar Pradesh",4.97,3.5,1.0,low,664,4977
+"Delhi, NCR",5.12,1.5,1.0,low,608,2179
+"Mumbai, Maharashtra",5.1,10.0,1.0,low,1490,14794
+"Bhopal, Madhya Pradesh",5.55,3.0,0.78,high,808,3627
+"Shimla, Himachal Pradesh",4.85,10.0,0.9,medium,1288,12459
+"Jodhpur, Rajasthan",5.87,1.0,0.9,medium,587,1530
+"Kolkata, West Bengal",4.51,3.0,1.0,low,454,3968
+"Varanasi, Uttar Pradesh",5.06,3.5,1.0,low,563,5171
+"Leh, Ladakh",5.81,8.0,1.0,low,1195,13551
+"Pune, Maharashtra",5.31,3.0,0.9,medium,469,4049
+"Mysuru, Karnataka",5.19,2.0,1.0,low,457,2953
+"Nagpur, Maharashtra",5.58,3.5,1.0,low,749,5839
+"Shimla, Himachal Pradesh",4.68,7.0,1.0,low,1098,9148
+"Kolkata, West Bengal",4.62,2.0,0.78,high,568,2090
+"Indore, Madhya Pradesh",5.62,10.0,1.0,low,1478,15917
+"Coimbatore, Tamil Nadu",5.41,1.0,0.9,medium,474,1383
+"Hyderabad, Telangana",5.54,10.0,0.78,high,1357,12492
+"Patna, Bihar",4.79,10.0,1.0,low,1472,13475
+"Chandigarh, Punjab/Haryana",4.96,1.5,1.0,low,334,2131
+"Shimla, Himachal Pradesh",4.71,2.0,0.78,high,613,2131
+"Indore, Madhya Pradesh",5.49,4.5,0.78,high,787,5365
+"Delhi, NCR",5.18,2.5,0.9,medium,590,3317
+"Bhopal, Madhya Pradesh",5.43,2.5,1.0,low,757,3812
+"Pune, Maharashtra",5.25,2.0,0.9,medium,522,2661
+"Ahmedabad, Gujarat",5.59,3.5,1.0,low,949,5599
+"Hyderabad, Telangana",5.45,8.0,0.9,medium,1341,11036
+"Dehradun, Uttarakhand",4.92,10.0,1.0,low,1444,13906
+"Surat, Gujarat",5.61,3.0,1.0,low,852,4892
+"Leh, Ladakh",5.71,4.0,1.0,low,995,6372
+"Mumbai, Maharashtra",5.03,4.5,1.0,low,747,6335
+"Bhopal, Madhya Pradesh",5.6,4.5,1.0,low,629,7261
+"Jodhpur, Rajasthan",5.79,4.0,0.9,medium,561,5767
+"Patna, Bihar",4.9,7.0,1.0,low,898,9761
+"Indore, Madhya Pradesh",5.48,1.0,1.0,low,403,1577
+"Varanasi, Uttar Pradesh",4.87,1.5,1.0,low,689,2131
+"Bengaluru, Karnataka",5.33,10.0,0.78,high,1270,11591
+"Ahmedabad, Gujarat",5.44,2.5,0.78,high,706,2982
+"Hyderabad, Telangana",5.38,3.5,1.0,low,678,5383
+"Surat, Gujarat",5.73,5.0,0.9,medium,1043,7275
+"Indore, Madhya Pradesh",5.5,3.0,0.9,medium,550,4234
+"Delhi, NCR",4.98,2.0,0.9,medium,642,2560
+"Mumbai, Maharashtra",4.88,3.5,0.78,high,527,3789
+"Lucknow, Uttar Pradesh",4.81,2.0,1.0,low,729,2786
+"Chennai, Tamil Nadu",5.48,1.5,1.0,low,399,2326
+"Delhi, NCR",5.21,3.5,0.78,high,599,4079
+"Hyderabad, Telangana",5.48,10.0,1.0,low,1365,15635
+"Leh, Ladakh",5.71,2.5,1.0,low,634,4043
+"Jaipur, Rajasthan",5.75,1.0,1.0,low,387,1614
+"Mumbai, Maharashtra",4.85,3.0,0.78,high,707,3236
+"Leh, Ladakh",5.86,6.0,1.0,low,1136,10130
+"Leh, Ladakh",5.73,10.0,1.0,low,1377,15708
+"Mysuru, Karnataka",5.38,4.0,0.9,medium,724,5477
+"Nagpur, Maharashtra",5.39,3.0,1.0,low,624,4580
+"Delhi, NCR",4.99,3.5,1.0,low,723,5047
+"Chennai, Tamil Nadu",5.35,8.0,1.0,low,992,12046
+"Chandigarh, Punjab/Haryana",5.04,4.0,0.9,medium,856,5219
+"Coimbatore, Tamil Nadu",5.21,7.0,1.0,low,1044,10491
+"Delhi, NCR",5.23,1.5,1.0,low,378,2239
+"Jodhpur, Rajasthan",6.04,5.0,1.0,low,961,8539
+"Bhubaneswar, Odisha",4.91,8.0,0.9,medium,966,9962
+"Mumbai, Maharashtra",5.12,5.0,0.9,medium,950,6499
+"Kolkata, West Bengal",4.49,3.0,1.0,low,517,3928
+"Pune, Maharashtra",5.39,2.5,1.0,low,837,3776
+"Indore, Madhya Pradesh",5.47,1.5,0.9,medium,669,2067
+"Patna, Bihar",4.74,1.5,1.0,low,360,2019
+"Chandigarh, Punjab/Haryana",5.14,3.5,1.0,low,585,5144
+"Bhopal, Madhya Pradesh",5.48,2.0,1.0,low,442,3196
+"Coimbatore, Tamil Nadu",5.21,7.0,0.9,medium,1058,9283
+"Mysuru, Karnataka",5.18,2.5,0.78,high,447,2902
+"Shimla, Himachal Pradesh",4.76,6.0,1.0,low,1081,8078
+"Kolkata, West Bengal",4.5,3.5,0.9,medium,653,3935
+"Mysuru, Karnataka",5.21,2.0,0.9,medium,474,2687
+"Dehradun, Uttarakhand",4.77,6.0,1.0,low,1101,8151
+"Jodhpur, Rajasthan",5.82,1.0,1.0,low,330,1663
+"Leh, Ladakh",5.91,8.0,1.0,low,1023,13211
+"Jodhpur, Rajasthan",5.86,8.0,1.0,low,1120,13359
+"Lucknow, Uttar Pradesh",4.78,3.0,1.0,low,798,3999
+"Jaipur, Rajasthan",5.82,10.0,1.0,low,1414,16568
+"Chennai, Tamil Nadu",5.36,2.5,1.0,low,493,3851
+"Jaipur, Rajasthan",5.57,4.0,1.0,low,755,6465
+"Patna, Bihar",4.85,1.5,0.78,high,453,1568
+"Hyderabad, Telangana",5.54,4.0,1.0,low,752,6231
+"Surat, Gujarat",5.5,1.5,0.9,medium,724,2138
+"Jodhpur, Rajasthan",5.92,7.0,1.0,low,998,12092
+"Kolkata, West Bengal",4.49,4.0,0.78,high,876,3995
+"Coimbatore, Tamil Nadu",5.27,2.5,0.9,medium,483,3300
+"Coimbatore, Tamil Nadu",5.21,2.0,1.0,low,395,2966
+"Bhopal, Madhya Pradesh",5.37,2.5,1.0,low,820,3769
+"Coimbatore, Tamil Nadu",5.16,2.5,0.9,medium,423,3301
+"Shimla, Himachal Pradesh",4.75,2.0,1.0,low,782,2631
+"Dehradun, Uttarakhand",4.93,3.0,0.9,medium,762,3808
+"Leh, Ladakh",5.76,5.0,0.78,high,1040,6493
+"Leh, Ladakh",5.87,8.0,1.0,low,1369,13336
+"Indore, Madhya Pradesh",5.57,10.0,1.0,low,1455,15649
+"Lucknow, Uttar Pradesh",5.02,3.5,1.0,low,515,4931
+"Shimla, Himachal Pradesh",4.78,3.5,1.0,low,740,4669
+"Mumbai, Maharashtra",5.06,7.0,1.0,low,1103,9805
+"Delhi, NCR",5.03,6.0,1.0,low,1022,8382
+"Chandigarh, Punjab/Haryana",5.02,1.0,1.0,low,466,1447
+"Kolkata, West Bengal",4.56,5.0,1.0,low,843,6599
+"Mysuru, Karnataka",5.43,4.0,1.0,low,675,6278
+"Varanasi, Uttar Pradesh",4.86,5.0,1.0,low,790,6987
+"Chandigarh, Punjab/Haryana",5.11,1.0,0.9,medium,424,1287
+"Hyderabad, Telangana",5.53,1.0,1.0,low,520,1515
+"Jodhpur, Rajasthan",5.87,2.0,0.9,medium,768,3015
+"Coimbatore, Tamil Nadu",5.39,1.0,0.78,high,438,1199
+"Kolkata, West Bengal",4.66,1.0,0.78,high,588,1021
+"Chandigarh, Punjab/Haryana",5.0,7.0,1.0,low,862,9993
+"Jodhpur, Rajasthan",5.94,1.5,0.9,medium,670,2291
+"Bengaluru, Karnataka",5.07,4.5,0.78,high,713,5072
+"Chandigarh, Punjab/Haryana",4.94,7.0,1.0,low,1239,9748
+"Surat, Gujarat",5.58,8.0,1.0,low,1067,12567
+"Patna, Bihar",4.78,2.0,0.9,medium,728,2401
+"Ahmedabad, Gujarat",5.41,4.0,0.78,high,690,4857
+"Dehradun, Uttarakhand",4.71,2.0,0.9,medium,597,2445
+"Bhubaneswar, Odisha",4.83,1.5,0.78,high,660,1576
+"Mysuru, Karnataka",5.31,8.0,1.0,low,1031,12108
+"Bhubaneswar, Odisha",4.88,7.0,1.0,low,920,9601
+"Jaipur, Rajasthan",5.63,8.0,1.0,low,1115,12692
+"Leh, Ladakh",5.69,4.0,1.0,low,706,6656
+"Kolkata, West Bengal",4.64,1.5,1.0,low,589,1962
+"Leh, Ladakh",5.94,7.0,0.9,medium,1201,10396
+"Jodhpur, Rajasthan",5.82,1.5,0.9,medium,364,2269
+"Kolkata, West Bengal",4.48,6.0,0.9,medium,1064,6946
+"Shimla, Himachal Pradesh",4.73,1.5,1.0,low,583,2031
+"Surat, Gujarat",5.45,2.5,0.78,high,536,3052
+"Jodhpur, Rajasthan",5.97,6.0,0.9,medium,1011,9169
+"Lucknow, Uttar Pradesh",4.95,6.0,1.0,low,803,8550
+"Chandigarh, Punjab/Haryana",5.12,8.0,0.9,medium,1081,10443
+"Delhi, NCR",5.08,2.0,1.0,low,622,2980
+"Patna, Bihar",4.86,4.5,0.9,medium,844,5650
+"Dehradun, Uttarakhand",4.67,2.5,1.0,low,462,3274
+"Surat, Gujarat",5.65,1.5,1.0,low,437,2343
+"Patna, Bihar",4.89,2.0,1.0,low,668,2724
+"Mumbai, Maharashtra",5.0,4.0,0.9,medium,787,5141
+"Coimbatore, Tamil Nadu",5.17,6.0,1.0,low,1139,8750
+"Surat, Gujarat",5.72,5.0,1.0,low,836,8277
+"Chandigarh, Punjab/Haryana",4.97,6.0,1.0,low,937,8489
+"Patna, Bihar",4.84,3.0,0.9,medium,467,3793
+"Ahmedabad, Gujarat",5.5,7.0,1.0,low,1054,10965
+"Pune, Maharashtra",5.3,2.5,1.0,low,528,3661
+"Dehradun, Uttarakhand",4.86,3.5,0.9,medium,884,4458
+"Chandigarh, Punjab/Haryana",5.07,2.0,0.9,medium,433,2602
+"Kolkata, West Bengal",4.48,3.0,1.0,low,589,3832
+"Dehradun, Uttarakhand",4.73,10.0,1.0,low,1201,13122
+"Shimla, Himachal Pradesh",4.79,4.0,1.0,low,604,5444
+"Mumbai, Maharashtra",4.96,6.0,0.78,high,846,6642
+"Varanasi, Uttar Pradesh",4.88,5.0,1.0,low,758,6797
+"Leh, Ladakh",5.89,4.0,0.9,medium,963,6038
+"Leh, Ladakh",5.74,3.0,1.0,low,609,4824
+"Dehradun, Uttarakhand",4.78,4.0,1.0,low,999,5506
+"Bengaluru, Karnataka",5.27,1.5,1.0,low,545,2226
+"Kolkata, West Bengal",4.52,5.0,1.0,low,660,6310
+"Bhopal, Madhya Pradesh",5.4,3.5,1.0,low,617,5465
+"Indore, Madhya Pradesh",5.68,1.0,1.0,low,579,1669
+"Coimbatore, Tamil Nadu",5.36,1.0,1.0,low,603,1550
+"Ahmedabad, Gujarat",5.36,10.0,0.9,medium,1394,13683
+"Chennai, Tamil Nadu",5.29,6.0,1.0,low,1018,9156
+"Chennai, Tamil Nadu",5.48,4.0,1.0,low,790,6218
+"Varanasi, Uttar Pradesh",5.11,7.0,1.0,low,1056,10143
+"Lucknow, Uttar Pradesh",4.75,8.0,0.9,medium,1261,9791
+"Surat, Gujarat",5.59,3.5,0.9,medium,863,5098
+"Bhopal, Madhya Pradesh",5.5,2.0,0.9,medium,778,2791
+"Indore, Madhya Pradesh",5.59,3.0,1.0,low,506,4754
+"Coimbatore, Tamil Nadu",5.44,8.0,1.0,low,998,12569
+"Hyderabad, Telangana",5.39,10.0,0.9,medium,1484,13797
+"Jaipur, Rajasthan",5.66,4.5,1.0,low,661,7188
+"Jodhpur, Rajasthan",5.89,2.5,1.0,low,506,4180
+"Ahmedabad, Gujarat",5.55,1.0,1.0,low,408,1596
+"Ahmedabad, Gujarat",5.58,5.0,1.0,low,850,8114
+"Hyderabad, Telangana",5.36,6.0,0.9,medium,1104,8293
+"Bengaluru, Karnataka",5.11,8.0,0.9,medium,1020,10276
+"Mysuru, Karnataka",5.37,1.0,1.0,low,636,1560
+"Chandigarh, Punjab/Haryana",5.05,2.5,0.9,medium,644,3184
+"Mumbai, Maharashtra",4.97,7.0,1.0,low,857,9965
+"Coimbatore, Tamil Nadu",5.24,4.5,1.0,low,985,6801
+"Nagpur, Maharashtra",5.57,1.0,1.0,low,427,1582
+"Nagpur, Maharashtra",5.48,4.0,0.9,medium,773,5751
+"Indore, Madhya Pradesh",5.64,2.0,0.9,medium,478,2794
+"Hyderabad, Telangana",5.5,3.0,0.9,medium,718,4295
+"Mumbai, Maharashtra",5.05,2.5,1.0,low,774,3622
+"Mysuru, Karnataka",5.39,6.0,0.9,medium,953,8234
+"Bengaluru, Karnataka",5.13,3.5,1.0,low,595,5072
+"Jaipur, Rajasthan",5.8,8.0,1.0,low,1127,13138
+"Bhopal, Madhya Pradesh",5.62,4.5,0.9,medium,703,6622
+"Hyderabad, Telangana",5.5,1.5,0.9,medium,481,2194
+"Lucknow, Uttar Pradesh",4.87,1.0,0.78,high,436,1062
+"Chandigarh, Punjab/Haryana",5.09,7.0,1.0,low,1153,9983
+"Dehradun, Uttarakhand",4.9,7.0,1.0,low,852,9932
+"Lucknow, Uttar Pradesh",4.87,10.0,1.0,low,1174,13906
+"Kolkata, West Bengal",4.58,6.0,1.0,low,902,7751
+"Bhubaneswar, Odisha",4.92,4.0,0.78,high,659,4464
+"Bengaluru, Karnataka",5.35,8.0,1.0,low,1195,11903
+"Varanasi, Uttar Pradesh",4.99,3.5,1.0,low,702,5044
+"Shimla, Himachal Pradesh",4.83,3.0,0.9,medium,792,3692
+"Delhi, NCR",5.14,5.0,0.9,medium,1055,6626
+"Jodhpur, Rajasthan",5.87,4.5,0.9,medium,813,6662
+"Patna, Bihar",4.85,10.0,0.78,high,1583,11028
+"Nagpur, Maharashtra",5.49,2.5,0.78,high,530,3088
+"Shimla, Himachal Pradesh",4.84,10.0,1.0,low,1442,13874
+"Leh, Ladakh",5.82,4.5,1.0,low,898,7576
+"Leh, Ladakh",5.86,10.0,1.0,low,1563,16736
+"Dehradun, Uttarakhand",4.91,7.0,1.0,low,894,9896
+"Indore, Madhya Pradesh",5.66,7.0,0.9,medium,937,10058
+"Varanasi, Uttar Pradesh",5.04,4.0,0.9,medium,756,5115
+"Chandigarh, Punjab/Haryana",4.87,2.5,1.0,low,708,3455
+"Patna, Bihar",4.77,6.0,1.0,low,1025,8055
+"Patna, Bihar",4.73,6.0,1.0,low,1020,7868
+"Coimbatore, Tamil Nadu",5.21,4.5,1.0,low,655,6627
+"Mumbai, Maharashtra",4.93,1.0,1.0,low,262,1395
+"Mysuru, Karnataka",5.41,4.5,1.0,low,729,6966
+"Dehradun, Uttarakhand",4.86,3.0,1.0,low,715,4076
+"Jaipur, Rajasthan",5.55,8.0,1.0,low,1094,12644
+"Surat, Gujarat",5.59,6.0,0.9,medium,855,8480
+"Leh, Ladakh",5.87,1.5,0.9,medium,723,2208
+"Varanasi, Uttar Pradesh",5.11,4.0,0.9,medium,886,5239
+"Hyderabad, Telangana",5.47,8.0,1.0,low,1160,12391
+"Chennai, Tamil Nadu",5.29,1.5,1.0,low,594,2313
+"Coimbatore, Tamil Nadu",5.21,1.0,0.9,medium,639,1329
+"Kolkata, West Bengal",4.67,8.0,1.0,low,1044,10701
+"Coimbatore, Tamil Nadu",5.26,7.0,1.0,low,1271,10470
+"Shimla, Himachal Pradesh",4.61,2.0,1.0,low,586,2659
+"Mysuru, Karnataka",5.44,4.5,1.0,low,605,6948
+"Bhopal, Madhya Pradesh",5.43,6.0,1.0,low,936,9452
+"Bengaluru, Karnataka",5.1,5.0,1.0,low,936,7162
+"Chandigarh, Punjab/Haryana",5.11,4.0,1.0,low,937,5867
+"Hyderabad, Telangana",5.32,2.5,1.0,low,798,3858
+"Hyderabad, Telangana",5.28,6.0,1.0,low,968,8928
+"Hyderabad, Telangana",5.39,1.0,0.9,medium,438,1366
+"Lucknow, Uttar Pradesh",4.93,3.5,1.0,low,900,4940
+"Patna, Bihar",4.77,1.5,1.0,low,393,2042
+"Chandigarh, Punjab/Haryana",4.86,1.0,1.0,low,365,1376
+"Nagpur, Maharashtra",5.5,4.0,0.9,medium,963,5813
+"Surat, Gujarat",5.71,5.0,0.9,medium,650,7388
+"Lucknow, Uttar Pradesh",4.82,8.0,0.9,medium,1390,9995
+"Coimbatore, Tamil Nadu",5.23,8.0,1.0,low,1181,12262
+"Surat, Gujarat",5.52,10.0,0.9,medium,1573,14332
+"Dehradun, Uttarakhand",4.93,3.5,1.0,low,920,4880
+"Coimbatore, Tamil Nadu",5.38,2.0,1.0,low,693,3137
+"Varanasi, Uttar Pradesh",4.95,1.5,0.9,medium,638,1938
+"Mysuru, Karnataka",5.35,3.5,1.0,low,537,5471
+"Dehradun, Uttarakhand",4.83,2.5,0.9,medium,617,3082
+"Hyderabad, Telangana",5.25,1.0,0.9,medium,496,1359
+"Bhopal, Madhya Pradesh",5.59,8.0,1.0,low,1309,12898
+"Mumbai, Maharashtra",4.95,4.5,1.0,low,807,6297
+"Patna, Bihar",4.93,8.0,1.0,low,1316,11285
+"Shimla, Himachal Pradesh",4.65,10.0,1.0,low,1439,13005
+"Jaipur, Rajasthan",5.62,3.5,0.9,medium,781,4938
+"Kolkata, West Bengal",4.72,3.0,1.0,low,732,4084
+"Lucknow, Uttar Pradesh",4.99,2.0,1.0,low,530,2878
+"Dehradun, Uttarakhand",4.92,2.5,0.9,medium,531,3105
+"Dehradun, Uttarakhand",4.74,1.0,1.0,low,315,1338
+"Bhubaneswar, Odisha",5.0,3.5,1.0,low,871,4901
+"Mysuru, Karnataka",5.35,6.0,1.0,low,1185,9248
+"Shimla, Himachal Pradesh",4.58,3.0,1.0,low,812,3994
+"Lucknow, Uttar Pradesh",4.82,4.0,0.9,medium,567,5084
+"Coimbatore, Tamil Nadu",5.27,5.0,0.78,high,849,5871
+"Dehradun, Uttarakhand",4.73,3.0,1.0,low,630,3976
+"Hyderabad, Telangana",5.43,3.0,1.0,low,689,4631
+"Ahmedabad, Gujarat",5.57,8.0,0.9,medium,1216,11250
+"Hyderabad, Telangana",5.42,10.0,1.0,low,1369,15449
+"Delhi, NCR",4.96,6.0,1.0,low,911,8419
+"Coimbatore, Tamil Nadu",5.45,1.0,1.0,low,440,1597
+"Mumbai, Maharashtra",4.96,3.0,0.9,medium,471,3686
+"Coimbatore, Tamil Nadu",5.2,1.0,1.0,low,339,1473
+"Hyderabad, Telangana",5.28,1.0,1.0,low,678,1493
+"Indore, Madhya Pradesh",5.49,3.5,0.9,medium,768,4965
+"Varanasi, Uttar Pradesh",4.93,4.5,0.78,high,605,4886
+"Dehradun, Uttarakhand",4.81,6.0,0.78,high,769,6431
+"Mysuru, Karnataka",5.2,1.5,0.78,high,572,1713
+"Indore, Madhya Pradesh",5.63,7.0,1.0,low,1268,11088
+"Varanasi, Uttar Pradesh",5.04,2.5,1.0,low,815,3552
+"Chennai, Tamil Nadu",5.33,1.0,1.0,low,413,1474
+"Hyderabad, Telangana",5.41,3.0,1.0,low,688,4654
+"Lucknow, Uttar Pradesh",5.0,2.5,1.0,low,683,3463
+"Hyderabad, Telangana",5.46,2.0,1.0,low,629,3152
+"Chennai, Tamil Nadu",5.53,2.0,1.0,low,474,3125
+"Lucknow, Uttar Pradesh",4.87,6.0,1.0,low,1119,8225
+"Ahmedabad, Gujarat",5.6,10.0,0.9,medium,1499,14750
+"Mysuru, Karnataka",5.43,10.0,1.0,low,1153,15460
+"Mumbai, Maharashtra",5.1,4.5,1.0,low,828,6693
+"Mumbai, Maharashtra",5.02,4.5,1.0,low,922,6485
+"Jodhpur, Rajasthan",5.85,1.0,0.9,medium,638,1518
+"Leh, Ladakh",5.9,2.0,0.78,high,499,2592
+"Mumbai, Maharashtra",4.86,8.0,1.0,low,1219,11215
+"Surat, Gujarat",5.58,7.0,0.78,high,1128,8660
+"Dehradun, Uttarakhand",4.78,8.0,1.0,low,1197,10434
+"Lucknow, Uttar Pradesh",4.88,6.0,0.78,high,1063,6610
+"Bhopal, Madhya Pradesh",5.4,1.5,1.0,low,310,2286
+"Chandigarh, Punjab/Haryana",5.1,10.0,1.0,low,1358,14629
+"Nagpur, Maharashtra",5.36,1.5,1.0,low,630,2276
+"Lucknow, Uttar Pradesh",4.92,1.5,0.9,medium,486,1886
+"Nagpur, Maharashtra",5.44,6.0,1.0,low,1082,9297
+"Jodhpur, Rajasthan",6.04,1.5,1.0,low,710,2539
+"Chennai, Tamil Nadu",5.29,4.0,1.0,low,929,6111
+"Nagpur, Maharashtra",5.47,7.0,0.9,medium,1102,9640
+"Coimbatore, Tamil Nadu",5.43,2.5,1.0,low,748,3814
+"Indore, Madhya Pradesh",5.71,4.0,1.0,low,620,6501
+"Bengaluru, Karnataka",5.27,2.5,0.9,medium,835,3342
+"Kolkata, West Bengal",4.51,3.0,0.9,medium,476,3472
+"Mysuru, Karnataka",5.25,1.5,1.0,low,571,2272
+"Patna, Bihar",4.67,2.5,1.0,low,674,3276
+"Leh, Ladakh",5.73,3.5,1.0,low,866,5763
+"Jodhpur, Rajasthan",5.79,2.0,1.0,low,419,3311
+"Bhubaneswar, Odisha",4.95,2.5,1.0,low,404,3543
+"Bhubaneswar, Odisha",4.95,7.0,1.0,low,1291,9857
+"Chennai, Tamil Nadu",5.29,6.0,0.9,medium,1133,8074
+"Jaipur, Rajasthan",5.72,10.0,0.9,medium,1244,15171
+"Bhubaneswar, Odisha",4.88,1.5,1.0,low,572,2064
+"Lucknow, Uttar Pradesh",4.94,4.0,0.78,high,656,4344
+"Chandigarh, Punjab/Haryana",5.08,6.0,1.0,low,1145,8625
+"Varanasi, Uttar Pradesh",5.12,8.0,1.0,low,996,11780
+"Ahmedabad, Gujarat",5.53,2.5,1.0,low,809,3892
+"Pune, Maharashtra",5.44,7.0,0.78,high,1044,8610
+"Varanasi, Uttar Pradesh",5.13,1.0,0.9,medium,565,1291
+"Leh, Ladakh",5.78,3.5,1.0,low,595,5824
+"Coimbatore, Tamil Nadu",5.25,4.5,0.9,medium,641,5957
+"Indore, Madhya Pradesh",5.47,10.0,0.9,medium,1391,13954
+"Ahmedabad, Gujarat",5.47,5.0,1.0,low,850,7533
+"Mumbai, Maharashtra",4.87,1.5,0.9,medium,338,1841
+"Jodhpur, Rajasthan",5.8,7.0,0.9,medium,906,10709
+"Bhopal, Madhya Pradesh",5.47,8.0,1.0,low,1289,12461
+"Mumbai, Maharashtra",5.01,3.0,0.9,medium,847,4021
+"Ahmedabad, Gujarat",5.63,8.0,1.0,low,985,12509
+"Hyderabad, Telangana",5.45,1.5,1.0,low,450,2359
+"Hyderabad, Telangana",5.33,7.0,0.78,high,998,8440
+"Bhopal, Madhya Pradesh",5.57,1.0,0.9,medium,391,1465
+"Chennai, Tamil Nadu",5.29,8.0,0.78,high,1259,9431
+"Hyderabad, Telangana",5.52,4.0,0.9,medium,928,5714
+"Bhopal, Madhya Pradesh",5.39,1.0,1.0,low,604,1504
+"Leh, Ladakh",5.68,4.5,0.78,high,811,5610
+"Jaipur, Rajasthan",5.82,10.0,1.0,low,1558,16967
+"Bengaluru, Karnataka",5.17,5.0,1.0,low,778,7236
+"Bhubaneswar, Odisha",4.79,7.0,0.9,medium,903,8779
+"Lucknow, Uttar Pradesh",5.05,2.0,0.9,medium,407,2489
+"Chandigarh, Punjab/Haryana",4.94,1.0,1.0,low,589,1381
+"Kolkata, West Bengal",4.56,8.0,1.0,low,1313,10568
+"Nagpur, Maharashtra",5.52,2.5,0.9,medium,659,3542
+"Hyderabad, Telangana",5.26,3.5,1.0,low,610,5228
+"Chandigarh, Punjab/Haryana",5.09,7.0,1.0,low,1049,10543
+"Delhi, NCR",4.98,2.0,0.9,medium,784,2527
+"Nagpur, Maharashtra",5.49,4.0,1.0,low,703,6289
+"Ahmedabad, Gujarat",5.5,3.5,1.0,low,729,5465
+"Varanasi, Uttar Pradesh",5.03,1.0,0.78,high,577,1144
+"Shimla, Himachal Pradesh",4.57,4.0,1.0,low,958,5250
+"Nagpur, Maharashtra",5.56,8.0,1.0,low,1066,13000
+"Lucknow, Uttar Pradesh",4.77,5.0,0.9,medium,703,6132
+"Bhubaneswar, Odisha",4.95,7.0,0.78,high,856,7427
+"Leh, Ladakh",5.82,10.0,1.0,low,1177,16269
+"Pune, Maharashtra",5.44,6.0,0.9,medium,778,8373
+"Bhopal, Madhya Pradesh",5.37,8.0,0.78,high,1157,9228
+"Bhopal, Madhya Pradesh",5.46,10.0,0.9,medium,1259,13944
+"Mumbai, Maharashtra",5.03,3.0,1.0,low,693,4360
+"Mysuru, Karnataka",5.29,5.0,0.78,high,927,5847
+"Mumbai, Maharashtra",4.99,4.0,1.0,low,855,5651
+"Mysuru, Karnataka",5.41,1.0,1.0,low,686,1535
+"Jodhpur, Rajasthan",5.81,6.0,1.0,low,820,9936
+"Patna, Bihar",4.91,2.0,1.0,low,757,2804
+"Pune, Maharashtra",5.32,5.0,1.0,low,1062,7735
+"Lucknow, Uttar Pradesh",4.92,7.0,1.0,low,1109,9879
+"Bhopal, Madhya Pradesh",5.58,4.0,1.0,low,579,6585
+"Leh, Ladakh",5.79,8.0,0.78,high,1241,10174
+"Chennai, Tamil Nadu",5.45,6.0,0.78,high,839,7362
+"Hyderabad, Telangana",5.37,8.0,1.0,low,1035,11762
+"Bengaluru, Karnataka",5.05,6.0,1.0,low,978,8496
+"Nagpur, Maharashtra",5.64,7.0,1.0,low,1095,11123
+"Indore, Madhya Pradesh",5.63,4.0,1.0,low,987,6372
+"Patna, Bihar",4.83,7.0,1.0,low,1271,9582
+"Pune, Maharashtra",5.4,1.5,1.0,low,397,2255
+"Shimla, Himachal Pradesh",4.72,8.0,0.78,high,1375,8445
+"Dehradun, Uttarakhand",4.72,4.0,0.9,medium,769,4938
+"Kolkata, West Bengal",4.64,5.0,1.0,low,799,6620
+"Mumbai, Maharashtra",4.94,7.0,1.0,low,1144,9752
+"Indore, Madhya Pradesh",5.64,7.0,1.0,low,1188,11091
+"Jaipur, Rajasthan",5.57,3.5,1.0,low,646,5620
+"Jaipur, Rajasthan",5.66,4.0,1.0,low,724,6373
+"Hyderabad, Telangana",5.42,10.0,0.78,high,1158,12038
+"Bhopal, Madhya Pradesh",5.64,5.0,0.78,high,976,6465
+"Surat, Gujarat",5.55,4.5,1.0,low,905,7176
+"Nagpur, Maharashtra",5.65,8.0,1.0,low,1317,12686
+"Dehradun, Uttarakhand",4.95,3.0,0.78,high,467,3323
+"Hyderabad, Telangana",5.28,8.0,1.0,low,1393,12238
+"Delhi, NCR",5.07,2.5,1.0,low,467,3568
+"Bhopal, Madhya Pradesh",5.65,2.0,0.78,high,355,2474
+"Hyderabad, Telangana",5.32,5.0,1.0,low,987,7705
+"Indore, Madhya Pradesh",5.51,6.0,1.0,low,1119,9574
+"Hyderabad, Telangana",5.33,5.0,0.9,medium,796,6759
+"Jaipur, Rajasthan",5.65,6.0,0.9,medium,1123,8676
+"Surat, Gujarat",5.57,4.0,0.9,medium,989,5863
+"Leh, Ladakh",5.71,8.0,0.9,medium,1297,11566
+"Bhubaneswar, Odisha",5.01,1.0,0.78,high,348,1136
+"Ahmedabad, Gujarat",5.55,4.5,1.0,low,932,7235
+"Leh, Ladakh",5.69,2.0,1.0,low,395,3338
+"Coimbatore, Tamil Nadu",5.2,4.0,1.0,low,831,5869
+"Dehradun, Uttarakhand",4.8,4.0,1.0,low,626,5368
+"Pune, Maharashtra",5.25,1.0,0.9,medium,352,1389
+"Patna, Bihar",4.67,4.5,1.0,low,734,6130
+"Patna, Bihar",4.66,7.0,1.0,low,986,9209
+"Chandigarh, Punjab/Haryana",5.07,10.0,1.0,low,1492,14772
+"Bhubaneswar, Odisha",4.83,3.0,1.0,low,477,4008
+"Patna, Bihar",4.77,7.0,1.0,low,887,9524
+"Mysuru, Karnataka",5.16,1.5,0.78,high,672,1695
+"Patna, Bihar",4.86,2.5,1.0,low,636,3456
+"Jaipur, Rajasthan",5.82,2.5,1.0,low,832,4157
+"Lucknow, Uttar Pradesh",4.93,2.0,0.9,medium,374,2568
+"Lucknow, Uttar Pradesh",4.84,5.0,1.0,low,1052,6849
+"Coimbatore, Tamil Nadu",5.22,1.5,1.0,low,344,2215
+"Mysuru, Karnataka",5.33,3.5,0.9,medium,547,4821
+"Mumbai, Maharashtra",5.01,2.5,1.0,low,487,3521
+"Bhubaneswar, Odisha",4.86,2.5,0.9,medium,408,3060
+"Varanasi, Uttar Pradesh",4.86,2.0,1.0,low,418,2723
+"Dehradun, Uttarakhand",4.85,1.5,0.78,high,392,1591
+"Coimbatore, Tamil Nadu",5.34,5.0,1.0,low,916,7719
+"Jaipur, Rajasthan",5.82,6.0,0.9,medium,1125,8698
+"Shimla, Himachal Pradesh",4.56,4.0,1.0,low,861,5108
+"Dehradun, Uttarakhand",4.84,4.0,1.0,low,706,5597
+"Dehradun, Uttarakhand",4.7,1.5,1.0,low,482,1986
+"Varanasi, Uttar Pradesh",4.9,5.0,0.9,medium,1008,6412
+"Jaipur, Rajasthan",5.64,1.5,1.0,low,639,2439
+"Bengaluru, Karnataka",5.12,7.0,1.0,low,1231,10297
+"Shimla, Himachal Pradesh",4.8,5.0,1.0,low,684,6766
+"Dehradun, Uttarakhand",4.69,2.0,0.78,high,356,2074
+"Kolkata, West Bengal",4.52,8.0,1.0,low,1032,10368
+"Mumbai, Maharashtra",5.01,10.0,0.9,medium,1304,12699
+"Mysuru, Karnataka",5.36,4.0,0.9,medium,675,5568
+"Dehradun, Uttarakhand",4.8,4.5,1.0,low,982,6115
+"Jaipur, Rajasthan",5.6,10.0,1.0,low,1239,15765
+"Lucknow, Uttar Pradesh",4.85,4.5,1.0,low,914,6292
+"Delhi, NCR",5.25,10.0,0.9,medium,1461,13364
+"Leh, Ladakh",5.73,7.0,0.9,medium,1086,10289
+"Lucknow, Uttar Pradesh",5.0,8.0,1.0,low,1072,11362
+"Pune, Maharashtra",5.35,1.0,1.0,low,414,1581
+"Jaipur, Rajasthan",5.79,2.0,0.9,medium,795,2979
+"Jaipur, Rajasthan",5.8,10.0,0.78,high,1244,12951
+"Dehradun, Uttarakhand",4.83,3.5,0.78,high,834,3789
+"Indore, Madhya Pradesh",5.74,1.5,0.9,medium,563,2239
+"Hyderabad, Telangana",5.34,4.5,0.78,high,788,5455
+"Bhubaneswar, Odisha",4.91,1.0,1.0,low,328,1368
+"Ahmedabad, Gujarat",5.4,4.0,0.9,medium,964,5428
+"Mysuru, Karnataka",5.17,7.0,1.0,low,1058,10474
+"Bhubaneswar, Odisha",4.88,3.0,0.9,medium,721,3743
+"Patna, Bihar",4.84,1.0,1.0,low,585,1396
+"Chandigarh, Punjab/Haryana",5.05,3.5,1.0,low,824,4968
+"Bengaluru, Karnataka",5.33,2.0,1.0,low,550,2969
+"Delhi, NCR",5.12,3.5,0.9,medium,777,4563
+"Ahmedabad, Gujarat",5.4,3.5,0.9,medium,596,4867
+"Surat, Gujarat",5.66,2.5,1.0,low,481,4039
+"Pune, Maharashtra",5.37,1.0,0.9,medium,354,1382
+"Lucknow, Uttar Pradesh",4.82,1.5,1.0,low,355,2064
+"Varanasi, Uttar Pradesh",4.97,1.5,1.0,low,412,2185
+"Mumbai, Maharashtra",5.11,1.5,0.9,medium,585,1946
+"Ahmedabad, Gujarat",5.49,2.0,0.9,medium,495,2824
+"Bhopal, Madhya Pradesh",5.47,1.5,1.0,low,704,2278
+"Bhopal, Madhya Pradesh",5.61,8.0,0.78,high,1133,9886
+"Shimla, Himachal Pradesh",4.57,4.5,1.0,low,840,5948
+"Varanasi, Uttar Pradesh",4.92,4.0,1.0,low,868,5525
+"Pune, Maharashtra",5.42,10.0,0.9,medium,1191,13460
+"Ahmedabad, Gujarat",5.6,1.5,1.0,low,572,2433
+"Indore, Madhya Pradesh",5.68,3.5,0.9,medium,874,5000
+"Kolkata, West Bengal",4.55,1.5,0.78,high,680,1555
+"Lucknow, Uttar Pradesh",4.8,10.0,1.0,low,1175,13630
+"Lucknow, Uttar Pradesh",4.78,2.5,0.78,high,570,2656
+"Nagpur, Maharashtra",5.44,10.0,1.0,low,1227,15546
+"Lucknow, Uttar Pradesh",4.8,2.0,0.9,medium,783,2461
+"Mysuru, Karnataka",5.35,5.0,0.9,medium,1087,6647
+"Indore, Madhya Pradesh",5.61,3.5,0.9,medium,889,4992
+"Hyderabad, Telangana",5.54,8.0,0.78,high,1046,9828
+"Indore, Madhya Pradesh",5.66,4.0,1.0,low,734,6449
+"Surat, Gujarat",5.6,3.5,1.0,low,833,5742
+"Jaipur, Rajasthan",5.74,4.0,0.9,medium,646,5908
+"Patna, Bihar",4.93,5.0,1.0,low,919,7111
+"Bhubaneswar, Odisha",4.94,4.0,0.9,medium,639,5160
+"Varanasi, Uttar Pradesh",4.98,2.0,1.0,low,519,2852
+"Kolkata, West Bengal",4.64,4.5,1.0,low,631,6044
+"Varanasi, Uttar Pradesh",4.91,7.0,0.9,medium,979,8744
+"Jodhpur, Rajasthan",5.91,10.0,1.0,low,1364,16639
+"Surat, Gujarat",5.71,5.0,0.9,medium,1076,7299
+"Chandigarh, Punjab/Haryana",4.97,10.0,1.0,low,1515,14033
+"Bengaluru, Karnataka",5.3,5.0,1.0,low,786,7514
+"Jodhpur, Rajasthan",6.03,3.0,1.0,low,543,5203
+"Chandigarh, Punjab/Haryana",4.98,10.0,1.0,low,1514,14002
+"Varanasi, Uttar Pradesh",4.91,2.5,0.78,high,481,2735
+"Jodhpur, Rajasthan",6.04,2.5,1.0,low,446,4288
+"Pune, Maharashtra",5.17,10.0,1.0,low,1420,14811
+"Bhubaneswar, Odisha",4.9,6.0,1.0,low,841,8330
+"Varanasi, Uttar Pradesh",4.98,3.0,1.0,low,747,4135
+"Nagpur, Maharashtra",5.59,2.0,1.0,low,404,3207
+"Jaipur, Rajasthan",5.85,2.5,0.78,high,662,3276
+"Shimla, Himachal Pradesh",4.8,1.0,1.0,low,515,1324
+"Leh, Ladakh",5.85,6.0,1.0,low,1097,9933
+"Chennai, Tamil Nadu",5.47,7.0,1.0,low,1183,11296
+"Chennai, Tamil Nadu",5.4,5.0,1.0,low,712,7696
+"Pune, Maharashtra",5.33,8.0,1.0,low,1089,11959
+"Nagpur, Maharashtra",5.51,4.5,0.9,medium,835,6328
+"Jodhpur, Rajasthan",5.77,6.0,0.78,high,828,7648
+"Hyderabad, Telangana",5.45,8.0,0.9,medium,1225,11287
+"Nagpur, Maharashtra",5.56,2.5,1.0,low,738,4050
+"Ahmedabad, Gujarat",5.63,3.5,1.0,low,855,5580
+"Leh, Ladakh",5.83,2.0,1.0,low,397,3280
+"Kolkata, West Bengal",4.55,7.0,0.9,medium,1206,8228
+"Pune, Maharashtra",5.23,2.0,1.0,low,372,2998
+"Chandigarh, Punjab/Haryana",5.01,2.0,1.0,low,366,2926
+"Pune, Maharashtra",5.36,6.0,0.9,medium,784,8256
+"Dehradun, Uttarakhand",4.94,6.0,0.78,high,1113,6589
+"Mumbai, Maharashtra",5.07,1.0,0.9,medium,472,1281
+"Kolkata, West Bengal",4.59,4.0,0.9,medium,946,4779
+"Jodhpur, Rajasthan",5.92,2.0,0.78,high,430,2670
+"Mumbai, Maharashtra",5.03,4.5,1.0,low,866,6579
+"Delhi, NCR",5.07,6.0,1.0,low,1058,8879
+"Jodhpur, Rajasthan",5.81,2.5,1.0,low,691,4127
+"Bhopal, Madhya Pradesh",5.61,1.5,1.0,low,448,2365
+"Nagpur, Maharashtra",5.45,4.0,0.78,high,892,4687
+"Mysuru, Karnataka",5.4,10.0,1.0,low,1193,15381
+"Mumbai, Maharashtra",5.13,6.0,1.0,low,800,8749
+"Mumbai, Maharashtra",5.05,3.0,1.0,low,790,4426
+"Chennai, Tamil Nadu",5.4,7.0,0.9,medium,1069,9579
+"Bhopal, Madhya Pradesh",5.6,6.0,1.0,low,1031,9476
+"Pune, Maharashtra",5.39,5.0,1.0,low,1031,7847
+"Chennai, Tamil Nadu",5.38,3.0,1.0,low,624,4539
+"Surat, Gujarat",5.57,2.5,1.0,low,769,4043
+"Shimla, Himachal Pradesh",4.74,8.0,1.0,low,1292,10582
+"Bhubaneswar, Odisha",5.05,1.5,0.78,high,463,1635
+"Jodhpur, Rajasthan",6.0,1.5,1.0,low,574,2568
+"Dehradun, Uttarakhand",4.73,1.0,1.0,low,283,1346
+"Lucknow, Uttar Pradesh",4.93,3.5,1.0,low,784,4860
+"Jaipur, Rajasthan",5.81,7.0,1.0,low,1104,11560
+"Leh, Ladakh",5.86,3.0,1.0,low,537,5035
+"Nagpur, Maharashtra",5.39,4.5,0.9,medium,928,6307
+"Bengaluru, Karnataka",5.11,2.5,0.9,medium,580,3261
+"Bhopal, Madhya Pradesh",5.44,6.0,1.0,low,1012,9402
+"Indore, Madhya Pradesh",5.51,3.0,1.0,low,837,4788
+"Pune, Maharashtra",5.36,10.0,1.0,low,1370,14879
+"Varanasi, Uttar Pradesh",5.15,4.5,1.0,low,722,6565
+"Lucknow, Uttar Pradesh",4.85,2.5,0.9,medium,558,3169
+"Lucknow, Uttar Pradesh",4.76,5.0,1.0,low,1087,6752
+"Bhubaneswar, Odisha",4.87,4.5,1.0,low,965,6217
+"Hyderabad, Telangana",5.45,7.0,0.78,high,1173,8299
+"Chandigarh, Punjab/Haryana",4.95,4.5,0.9,medium,700,5765
+"Bengaluru, Karnataka",5.17,3.5,1.0,low,895,5216
+"Leh, Ladakh",5.94,1.5,1.0,low,591,2534
+"Jodhpur, Rajasthan",5.94,5.0,0.9,medium,795,7638
+"Pune, Maharashtra",5.43,5.0,1.0,low,754,7694
+"Hyderabad, Telangana",5.32,8.0,1.0,low,1025,12596
+"Bhubaneswar, Odisha",4.84,6.0,1.0,low,1101,8120
+"Shimla, Himachal Pradesh",4.72,6.0,0.9,medium,839,7069
+"Varanasi, Uttar Pradesh",4.95,4.0,1.0,low,982,5692
+"Dehradun, Uttarakhand",4.65,4.5,1.0,low,981,5809
+"Indore, Madhya Pradesh",5.56,4.5,1.0,low,898,7221
+"Lucknow, Uttar Pradesh",4.91,10.0,0.9,medium,1597,12582
+"Nagpur, Maharashtra",5.49,2.0,0.9,medium,691,2772
+"Chandigarh, Punjab/Haryana",4.98,8.0,1.0,low,1292,11311
+"Leh, Ladakh",5.82,4.0,0.78,high,714,5175
+"Bengaluru, Karnataka",5.31,10.0,1.0,low,1211,14525
+"Jodhpur, Rajasthan",5.84,2.5,0.78,high,699,3212
+"Jodhpur, Rajasthan",5.86,1.5,1.0,low,565,2484
+"Mumbai, Maharashtra",4.95,4.0,0.78,high,943,4345
+"Kolkata, West Bengal",4.61,1.0,0.9,medium,480,1158
+"Bhopal, Madhya Pradesh",5.41,3.0,1.0,low,594,4587
+"Bhubaneswar, Odisha",4.93,3.5,1.0,low,646,4940
+"Jodhpur, Rajasthan",5.92,10.0,0.9,medium,1246,15494
+"Jodhpur, Rajasthan",5.89,6.0,1.0,low,1062,10112
+"Surat, Gujarat",5.69,7.0,0.9,medium,976,10216
+"Bengaluru, Karnataka",5.09,1.5,1.0,low,356,2153
+"Kolkata, West Bengal",4.57,1.0,1.0,low,675,1285
+"Jaipur, Rajasthan",5.77,10.0,1.0,low,1204,16465
+"Bhubaneswar, Odisha",4.84,10.0,0.9,medium,1333,12554
+"Dehradun, Uttarakhand",4.89,10.0,0.9,medium,1360,12171
+"Shimla, Himachal Pradesh",4.58,6.0,0.78,high,1025,6283
+"Kolkata, West Bengal",4.67,4.0,0.9,medium,795,4812
+"Chennai, Tamil Nadu",5.41,2.5,1.0,low,787,3999
+"Delhi, NCR",5.03,4.5,0.9,medium,745,5796
+"Mumbai, Maharashtra",5.15,8.0,1.0,low,1235,11619
+"Varanasi, Uttar Pradesh",5.12,8.0,1.0,low,1361,11752
+"Shimla, Himachal Pradesh",4.65,2.0,1.0,low,560,2699
+"Chandigarh, Punjab/Haryana",4.92,1.0,1.0,low,628,1379
+"Chennai, Tamil Nadu",5.4,1.5,0.9,medium,715,2110
+"Chennai, Tamil Nadu",5.51,1.5,0.9,medium,609,2125
+"Ahmedabad, Gujarat",5.46,1.5,1.0,low,742,2367
+"Bhopal, Madhya Pradesh",5.39,2.0,0.78,high,738,2383
+"Bhopal, Madhya Pradesh",5.45,2.5,0.9,medium,847,3390
+"Pune, Maharashtra",5.2,4.0,1.0,low,930,5867
+"Mysuru, Karnataka",5.18,4.5,1.0,low,734,6626
+"Bengaluru, Karnataka",5.26,6.0,1.0,low,1145,8709
+"Chennai, Tamil Nadu",5.37,6.0,1.0,low,857,9337
+"Dehradun, Uttarakhand",4.8,1.5,1.0,low,344,2081
+"Kolkata, West Bengal",4.51,8.0,0.9,medium,1275,9225
+"Jaipur, Rajasthan",5.83,3.5,0.78,high,566,4615
+"Nagpur, Maharashtra",5.5,1.0,0.9,medium,625,1388
+"Kolkata, West Bengal",4.57,6.0,1.0,low,954,7919
+"Kolkata, West Bengal",4.49,3.5,0.78,high,942,3413
+"Bengaluru, Karnataka",5.07,3.5,1.0,low,555,4888
+"Nagpur, Maharashtra",5.48,10.0,0.9,medium,1483,13921
+"Varanasi, Uttar Pradesh",5.06,5.0,0.9,medium,715,6417
+"Bhubaneswar, Odisha",4.8,7.0,0.9,medium,1216,8760
+"Mumbai, Maharashtra",4.9,4.5,1.0,low,727,6519
+"Hyderabad, Telangana",5.25,4.5,1.0,low,610,6643
+"Mumbai, Maharashtra",5.04,1.5,1.0,low,330,2171
+"Pune, Maharashtra",5.28,10.0,1.0,low,1446,15112
+"Ahmedabad, Gujarat",5.43,5.0,1.0,low,688,7629
+"Varanasi, Uttar Pradesh",4.99,3.5,0.9,medium,590,4372
+"Leh, Ladakh",5.84,8.0,1.0,low,1021,13488
+"Bengaluru, Karnataka",5.28,1.0,1.0,low,488,1520
+"Leh, Ladakh",5.67,2.0,1.0,low,487,3201
+"Indore, Madhya Pradesh",5.49,8.0,0.9,medium,1174,11287
+"Ahmedabad, Gujarat",5.61,10.0,1.0,low,1464,15752
+"Bengaluru, Karnataka",5.24,3.0,1.0,low,597,4430
+"Hyderabad, Telangana",5.26,4.0,1.0,low,602,6008
+"Mysuru, Karnataka",5.27,8.0,0.9,medium,1348,10880
+"Kolkata, West Bengal",4.67,10.0,0.9,medium,1328,11405
+"Chennai, Tamil Nadu",5.55,2.0,0.9,medium,378,2891
+"Chandigarh, Punjab/Haryana",4.97,3.5,0.78,high,590,3919
+"Jodhpur, Rajasthan",6.0,1.5,0.9,medium,746,2319
+"Chennai, Tamil Nadu",5.48,7.0,1.0,low,1040,10775
+"Kolkata, West Bengal",4.48,8.0,1.0,low,1018,10185
+"Mysuru, Karnataka",5.43,6.0,1.0,low,913,9438
+"Leh, Ladakh",5.93,3.5,0.78,high,886,4454
+"Chandigarh, Punjab/Haryana",5.05,3.5,1.0,low,525,5006
+"Coimbatore, Tamil Nadu",5.25,7.0,1.0,low,993,10624
+"Hyderabad, Telangana",5.38,4.0,1.0,low,871,6152
+"Leh, Ladakh",5.87,6.0,1.0,low,1107,10075
+"Mysuru, Karnataka",5.18,2.0,0.9,medium,690,2590
+"Shimla, Himachal Pradesh",4.56,6.0,0.9,medium,998,7282
+"Mumbai, Maharashtra",5.02,2.5,1.0,low,773,3618
+"Bengaluru, Karnataka",5.07,4.0,1.0,low,642,5886
+"Surat, Gujarat",5.61,5.0,1.0,low,865,8021
+"Hyderabad, Telangana",5.26,2.0,1.0,low,569,3040
+"Mumbai, Maharashtra",4.91,2.5,1.0,low,457,3556
+"Bhopal, Madhya Pradesh",5.44,5.0,0.9,medium,778,6972
+"Leh, Ladakh",5.75,3.5,1.0,low,825,5657
+"Chandigarh, Punjab/Haryana",5.08,6.0,0.9,medium,751,7754
+"Surat, Gujarat",5.46,7.0,0.78,high,965,8586
+"Hyderabad, Telangana",5.42,2.0,0.9,medium,680,2801
+"Hyderabad, Telangana",5.52,1.0,1.0,low,284,1541
+"Shimla, Himachal Pradesh",4.7,4.5,1.0,low,842,5967
+"Ahmedabad, Gujarat",5.53,6.0,1.0,low,1048,9380
+"Bengaluru, Karnataka",5.17,6.0,1.0,low,852,8810
+"Nagpur, Maharashtra",5.43,6.0,1.0,low,925,9454
+"Indore, Madhya Pradesh",5.51,4.0,1.0,low,825,6338
+"Hyderabad, Telangana",5.34,4.5,1.0,low,885,6834
+"Leh, Ladakh",5.75,4.0,1.0,low,863,6449
+"Kolkata, West Bengal",4.49,7.0,0.9,medium,1206,8057
+"Chandigarh, Punjab/Haryana",5.01,2.5,0.78,high,580,2727
+"Jodhpur, Rajasthan",5.95,4.0,1.0,low,834,6710
+"Leh, Ladakh",5.7,1.0,0.78,high,408,1261
+"Varanasi, Uttar Pradesh",4.9,2.5,1.0,low,797,3429
+"Surat, Gujarat",5.75,4.0,1.0,low,984,6530
+"Kolkata, West Bengal",4.71,1.5,1.0,low,439,2016
+"Chennai, Tamil Nadu",5.32,8.0,1.0,low,1286,12095
+"Pune, Maharashtra",5.2,10.0,1.0,low,1582,14597
+"Surat, Gujarat",5.59,1.5,1.0,low,484,2338
+"Mumbai, Maharashtra",4.86,10.0,1.0,low,1391,13604
+"Varanasi, Uttar Pradesh",5.1,7.0,0.9,medium,963,9021
+"Hyderabad, Telangana",5.42,6.0,1.0,low,807,9290
+"Lucknow, Uttar Pradesh",5.05,3.5,1.0,low,874,5049
+"Bengaluru, Karnataka",5.08,1.5,0.9,medium,673,1955
+"Bengaluru, Karnataka",5.34,5.0,1.0,low,938,7532
+"Nagpur, Maharashtra",5.58,6.0,1.0,low,1035,9488
+"Delhi, NCR",5.05,2.0,0.9,medium,374,2609
+"Jaipur, Rajasthan",5.8,5.0,1.0,low,895,8291
+"Delhi, NCR",5.15,8.0,0.9,medium,1301,10756
+"Mumbai, Maharashtra",5.06,4.5,1.0,low,761,6481
+"Bengaluru, Karnataka",5.2,3.5,1.0,low,822,5181
+"Shimla, Himachal Pradesh",4.68,7.0,1.0,low,1154,9349
+"Mumbai, Maharashtra",5.09,2.5,0.9,medium,758,3245
+"Nagpur, Maharashtra",5.61,7.0,1.0,low,1104,11194
+"Coimbatore, Tamil Nadu",5.41,5.0,1.0,low,930,7556
+"Coimbatore, Tamil Nadu",5.36,7.0,1.0,low,875,10893
+"Kolkata, West Bengal",4.61,6.0,0.9,medium,937,7038
+"Kolkata, West Bengal",4.53,4.0,1.0,low,901,5296
+"Nagpur, Maharashtra",5.46,6.0,0.9,medium,926,8195
+"Hyderabad, Telangana",5.26,7.0,1.0,low,1084,10396
+"Patna, Bihar",4.71,6.0,1.0,low,788,7687
+"Varanasi, Uttar Pradesh",5.02,1.0,0.9,medium,299,1294
+"Mysuru, Karnataka",5.15,1.5,1.0,low,371,2175
+"Mysuru, Karnataka",5.4,3.5,0.78,high,922,4210
+"Nagpur, Maharashtra",5.54,3.5,0.78,high,931,4253
+"Hyderabad, Telangana",5.39,6.0,0.9,medium,1000,8255
+"Delhi, NCR",5.0,1.5,0.9,medium,525,1903
+"Mysuru, Karnataka",5.26,6.0,0.78,high,1075,7188
+"Dehradun, Uttarakhand",4.74,1.0,0.9,medium,459,1191
+"Jodhpur, Rajasthan",5.98,7.0,1.0,low,878,12052
+"Patna, Bihar",4.68,5.0,1.0,low,822,6520
+"Leh, Ladakh",5.87,4.0,0.9,medium,578,5974
+"Jaipur, Rajasthan",5.74,8.0,1.0,low,1248,12913
+"Kolkata, West Bengal",4.55,4.0,0.78,high,580,4025
+"Kolkata, West Bengal",4.57,10.0,1.0,low,1483,13073
+"Patna, Bihar",4.76,4.0,1.0,low,870,5347
+"Chandigarh, Punjab/Haryana",5.1,7.0,1.0,low,893,10313
+"Coimbatore, Tamil Nadu",5.25,2.0,0.9,medium,553,2689
+"Ahmedabad, Gujarat",5.41,3.5,0.78,high,568,4210
+"Jaipur, Rajasthan",5.72,1.5,1.0,low,460,2441
+"Chennai, Tamil Nadu",5.44,3.0,0.78,high,893,3626
+"Jaipur, Rajasthan",5.56,3.0,0.9,medium,838,4256
+"Bhubaneswar, Odisha",4.91,10.0,0.9,medium,1466,12622
+"Ahmedabad, Gujarat",5.58,6.0,1.0,low,1072,9460
+"Surat, Gujarat",5.61,3.0,0.9,medium,845,4262
+"Jaipur, Rajasthan",5.71,3.0,1.0,low,808,4892
+"Hyderabad, Telangana",5.26,3.5,0.9,medium,808,4763
+"Shimla, Himachal Pradesh",4.71,8.0,0.9,medium,1321,9714
+"Nagpur, Maharashtra",5.44,6.0,0.9,medium,1179,8378
+"Lucknow, Uttar Pradesh",5.01,5.0,1.0,low,1033,7152
+"Patna, Bihar",4.84,7.0,0.78,high,864,7600
+"Leh, Ladakh",5.75,6.0,0.9,medium,1054,8668
+"Patna, Bihar",4.91,6.0,1.0,low,1060,8235
+"Patna, Bihar",4.79,3.0,1.0,low,882,4075
+"Surat, Gujarat",5.69,1.0,1.0,low,435,1562
+"Kolkata, West Bengal",4.69,4.5,1.0,low,750,6081
+"Bhopal, Madhya Pradesh",5.37,4.5,1.0,low,1016,6894
+"Kolkata, West Bengal",4.52,2.0,0.9,medium,383,2325
+"Bhubaneswar, Odisha",4.92,6.0,1.0,low,1090,8433
+"Varanasi, Uttar Pradesh",4.86,2.0,1.0,low,773,2754
+"Nagpur, Maharashtra",5.44,3.0,0.78,high,677,3578
+"Mysuru, Karnataka",5.29,2.5,0.9,medium,536,3358
+"Chandigarh, Punjab/Haryana",4.86,2.0,1.0,low,452,2799
+"Mysuru, Karnataka",5.43,10.0,0.9,medium,1547,13504
+"Leh, Ladakh",5.71,6.0,1.0,low,1064,9749
+"Lucknow, Uttar Pradesh",4.79,3.5,0.9,medium,686,4208
+"Bhubaneswar, Odisha",4.91,1.5,0.78,high,436,1657
+"Kolkata, West Bengal",4.51,8.0,1.0,low,1396,10084
+"Pune, Maharashtra",5.39,4.0,1.0,low,636,6159
+"Pune, Maharashtra",5.26,10.0,1.0,low,1559,14757
+"Nagpur, Maharashtra",5.36,2.5,1.0,low,705,3694
+"Ahmedabad, Gujarat",5.38,10.0,1.0,low,1423,15871
+"Dehradun, Uttarakhand",4.68,3.5,1.0,low,892,4671
+"Nagpur, Maharashtra",5.4,4.0,1.0,low,961,6208
+"Pune, Maharashtra",5.16,3.0,0.9,medium,464,3974
+"Bhubaneswar, Odisha",4.84,1.5,0.9,medium,368,1856
