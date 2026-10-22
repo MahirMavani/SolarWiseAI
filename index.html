@@ -1339,12 +1339,32 @@
             </div>
           </div>
 
+          <!-- Space Alert / Feasibility Status Indicator -->
+          <div class="whatif-feasibility-bar" id="whatIfFeasibilityBar">
+            <span class="feasibility-icon" id="whatIfFeasIcon">⚡</span>
+            <span class="feasibility-text" id="whatIfFeasText">Optimal Roof Fit: 3.0 kW system requires ~300 sq.ft (25% of available space).</span>
+          </div>
+
           <!-- Explain with AI CTA -->
           <div class="whatif-ai-cta" data-reveal="fade-up" data-delay="200">
-            <button type="button" class="btn-yellow" onclick="askAiAboutCurrentScenario()">
+            <button type="button" class="btn-yellow" id="btnExplainScenario" onclick="askAiAboutCurrentScenario()">
               <span>Explain Scenario with SolarWise AI</span>
               <span class="arrow">→</span>
             </button>
+          </div>
+
+          <!-- Live AI Explanation Box -->
+          <div class="whatif-ai-box hidden" id="whatIfAiBox">
+            <div class="whatif-ai-header">
+              <div class="ai-status-pill">
+                <span class="status-dot-pulse"></span>
+                <span id="whatIfAiStatusTitle">SolarWise AI Scenario Intelligence</span>
+              </div>
+              <button type="button" class="btn-chat-close" onclick="closeWhatIfAiBox()" title="Close explanation">×</button>
+            </div>
+            <div class="whatif-ai-body" id="whatIfAiBody">
+              <!-- Rendered via JS -->
+            </div>
           </div>
         </div>
       </section>

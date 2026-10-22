@@ -466,6 +466,7 @@ function renderAllDashboardModules(profile) {
 
   // 5. Populate Solar Savings Simulator Initial Values (Req 1)
   syncSimulatorSliders(profile);
+  syncWhatIfInputs(profile);
 
   // 6. 12-Month Solar Generation & Seasonality (Req 11)
   renderMonthlySeasonalityChart(profile.monthlySeasonality);
@@ -1415,88 +1416,294 @@ function calculateScenarioDelta(baseProfile, scenarioKey) {
   };
 }
 
+// -----------------------------------------------------------------------------
+// 7. Interactive What-If Scenario Modeling Engine (Requirement 10 / Screen 09)
+// Real-time Physics Calculations + Google Gemini Generative AI Reasoning
+// -----------------------------------------------------------------------------
+let lastWhatIfModel = null;
+
+function calculateCurrentWhatIfModel() {
+  const usageSlider = document.getElementById('whatIfUsageSlider');
+  const roofSlider = document.getElementById('whatIfRoofSlider');
+  const sizeSlider = document.getElementById('whatIfSizeSlider');
+  const shadeSelect = document.getElementById('whatIfShadeSelect');
+
+  const usage = Number(usageSlider?.value) || 350;
+  const roof = Number(roofSlider?.value) || 1200;
+  const kw = Number(sizeSlider?.value) || 3.0;
+  const shade = shadeSelect?.value || 'low';
+  const location = locationSelect ? locationSelect.value.trim() : 'Surat, Gujarat';
+
+  const cityData = citySolarData[location] || { radiation: 5.5, tariff: 8.2 };
+  const shadeFactor = shade === 'high' ? 0.78 : (shade === 'medium' ? 0.90 : 1.0);
+  const yieldPerKw = Math.round(cityData.radiation * 300 * shadeFactor);
+  const gen = Math.round(kw * yieldPerKw);
+
+  const annualUsage = usage * 12;
+  const directUse = Math.min(gen, annualUsage);
+  const surplus = Math.max(0, gen - annualUsage);
+  const tariff = cityData.tariff;
+  const annualSavings = Math.round((directUse * tariff) + (surplus * 2.25));
+
+  const grossCost = Math.round(kw * 62000);
+  const subsidyInfo = calculateSubsidy(kw, location);
+  const totalSubsidy = subsidyInfo.totalSubsidy || 0;
+  const netCost = Math.max(0, grossCost - totalSubsidy);
+  const payback = annualSavings > 0 ? (netCost / annualSavings).toFixed(1) : '—';
+
+  const areaNeeded = Math.round(kw * 100);
+  const roofUtilizationPct = Math.min(100, Math.round((areaNeeded / roof) * 100));
+  const energyCoveragePct = Math.min(100, Math.round((gen / annualUsage) * 100));
+
+  return {
+    usage,
+    roof,
+    kw,
+    shade,
+    location,
+    cityData,
+    yieldPerKw,
+    gen,
+    annualUsage,
+    directUse,
+    surplus,
+    tariff,
+    annualSavings,
+    grossCost,
+    totalSubsidy,
+    netCost,
+    payback,
+    areaNeeded,
+    roofUtilizationPct,
+    energyCoveragePct,
+    subsidyInfo
+  };
+}
+
+function updateWhatIfModel() {
+  const model = calculateCurrentWhatIfModel();
+  lastWhatIfModel = model;
+
+  // 1. Update slider readout tags
+  setText('whatIfUsageVal', `${model.usage} kWh`);
+  setText('whatIfRoofVal', `${model.roof.toLocaleString('en-IN')} sq.ft`);
+  setText('whatIfSizeVal', `${model.kw.toFixed(1)} kW`);
+
+  // 2. Update real-time impact cards
+  setText('whatIfGenDelta', `${model.gen.toLocaleString('en-IN')} kWh`);
+  setText('whatIfSavingsDelta', `₹${model.annualSavings.toLocaleString('en-IN')}`);
+  setText('whatIfPaybackDelta', model.payback === '—' ? '—' : `${model.payback} years`);
+  setText('whatIfNetCostDelta', `₹${model.netCost.toLocaleString('en-IN')}`);
+
+  // 3. Update feasibility / roof space indicator
+  const feasBar = document.getElementById('whatIfFeasibilityBar');
+  const feasIcon = document.getElementById('whatIfFeasIcon');
+  const feasText = document.getElementById('whatIfFeasText');
+
+  if (feasBar) {
+    feasBar.classList.remove('hidden');
+    if (model.areaNeeded > model.roof) {
+      feasBar.classList.add('warning');
+      if (feasIcon) feasIcon.textContent = '⚠️';
+      if (feasText) {
+        feasText.textContent = `Roof Space Constraint: A ${model.kw.toFixed(1)} kW array needs ~${model.areaNeeded} sq.ft, but only ${model.roof.toLocaleString('en-IN')} sq.ft is available. Consider ultra-high-efficiency modules (580W+) or reducing system size.`;
+      }
+    } else {
+      feasBar.classList.remove('warning');
+      if (feasIcon) feasIcon.textContent = '⚡';
+      if (feasText) {
+        feasText.textContent = `Optimal Roof Fit: ${model.kw.toFixed(1)} kW system requires ~${model.areaNeeded} sq.ft (${model.roofUtilizationPct}% of your available roof footprint).`;
+      }
+    }
+  }
+
+  return model;
+}
+
 function initWhatIfScenarios() {
-  const buttons = document.querySelectorAll('.scenario-btn');
-  const resultBox = document.getElementById('scenarioResultBox');
-  const numbersBar = document.getElementById('scenarioNumbersBar');
-  const explanationEl = document.getElementById('scenarioAiExplanation');
-  const titleText = document.getElementById('scenarioTitleText');
+  const usageSlider = document.getElementById('whatIfUsageSlider');
+  const roofSlider = document.getElementById('whatIfRoofSlider');
+  const sizeSlider = document.getElementById('whatIfSizeSlider');
+  const shadeSelect = document.getElementById('whatIfShadeSelect');
 
-  buttons.forEach(btn => {
-    btn.addEventListener('click', async () => {
-      const key = btn.dataset.scenario;
-      if (!activeSolarProfile) {
-        activeSolarProfile = calculateSolarProfile();
-      }
-
-      // 1. Calculate scenario numerically FIRST (JS Source of Truth)
-      const delta = calculateScenarioDelta(activeSolarProfile, key);
-
-      // 2. Render Numerical Comparison Bar immediately
-      if (resultBox) resultBox.classList.remove('hidden');
-      if (titleText) titleText.textContent = `Scenario: ${delta.description}`;
-
-      if (numbersBar) {
-        numbersBar.innerHTML = `
-          <div class="scen-num-tile">
-            <span class="s-num-label">Baseline System</span>
-            <div class="s-num-val">${delta.baselineSystem}</div>
-          </div>
-          <div class="scen-num-tile">
-            <span class="s-num-label">Scenario System</span>
-            <div class="s-num-val text-green">${delta.scenarioSystem}</div>
-          </div>
-          <div class="scen-num-tile">
-            <span class="s-num-label">Annual Savings</span>
-            <div class="s-num-val text-emerald">${delta.scenarioSavings}</div>
-          </div>
-          <div class="scen-num-tile">
-            <span class="s-num-label">Cost / ROI Impact</span>
-            <div class="s-num-val">${delta.costDelta}</div>
-          </div>
-        `;
-      }
-
-      // 3. Show Loading Shimmer for Gemini explanation
-      if (explanationEl) {
-        explanationEl.innerHTML = `
-          <div class="advisor-loading" style="padding: 12px; margin: 0;">
-            <p style="margin: 0; color: #15803d; font-weight: 600;">✦ Consulting Gemini to explain this scenario in plain language...</p>
-          </div>
-        `;
-      }
-
-      // 4. Send calculated numbers to Gemini for plain-language reasoning
-      try {
-        const question = `What are the practical homeowner implications and trade-offs of this scenario: "${delta.description}"?`;
-        const res = await fetch('/api/ask', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            question,
-            solarProfile: getEffectiveSolarProfile(),
-            scenarioData: delta
-          })
-        });
-
-        const data = await res.json();
-        const content = data.structured || data.data || data.answer;
-
-        if (explanationEl) {
-          explanationEl.innerHTML = renderStructuredAiResponse(content);
-        }
-      } catch (err) {
-        if (explanationEl) {
-          explanationEl.innerHTML = `
-            <div class="chat-direct-insight">
-              <span class="insight-tag-mini">✦ KEY INSIGHT</span>
-              <p>${escapeHtml(delta.details)}</p>
-            </div>
-          `;
-        }
-      }
+  // Attach live event listeners to all sliders
+  [usageSlider, roofSlider, sizeSlider].forEach(slider => {
+    slider?.addEventListener('input', () => {
+      updateWhatIfModel();
     });
   });
+
+  shadeSelect?.addEventListener('change', () => {
+    updateWhatIfModel();
+  });
+
+  // Initial calculation & render
+  updateWhatIfModel();
+}
+
+// Function to synchronize What-If inputs with current active solar profile
+function syncWhatIfInputs(profile) {
+  if (!profile) return;
+  const usageSlider = document.getElementById('whatIfUsageSlider');
+  const roofSlider = document.getElementById('whatIfRoofSlider');
+  const sizeSlider = document.getElementById('whatIfSizeSlider');
+  const shadeSelect = document.getElementById('whatIfShadeSelect');
+
+  if (usageSlider && profile.usage) usageSlider.value = profile.usage;
+  if (roofSlider && profile.roof) roofSlider.value = profile.roof;
+  if (sizeSlider && profile.systemSize) sizeSlider.value = profile.systemSize;
+  if (shadeSelect && profile.shade) shadeSelect.value = profile.shade;
+
+  updateWhatIfModel();
+}
+
+// Global handler for "Explain Scenario with SolarWise AI" button
+async function askAiAboutCurrentScenario() {
+  const model = updateWhatIfModel();
+  const btn = document.getElementById('btnExplainScenario');
+  const aiBox = document.getElementById('whatIfAiBox');
+  const aiBody = document.getElementById('whatIfAiBody');
+
+  if (aiBox) aiBox.classList.remove('hidden');
+
+  // Set loading state on button and display shimmer in box
+  if (btn) {
+    btn.disabled = true;
+    btn.innerHTML = `<span>Consulting Gemini AI...</span><span class="status-dot-pulse"></span>`;
+  }
+
+  if (aiBody) {
+    aiBody.innerHTML = `
+      <div class="advisor-loading" style="padding: 24px; text-align: center; border-radius: var(--radius-md); background: rgba(255,255,255,0.02);">
+        <p style="margin: 0; color: var(--accent-solar-yellow); font-weight: 600; font-size: 0.95rem;">
+          ✦ Gemini 3.5 Flash is analyzing your ${model.kw} kW scenario for ${escapeHtml(model.location)}...
+        </p>
+        <p style="margin: 8px 0 0 0; color: var(--text-muted); font-size: 0.8rem;">
+          Evaluating solar yield (${model.gen.toLocaleString()} kWh/yr), net capital outlay (₹${model.netCost.toLocaleString()}), and subsidy eligibility.
+        </p>
+      </div>
+    `;
+    aiBox?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  try {
+    const question = `Please analyze this customized what-if solar scenario: A property in ${model.location} consuming ${model.usage} kWh/month (${model.annualUsage.toLocaleString()} kWh/year) with a ${model.roof} sq.ft roof is evaluating a ${model.kw} kW rooftop solar array with ${model.shade} shading. 
+Simulated outcomes:
+- Annual Solar Generation: ${model.gen.toLocaleString()} kWh
+- Estimated Yearly Utility Savings: ₹${model.annualSavings.toLocaleString()}
+- Gross Turnkey Cost: ₹${model.grossCost.toLocaleString()}
+- Applicable PM Surya Ghar Subsidy: ₹${model.totalSubsidy.toLocaleString()}
+- Net Out-of-Pocket Cost: ₹${model.netCost.toLocaleString()}
+- Payback Period: ${model.payback} years
+- Energy Demand Coverage: ${model.energyCoveragePct}%
+- Roof Utilization: ${model.roofUtilizationPct}% (~${model.areaNeeded} sq.ft needed out of ${model.roof} sq.ft)
+
+Explain the practical trade-offs, feasibility, return on investment, and advice for this exact configuration.`;
+
+    const res = await fetch('/api/ask', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        question,
+        solarProfile: {
+          location: model.location,
+          systemSize: model.kw,
+          usage: model.usage,
+          roof: model.roof,
+          shade: model.shade,
+          generation: model.gen,
+          savings: model.annualSavings,
+          netCost: model.netCost,
+          payback: model.payback
+        }
+      })
+    });
+
+    const data = await res.json();
+    const content = data.structured || data.data || data.answer || {};
+    const headline = content.headline || content.title || `${model.kw} kW Scenario Feasibility Assessment`;
+    const insight = content.keyInsight || content.answer || content.summary || `A ${model.kw} kW system delivers an attractive ${model.payback}-year payback period in ${model.location}, generating ${model.gen.toLocaleString()} kWh of clean solar electricity annually.`;
+    const points = Array.isArray(content.points) ? content.points : (Array.isArray(content.keyPoints) ? content.keyPoints : (Array.isArray(content.recommendations) ? content.recommendations : []));
+
+    if (aiBody) {
+      aiBody.innerHTML = `
+        <div class="whatif-ai-headline">✦ ${escapeHtml(headline)}</div>
+        
+        <div class="whatif-ai-chips-row">
+          <span class="whatif-ai-chip">Array Size: <strong>${model.kw.toFixed(1)} kW</strong></span>
+          <span class="whatif-ai-chip">Generation: <strong>${model.gen.toLocaleString('en-IN')} kWh/yr</strong></span>
+          <span class="whatif-ai-chip">Net Investment: <strong>₹${model.netCost.toLocaleString('en-IN')}</strong></span>
+          <span class="whatif-ai-chip">Payback: <strong>${model.payback} Years</strong></span>
+          <span class="whatif-ai-chip">Demand Coverage: <strong>${model.energyCoveragePct}%</strong></span>
+          <span class="whatif-ai-chip">Roof Footprint: <strong>${model.roofUtilizationPct}%</strong></span>
+        </div>
+
+        <div class="whatif-ai-insight-card">
+          <p style="margin: 0; line-height: 1.6;">${escapeHtml(insight)}</p>
+        </div>
+
+        ${points.length > 0 ? `
+          <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 4px;">
+            <div style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.8px; color: var(--text-faint); text-transform: uppercase;">
+              Strategic Recommendations & Trade-Offs
+            </div>
+            <ul style="margin: 0; padding-left: 20px; color: var(--text-main); font-size: 0.88rem; line-height: 1.6;">
+              ${points.map(pt => `<li>${escapeHtml(pt)}</li>`).join('')}
+            </ul>
+          </div>
+        ` : ''}
+
+        <div class="whatif-ai-actions">
+          <button type="button" class="btn-yellow-sm" onclick="transferScenarioToAdvisor()">
+            <span>Discuss further in AI Advisor</span>
+            <span class="arrow">→</span>
+          </button>
+        </div>
+      `;
+    }
+  } catch (err) {
+    console.error('[What-If AI Error]', err);
+    if (aiBody) {
+      aiBody.innerHTML = `
+        <div class="whatif-ai-headline">✦ ${model.kw} kW Scenario Analysis (${escapeHtml(model.location)})</div>
+        <div class="whatif-ai-chips-row">
+          <span class="whatif-ai-chip">Array Size: <strong>${model.kw} kW</strong></span>
+          <span class="whatif-ai-chip">Annual Yield: <strong>${model.gen.toLocaleString('en-IN')} kWh</strong></span>
+          <span class="whatif-ai-chip">Net Turnkey Cost: <strong>₹${model.netCost.toLocaleString('en-IN')}</strong></span>
+          <span class="whatif-ai-chip">Payback: <strong>${model.payback} Years</strong></span>
+        </div>
+        <div class="whatif-ai-insight-card">
+          <p style="margin: 0;">This customized ${model.kw} kW solar array will generate approximately <strong>${model.gen.toLocaleString('en-IN')} kWh/year</strong>, covering <strong>${model.energyCoveragePct}%</strong> of your household consumption while reducing your power bills by ~₹${model.annualSavings.toLocaleString('en-IN')} annually. Net investment after Central PM Surya Ghar CFA is ₹${model.netCost.toLocaleString('en-IN')}.</p>
+        </div>
+        <div class="whatif-ai-actions">
+          <button type="button" class="btn-yellow-sm" onclick="transferScenarioToAdvisor()">
+            <span>Discuss in AI Advisor</span>
+            <span class="arrow">→</span>
+          </button>
+        </div>
+      `;
+    }
+  } finally {
+    if (btn) {
+      btn.disabled = false;
+      btn.innerHTML = `<span>Explain Scenario with SolarWise AI</span><span class="arrow">→</span>`;
+    }
+  }
+}
+
+function closeWhatIfAiBox() {
+  const aiBox = document.getElementById('whatIfAiBox');
+  if (aiBox) aiBox.classList.add('hidden');
+}
+
+function transferScenarioToAdvisor() {
+  const model = lastWhatIfModel || calculateCurrentWhatIfModel();
+  switchScreen('screen-advisor');
+  const chatInput = document.getElementById('knowledgeInput') || document.getElementById('advisorQueryInput');
+  if (chatInput) {
+    chatInput.value = `Can you explain the trade-offs of the ${model.kw} kW system with ₹${model.annualSavings.toLocaleString('en-IN')}/year savings in ${model.location}?`;
+    chatInput.focus();
+  }
 }
 
 // -----------------------------------------------------------------------------

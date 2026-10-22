@@ -2164,6 +2164,120 @@ html, body {
 .whatif-ai-cta {
   display: flex;
   justify-content: flex-start;
+  margin-top: 6px;
+}
+
+/* What-If Feasibility Status Bar */
+.whatif-feasibility-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 500;
+  background: rgba(16, 185, 129, 0.06);
+  border: 1px solid rgba(16, 185, 129, 0.22);
+  color: #34d399;
+  transition: all 0.3s ease;
+}
+
+.whatif-feasibility-bar.warning {
+  background: rgba(245, 158, 11, 0.08);
+  border-color: rgba(245, 158, 11, 0.35);
+  color: #fbbf24;
+}
+
+.whatif-feasibility-bar .feasibility-icon {
+  font-size: 1.1rem;
+}
+
+/* What-If AI Reasoning Box */
+.whatif-ai-box {
+  background: var(--bg-card);
+  border: 1px solid rgba(229, 255, 63, 0.25);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 24px rgba(229, 255, 63, 0.05);
+  animation: fadeInDown 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.whatif-ai-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-hairline);
+  padding-bottom: 14px;
+}
+
+.whatif-ai-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+.whatif-ai-headline {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.whatif-ai-insight-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 3px solid var(--accent-solar-yellow);
+  padding: 14px 18px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.92rem;
+  color: #e2e8f0;
+}
+
+.whatif-ai-chips-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.whatif-ai-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-hairline);
+  color: var(--text-muted);
+}
+
+.whatif-ai-chip strong {
+  color: #ffffff;
+}
+
+.whatif-ai-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ==============================================================================
