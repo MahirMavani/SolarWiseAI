@@ -279,12 +279,29 @@ function calculateSystemComparison(annualUsage, tariff, location, radiation, sha
   });
 }
 
+// Universal Number Sanitizer (strips currency symbols, commas, and text)
+function cleanNumber(val, defaultVal = 0) {
+  if (typeof val === 'number') return isNaN(val) ? defaultVal : val;
+  if (!val) return defaultVal;
+  if (typeof val === 'string') {
+    const cleaned = val.replace(/[^0-9.-]/g, '');
+    const num = parseFloat(cleaned);
+    return isNaN(num) ? defaultVal : num;
+  }
+  return defaultVal;
+}
+
 // Requirement 6: EMI & Solar Financing Calculator
 function calculateFinancingEMI(cost, downPaymentPct, annualInterestRate, tenureYears) {
-  const downPayment = Math.round(cost * (downPaymentPct / 100));
-  const loanPrincipal = Math.max(0, cost - downPayment);
-  const monthlyRate = (annualInterestRate / 100) / 12;
-  const months = tenureYears * 12;
+  const cleanCost = cleanNumber(cost, 108000);
+  const cleanDownPct = cleanNumber(downPaymentPct, 20);
+  const cleanRate = cleanNumber(annualInterestRate, 8.5);
+  const cleanTenure = Math.max(1, Math.round(cleanNumber(tenureYears, 5)));
+
+  const downPayment = Math.round(cleanCost * (cleanDownPct / 100));
+  const loanPrincipal = Math.max(0, cleanCost - downPayment);
+  const monthlyRate = (cleanRate / 100) / 12;
+  const months = cleanTenure * 12;
 
   let monthlyEmi = 0;
   if (monthlyRate > 0 && months > 0 && loanPrincipal > 0) {
@@ -992,13 +1009,13 @@ function initFinancingCalculator() {
   const tenureSlider = document.getElementById('finTenureYears') || document.getElementById('emiTenureRange');
 
   function updateFinancing() {
-    const profile = (typeof getEffectiveSolarProfile === 'function' ? getEffectiveSolarProfile() : activeSolarProfile) || calculateSolarProfile();
-    const netCost = (profile && profile.netCost) ? profile.netCost : 108000;
-    const monthlySavings = (profile && profile.monthlySavings) ? profile.monthlySavings : 3540;
+    const rawProfile = activeSolarProfile || calculateSolarProfile();
+    const netCost = cleanNumber(rawProfile?.netCost, 108000);
+    const monthlySavings = cleanNumber(rawProfile?.monthlySavings, 3540);
 
-    const downPct = Number(downSlider?.value) || 20;
-    const rate = Number(rateSlider?.value) || 8.5;
-    const tenure = Number(tenureSlider?.value) || 5;
+    const downPct = cleanNumber(downSlider?.value, 20);
+    const rate = cleanNumber(rateSlider?.value, 8.5);
+    const tenure = cleanNumber(tenureSlider?.value, 5);
 
     // Update readout labels
     setText('finDownPayPercentVal', `${downPct}%`);
