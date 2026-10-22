@@ -983,73 +983,104 @@ function syncSimulatorSliders(profile) {
   document.getElementById('simUsageRange')?.dispatchEvent(evt);
 }
 
-// Requirement 6: Solar Financing / EMI Calculator Controller
+// Requirement 6: Solar Financing / EMI Calculator Controller (Screen 08)
+let updateFinancingRef = null;
+
 function initFinancingCalculator() {
-  const costInput = document.getElementById('emiCost');
-  const downRange = document.getElementById('emiDownRange');
-  const rateRange = document.getElementById('emiRateRange');
-  const tenureRange = document.getElementById('emiTenureRange');
+  const downSlider = document.getElementById('finDownPayPercent') || document.getElementById('emiDownRange');
+  const rateSlider = document.getElementById('finInterestRate') || document.getElementById('emiRateRange');
+  const tenureSlider = document.getElementById('finTenureYears') || document.getElementById('emiTenureRange');
 
   function updateFinancing() {
-    const cost = Number(costInput?.value) || 200000;
-    const downPct = Number(downRange?.value) || 20;
-    const rate = Number(rateRange?.value) || 8.5;
-    const tenure = Number(tenureRange?.value) || 5;
+    const profile = (typeof getEffectiveSolarProfile === 'function' ? getEffectiveSolarProfile() : activeSolarProfile) || calculateSolarProfile();
+    const netCost = (profile && profile.netCost) ? profile.netCost : 108000;
+    const monthlySavings = (profile && profile.monthlySavings) ? profile.monthlySavings : 3540;
 
+    const downPct = Number(downSlider?.value) || 20;
+    const rate = Number(rateSlider?.value) || 8.5;
+    const tenure = Number(tenureSlider?.value) || 5;
+
+    // Update readout labels
+    setText('finDownPayPercentVal', `${downPct}%`);
+    setText('finInterestVal', `${rate.toFixed(1)}%`);
+    setText('finTenureVal', `${tenure} Year${tenure > 1 ? 's' : ''}`);
+
+    // Legacy readout labels if present
     setText('emiDownPercent', `${downPct}%`);
     setText('emiRateVal', `${rate.toFixed(1)}% p.a.`);
     setText('emiTenureVal', `${tenure} Year${tenure > 1 ? 's' : ''}`);
 
-    const res = calculateFinancingEMI(cost, downPct, rate, tenure);
-    setText('emiDownVal', `₹${res.downPayment.toLocaleString()}`);
-    setText('emiLoanAmount', `₹${res.loanPrincipal.toLocaleString()}`);
-    setText('emiMonthlyVal', `₹${res.monthlyEmi.toLocaleString()} / mo`);
-    setText('emiTotalInterest', `₹${res.totalInterest.toLocaleString()}`);
-    setText('emiTotalRepayment', `₹${res.totalRepayment.toLocaleString()}`);
+    const res = calculateFinancingEMI(netCost, downPct, rate, tenure);
 
-    const monthlySavings = activeSolarProfile ? activeSolarProfile.monthlySavings : 3000;
-    setText('cfSavingsVal', `+₹${monthlySavings.toLocaleString()} / mo`);
-    setText('cfEmiVal', `-₹${res.monthlyEmi.toLocaleString()} / mo`);
+    // Update capital summary
+    setText('finSystemCost', `₹${netCost.toLocaleString('en-IN')}`);
+    setText('finDownPayAmt', `₹${res.downPayment.toLocaleString('en-IN')}`);
+    setText('finLoanPrincipal', `₹${res.loanPrincipal.toLocaleString('en-IN')}`);
 
+    // Update installment & monthly solar savings
+    setText('finMonthlyEmi', `₹${res.monthlyEmi.toLocaleString('en-IN')}`);
+    setText('finMonthlySavings', `₹${monthlySavings.toLocaleString('en-IN')}`);
+
+    // Legacy elements if present
+    setText('emiDownVal', `₹${res.downPayment.toLocaleString('en-IN')}`);
+    setText('emiLoanAmount', `₹${res.loanPrincipal.toLocaleString('en-IN')}`);
+    setText('emiMonthlyVal', `₹${res.monthlyEmi.toLocaleString('en-IN')} / mo`);
+    setText('emiTotalInterest', `₹${res.totalInterest.toLocaleString('en-IN')}`);
+    setText('emiTotalRepayment', `₹${res.totalRepayment.toLocaleString('en-IN')}`);
+    setText('cfSavingsVal', `+₹${monthlySavings.toLocaleString('en-IN')} / mo`);
+    setText('cfEmiVal', `-₹${res.monthlyEmi.toLocaleString('en-IN')} / mo`);
+
+    // Cash flow balance calculation
     const netImpact = monthlySavings - res.monthlyEmi;
-    const netEl = document.getElementById('cfNetVal');
-    const pill = document.getElementById('emiCashflowPill');
-    const textEl = document.getElementById('emiCashflowText');
-    const noteEl = document.getElementById('cfNote');
+    const netEl = document.getElementById('finNetCashflow') || document.getElementById('cfNetVal');
+    const badge = document.getElementById('finCashflowBadge') || document.getElementById('emiCashflowPill');
+    const banner = document.querySelector('.cashflow-pill-banner');
 
     if (netImpact >= 0) {
       if (netEl) {
-        netEl.textContent = `+₹${netImpact.toLocaleString()} / mo`;
-        netEl.className = 'text-green';
+        netEl.textContent = `+₹${netImpact.toLocaleString('en-IN')} / month`;
+        netEl.classList.remove('text-amber');
+        netEl.classList.add('text-green');
       }
-      if (pill) pill.className = 'cashflow-pill';
-      if (textEl) textEl.textContent = 'Positive Cash Flow from Day 1';
-      if (noteEl) noteEl.textContent = 'Your monthly solar savings fully exceed the loan EMI, putting net cash back in your pocket from month one.';
+      if (badge) {
+        badge.textContent = 'Day-1 Positive Cash Flow';
+        badge.classList.remove('warning');
+      }
+      if (banner) {
+        banner.classList.remove('warning');
+      }
     } else {
       if (netEl) {
-        netEl.textContent = `-₹${Math.abs(netImpact).toLocaleString()} / mo`;
-        netEl.className = 'text-amber';
+        netEl.textContent = `-₹${Math.abs(netImpact).toLocaleString('en-IN')} / month`;
+        netEl.classList.remove('text-green');
+        netEl.classList.add('text-amber');
       }
-      if (pill) pill.className = 'cashflow-pill';
-      if (textEl) textEl.textContent = 'Nearly Self-Financing';
-      if (noteEl) noteEl.textContent = `Solar bill savings cover over ${Math.round((monthlySavings / res.monthlyEmi) * 100)}% of your installment. After ${tenure} years, 100% of solar generation is pure profit.`;
+      const coveragePct = res.monthlyEmi > 0 ? Math.round((monthlySavings / res.monthlyEmi) * 100) : 100;
+      if (badge) {
+        badge.textContent = `Nearly Self-Financing (${coveragePct}% Covered)`;
+        badge.classList.add('warning');
+      }
+      if (banner) {
+        banner.classList.add('warning');
+      }
     }
   }
 
-  costInput?.addEventListener('input', updateFinancing);
-  downRange?.addEventListener('input', updateFinancing);
-  rateRange?.addEventListener('input', updateFinancing);
-  tenureRange?.addEventListener('input', updateFinancing);
+  updateFinancingRef = updateFinancing;
+
+  // Attach live event listeners to sliders
+  [downSlider, rateSlider, tenureSlider].forEach(slider => {
+    slider?.addEventListener('input', updateFinancing);
+  });
+
+  // Initial calculation & render
+  updateFinancing();
 }
 
 function syncFinancingInputs(profile) {
-  setVal('emiCost', profile.netCost);
-  setVal('emiDownRange', 20);
-  setVal('emiRateRange', 8.5);
-  setVal('emiTenureRange', 5);
-
-  const evt = new Event('input');
-  document.getElementById('emiDownRange')?.dispatchEvent(evt);
+  if (updateFinancingRef) {
+    updateFinancingRef();
+  }
 }
 
 // Requirement 16: Solar Installation Checklist Controller (with localStorage)
