@@ -1,0 +1,33 @@
+name: Bug Report
+description: Create a report to help us improve SolarWise AI
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for taking the time to report an issue!
+  - type: input
+    id: summary
+    attributes:
+      label: Issue Summary
+      description: A clear and concise description of what the bug is.
+      placeholder: e.g. EMI calculation returns NaN when input is empty
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce the behavior?
+      placeholder: |
+        1. Open index.html
+        2. Enter rooftop area
+        3. Click calculate
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should happen instead?
+    validations:
+      required: true
